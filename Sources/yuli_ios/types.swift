@@ -1,5 +1,4 @@
 import Foundation
-import SwiftagramCrypto
 import ComposableStorage
 
 @objc class User: NSObject {
