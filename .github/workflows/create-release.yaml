@@ -8,8 +8,6 @@ on:
 jobs:
   create_release:
     name: Create Release
-    if: startsWith(github.event.pull_request.title, '[CD]') != true &&
-        github.event.pull_request.user.login != 'github-actions'
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
