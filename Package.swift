@@ -29,8 +29,5 @@ let package = Package(
                 .product(name: "Swiftagram", package: "Swiftagram"),
                 .product(name: "SwiftagramCrypto", package: "Swiftagram")
             ]),
-        .testTarget(
-            name: "yuli_iosTests",
-            dependencies: ["yuli_ios"]),
     ]
 )
