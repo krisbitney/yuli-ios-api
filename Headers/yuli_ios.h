@@ -35,8 +35,8 @@
 - (void)login:(NSString*)username password:(NSString*)password completion:(void (^)(BOOL, NSString* _Nullable))completion;
 - (void)restoreSession:(void (^)(BOOL, NSString* _Nullable))completion;
 - (void)fetchUserProfile:(void (^)(User* _Nullable, NSString* _Nullable))completion;
-- (void)fetchFollowers:(void (^)(NSArray<Profile*>* _Nullable, NSString* _Nullable))completion;
-- (void)fetchFollowings:(void (^)(NSArray<Profile*>* _Nullable, NSString* _Nullable))completion;
+- (void)fetchFollowersWithPageDelay:(float)pageDelay completion:(void (^)(NSArray<Profile*>* _Nullable, NSString* _Nullable))completion;
+- (void)fetchFollowingsWithPageDelay:(float)pageDelay completion:(void (^)(NSArray<Profile*>* _Nullable, NSString* _Nullable))completion;
 
 @end
 
@@ -54,7 +54,8 @@
 - (void)login:(NSString*)username password:(NSString*)password completion:(void (^)(BOOL, NSString* _Nullable))completion;
 - (void)restoreSession:(void (^)(BOOL, NSString* _Nullable))completion;
 - (void)fetchUserProfile:(void (^)(User* _Nullable, NSString* _Nullable))completion;
-- (void)fetchFollowers:(void (^)(NSArray<Profile*>* _Nullable, NSString* _Nullable))completion;
-- (void)fetchFollowings:(void (^)(NSArray<Profile*>* _Nullable, NSString* _Nullable))completion;
+- (void)fetchFollowersWithPageDelay:(float)pageDelay completion:(void (^)(NSArray<Profile*>* _Nullable, NSString* _Nullable))completion;
+- (void)fetchFollowingsWithPageDelay:(float)pageDelay completion:(void (^)(NSArray<Profile*>* _Nullable, NSString* _Nullable))completion;
 
 @end
+
