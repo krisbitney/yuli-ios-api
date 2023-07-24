@@ -35,8 +35,8 @@ import ComposableStorage
     @objc func login(username: String, password: String, completion: @escaping (Bool, String?) -> Void)
     @objc func restoreSession(completion: @escaping (Bool, String?) -> Void)
     @objc func fetchUserProfile(completion: @escaping (User?, String?) -> Void)
-    @objc func fetchFollowers(pageDelay: Float, completion: @escaping ([Profile]?, String?) -> Void)
-    @objc func fetchFollowings(pageDelay: Float, completion: @escaping ([Profile]?, String?) -> Void)
+    @objc func fetchFollowers(pageDelay: Int64, completion: @escaping ([Profile]?, String?) -> Void)
+    @objc func fetchFollowings(pageDelay: Int64, completion: @escaping ([Profile]?, String?) -> Void)
 }
 
 @objc class KeychainItem: NSObject, Codable, Identifiable, Storable {

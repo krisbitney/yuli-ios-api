@@ -92,13 +92,13 @@ import SwiftagramCrypto
 
     }
 
-    @objc func fetchFollowers(pageDelay: Float, completion: @escaping ([Profile]?, String?) -> Void) {
+    @objc func fetchFollowers(pageDelay: Int64, completion: @escaping ([Profile]?, String?) -> Void) {
         guard let secret = self.secret else {
             completion(nil, "User is not logged in")
             return
         }
         
-        let delay = Delay(TimeInterval(pageDelay))
+        let delay = Delay(TimeInterval(Float(pageDelay) / 1000))
         
         Endpoint
             .user(secret.identifier)
@@ -129,13 +129,13 @@ import SwiftagramCrypto
             .store(in: &cancellables)
     }
 
-    @objc func fetchFollowings(pageDelay: Float, completion: @escaping ([Profile]?, String?) -> Void) {
+    @objc func fetchFollowings(pageDelay: Int64, completion: @escaping ([Profile]?, String?) -> Void) {
         guard let secret = self.secret else {
             completion(nil, "User is not logged in")
             return
         }
         
-        let delay = Delay(TimeInterval(pageDelay))
+        let delay = Delay(TimeInterval(Float(pageDelay) / 1000))
         
         Endpoint
             .user(secret.identifier)

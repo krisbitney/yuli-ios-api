@@ -30,16 +30,6 @@
 
 @end
 
-@protocol SocialApi <NSObject>
-
-- (void)login:(NSString*)username password:(NSString*)password completion:(void (^)(BOOL, NSString* _Nullable))completion;
-- (void)restoreSession:(void (^)(BOOL, NSString* _Nullable))completion;
-- (void)fetchUserProfile:(void (^)(User* _Nullable, NSString* _Nullable))completion;
-- (void)fetchFollowersWithPageDelay:(float)pageDelay completion:(void (^)(NSArray<Profile*>* _Nullable, NSString* _Nullable))completion;
-- (void)fetchFollowingsWithPageDelay:(float)pageDelay completion:(void (^)(NSArray<Profile*>* _Nullable, NSString* _Nullable))completion;
-
-@end
-
 @interface KeychainItem : NSObject
 
 @property (nonatomic, readonly) NSString* id;
@@ -49,13 +39,24 @@
 
 @end
 
+@protocol SocialApi <NSObject>
+
+- (void)login:(NSString*)username password:(NSString*)password completion:(void (^)(BOOL, NSString* _Nullable))completion;
+- (void)restoreSession:(void (^)(BOOL, NSString* _Nullable))completion;
+- (void)fetchUserProfile:(void (^)(User* _Nullable, NSString* _Nullable))completion;
+- (void)fetchFollowers:(int64_t)pageDelay completion:(void (^)(NSArray<Profile*>* _Nullable, NSString* _Nullable))completion;
+- (void)fetchFollowings:(int64_t)pageDelay completion:(void (^)(NSArray<Profile*>* _Nullable, NSString* _Nullable))completion;
+
+@end
+
 @interface SwiftSocialApi : NSObject <SocialApi>
 
 - (void)login:(NSString*)username password:(NSString*)password completion:(void (^)(BOOL, NSString* _Nullable))completion;
 - (void)restoreSession:(void (^)(BOOL, NSString* _Nullable))completion;
 - (void)fetchUserProfile:(void (^)(User* _Nullable, NSString* _Nullable))completion;
-- (void)fetchFollowersWithPageDelay:(float)pageDelay completion:(void (^)(NSArray<Profile*>* _Nullable, NSString* _Nullable))completion;
-- (void)fetchFollowingsWithPageDelay:(float)pageDelay completion:(void (^)(NSArray<Profile*>* _Nullable, NSString* _Nullable))completion;
+- (void)fetchFollowers:(int64_t)pageDelay completion:(void (^)(NSArray<Profile*>* _Nullable, NSString* _Nullable))completion;
+- (void)fetchFollowings:(int64_t)pageDelay completion:(void (^)(NSArray<Profile*>* _Nullable, NSString* _Nullable))completion;
 
 @end
+
 
