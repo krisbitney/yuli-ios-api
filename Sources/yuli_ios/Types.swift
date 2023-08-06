@@ -38,13 +38,3 @@ import ComposableStorage
     @objc func fetchFollowers(pageDelay: Int64, completion: @escaping ([Profile]?, String?) -> Void)
     @objc func fetchFollowings(pageDelay: Int64, completion: @escaping ([Profile]?, String?) -> Void)
 }
-
-@objc class KeychainItem: NSObject, Codable, Identifiable, Storable {
-    @objc let id: String
-    @objc let label: String
-    
-    @objc init(id: String, label: String) {
-        self.id = id
-        self.label = label
-    }
-}

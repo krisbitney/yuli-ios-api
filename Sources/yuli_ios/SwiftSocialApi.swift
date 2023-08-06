@@ -6,15 +6,10 @@ import SwiftagramCrypto
     private var cancellables = Set<AnyCancellable>()
 
     private var username: String?
-
-    private let secretIdentifier = "io.github.krisbitney.yuli.ig"
-    private let labelStorage = SwiftagramCrypto.KeychainStorage<KeychainItem>()
-    private let storage = SwiftagramCrypto.KeychainStorage<Secret>()
     private var secret: Secret?
 
     @objc func login(username: String, password: String, completion: @escaping (Bool, String?) -> Void) {
         self.username = username
-        
         Authenticator
             .keychain
             .basic(username: username, password: password)
@@ -30,30 +25,15 @@ import SwiftagramCrypto
                 },
                receiveValue: { secret in
                    self.secret = secret
-                   do {
-                       try self.storage.store(secret)
-                       try self.labelStorage.store(KeychainItem(
-                        id: self.secretIdentifier,
-                        label: secret.label
-                       ))
-                       completion(true, nil)
-                   } catch {
-                       completion(false, error.localizedDescription)
-                   }
+                   completion(true, nil)
                 }
             )
                 .store(in: &cancellables)
     }
 
     @objc func restoreSession(completion: @escaping (Bool, String?) -> Void) {
-        let label = try? self.labelStorage.item(matching: secretIdentifier)
-        if (label == nil) {
-            completion(false, "Failed to restore session.")
-            return
-        }
-        self.secret = try? self.storage.item(matching: label!.label)
-        let result = (self.secret != nil)
-        completion(result, result ? nil : "Failed to restore session.")
+        self.secret = try? Authenticator.keychain.secrets.get()[0]
+        completion(self.secret != nil, nil)
     }
 
     @objc func fetchUserProfile(completion: @escaping (User?, String?) -> Void) {
