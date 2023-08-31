@@ -2,13 +2,14 @@ import Foundation
 import Swiftagram
 import SwiftagramCrypto
 
-@objc class SwiftSocialApi: NSObject, SocialApi {
+@objcMembers
+class SwiftSocialApi: NSObject, SocialApi {
     private var cancellables = Set<AnyCancellable>()
 
     private var username: String?
     private var secret: Secret?
 
-    @objc func login(username: String, password: String, completion: @escaping (Bool, String?) -> Void) {
+    func login(username: String, password: String, completion: @escaping (Bool, String?) -> Void) {
         self.username = username
         Authenticator
             .keychain
@@ -31,12 +32,12 @@ import SwiftagramCrypto
                 .store(in: &cancellables)
     }
 
-    @objc func restoreSession(completion: @escaping (Bool, String?) -> Void) {
+    func restoreSession(completion: @escaping (Bool, String?) -> Void) {
         self.secret = try? Authenticator.keychain.secrets.get()[0]
         completion(self.secret != nil, nil)
     }
 
-    @objc func fetchUserProfile(completion: @escaping (User?, String?) -> Void) {
+    func fetchUserProfile(completion: @escaping (User?, String?) -> Void) {
         guard let secret = self.secret else {
             completion(nil, "User is not logged in")
             return
@@ -72,7 +73,7 @@ import SwiftagramCrypto
 
     }
 
-    @objc func fetchFollowers(pageDelay: Int64, completion: @escaping ([Profile]?, String?) -> Void) {
+    func fetchFollowers(pageDelay: Int64, completion: @escaping ([Profile]?, String?) -> Void) {
         guard let secret = self.secret else {
             completion(nil, "User is not logged in")
             return
@@ -109,7 +110,7 @@ import SwiftagramCrypto
             .store(in: &cancellables)
     }
 
-    @objc func fetchFollowings(pageDelay: Int64, completion: @escaping ([Profile]?, String?) -> Void) {
+    func fetchFollowings(pageDelay: Int64, completion: @escaping ([Profile]?, String?) -> Void) {
         guard let secret = self.secret else {
             completion(nil, "User is not logged in")
             return

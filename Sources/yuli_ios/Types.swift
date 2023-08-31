@@ -1,15 +1,16 @@
 import Foundation
 import ComposableStorage
 
-@objc class User: NSObject {
-    @objc let username: String
-    @objc let name: String?
-    @objc let picUrl: String?
-    @objc let followerCount: Int
-    @objc let followingCount: Int
-    @objc let mediaCount: Int
+@objcMembers
+class User: NSObject {
+    let username: String
+    let name: String?
+    let picUrl: String?
+    let followerCount: Int
+    let followingCount: Int
+    let mediaCount: Int
 
-    @objc init(username: String, name: String?, picUrl: String?, followerCount: Int, followingCount: Int, mediaCount: Int) {
+    init(username: String, name: String?, picUrl: String?, followerCount: Int, followingCount: Int, mediaCount: Int) {
         self.username = username
         self.name = name
         self.picUrl = picUrl
@@ -19,19 +20,21 @@ import ComposableStorage
     }
 }
 
-@objc class Profile: NSObject {
-    @objc let username: String
-    @objc let name: String?
-    @objc let picUrl: String?
+@objcMembers
+class Profile: NSObject {
+    let username: String
+    let name: String?
+    let picUrl: String?
 
-    @objc init(username: String, name: String?, picUrl: String?) {
+    init(username: String, name: String?, picUrl: String?) {
         self.username = username
         self.name = name
         self.picUrl = picUrl
     }
 }
 
-@objc protocol SocialApi {
+@objc
+protocol SocialApi {
     @objc func login(username: String, password: String, completion: @escaping (Bool, String?) -> Void)
     @objc func restoreSession(completion: @escaping (Bool, String?) -> Void)
     @objc func fetchUserProfile(completion: @escaping (User?, String?) -> Void)
