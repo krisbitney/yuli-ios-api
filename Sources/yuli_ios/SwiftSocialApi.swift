@@ -3,13 +3,13 @@ import Swiftagram
 import SwiftagramCrypto
 
 @objcMembers
-class SwiftSocialApi: NSObject, SocialApi {
+public class SwiftSocialApi: NSObject, SocialApi {
     private var cancellables = Set<AnyCancellable>()
 
     private var username: String?
     private var secret: Secret?
 
-    func login(username: String, password: String, completion: @escaping (Bool, String?) -> Void) {
+    public func login(username: String, password: String, completion: @escaping (Bool, String?) -> Void) {
         self.username = username
         Authenticator
             .keychain
@@ -32,12 +32,12 @@ class SwiftSocialApi: NSObject, SocialApi {
                 .store(in: &cancellables)
     }
 
-    func restoreSession(completion: @escaping (Bool, String?) -> Void) {
+    public func restoreSession(completion: @escaping (Bool, String?) -> Void) {
         self.secret = try? Authenticator.keychain.secrets.get()[0]
         completion(self.secret != nil, nil)
     }
 
-    func fetchUserProfile(completion: @escaping (User?, String?) -> Void) {
+    public func fetchUserProfile(completion: @escaping (User?, String?) -> Void) {
         guard let secret = self.secret else {
             completion(nil, "User is not logged in")
             return
@@ -73,7 +73,7 @@ class SwiftSocialApi: NSObject, SocialApi {
 
     }
 
-    func fetchFollowers(pageDelay: Int64, completion: @escaping ([Profile]?, String?) -> Void) {
+    public func fetchFollowers(pageDelay: Int64, completion: @escaping ([Profile]?, String?) -> Void) {
         guard let secret = self.secret else {
             completion(nil, "User is not logged in")
             return
@@ -110,7 +110,7 @@ class SwiftSocialApi: NSObject, SocialApi {
             .store(in: &cancellables)
     }
 
-    func fetchFollowings(pageDelay: Int64, completion: @escaping ([Profile]?, String?) -> Void) {
+    public func fetchFollowings(pageDelay: Int64, completion: @escaping ([Profile]?, String?) -> Void) {
         guard let secret = self.secret else {
             completion(nil, "User is not logged in")
             return
