@@ -9,7 +9,6 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '13.0'
   s.swift_version = '5.7'
   s.requires_arc = true
-  s.static_framework = true
 
   s.source_files = 'Sources/yuli_ios/**/*.swift'
 

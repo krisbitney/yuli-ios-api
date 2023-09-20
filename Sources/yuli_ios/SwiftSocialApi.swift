@@ -9,6 +9,7 @@ public class SwiftSocialApi: NSObject, SocialApi {
     private var username: String?
     private var secret: Secret?
 
+    // TODO: store cookies by username so i can support multiple logins?
     public func login(username: String, password: String, completion: @escaping (Bool, String?) -> Void) {
         self.username = username
         Authenticator
@@ -32,6 +33,7 @@ public class SwiftSocialApi: NSObject, SocialApi {
                 .store(in: &cancellables)
     }
 
+    // TODO: how to get secret matching a username?
     public func restoreSession(completion: @escaping (Bool, String?) -> Void) {
         self.secret = try? Authenticator.keychain.secrets.get()[0]
         completion(self.secret != nil, nil)
