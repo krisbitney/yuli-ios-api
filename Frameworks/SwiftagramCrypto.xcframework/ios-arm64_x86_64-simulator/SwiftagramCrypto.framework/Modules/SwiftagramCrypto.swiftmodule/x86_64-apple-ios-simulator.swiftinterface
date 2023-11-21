@@ -1,0 +1,133 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SwiftagramCrypto
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import ComposableStorage
+import ComposableStorageCrypto
+import CoreGraphics
+import Foundation
+import SwCrypt
+import Swift
+@_exported import Swiftagram
+import UIKit
+import _Concurrency
+import _StringProcessing
+public typealias KeychainStorage = ComposableStorageCrypto.KeychainStorage
+extension Swiftagram.Authenticator {
+  public static var keychain: Swiftagram.Authenticator {
+    get
+  }
+  public static func keychain(_ keychainStorage: ComposableStorageCrypto.KeychainStorage<Swiftagram.Secret>) -> Swiftagram.Authenticator
+}
+extension Swiftagram.Authenticator.Group {
+  public struct Basic : Swiftagram.CustomClientAuthentication {
+    public let authenticator: Swiftagram.Authenticator
+    public let username: Swift.String
+    public func authenticate(in client: Swiftagram.Client) -> Combine.AnyPublisher<Swiftagram.Secret, Swift.Error>
+  }
+}
+extension Swiftagram.Authenticator {
+  public func basic(username: Swift.String, password: Swift.String) -> Swiftagram.Authenticator.Group.Basic
+}
+extension Swiftagram.Authenticator.Group.Basic {
+  public struct TwoFactor : Swiftagram.Authentication {
+    public let storage: ComposableStorage.AnyStorage<Swiftagram.Secret>
+    public let client: Swiftagram.Client
+    public let code: Swift.String
+    public let username: Swift.String
+    public let crossSiteRequestForgery: Foundation.HTTPCookie
+    public func authenticate() -> Combine.AnyPublisher<Swiftagram.Secret, Swift.Error>
+  }
+}
+extension Swiftagram.Authenticator.Error.TwoFactor {
+  public func code(_ code: Swift.String) -> Swiftagram.Authenticator.Group.Basic.TwoFactor
+}
+extension Swiftagram.Endpoint.Group.Media.Comment {
+  final public func delete() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group.Media.ManyComments {
+  final public func delete() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group.Media {
+  final public func archive() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+  final public func comment(with text: Swift.String, under parentCommentIdentifier: Swift.String? = nil) -> Swiftagram.Endpoint.Single<Swiftagram.Comment.Unit, Swift.Error>
+  final public func delete() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+  final public func like() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+  final public func save(in collectionIdentifier: Swift.String) -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+  final public func unarchive() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+  final public func unlike() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group.Posts {
+  final public func upload<U>(image: Swiftagram.Agnostic.Image, captioned caption: Swift.String?, tagging users: U, at location: Swiftagram.Location? = nil) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error> where U : Swift.Collection, U.Element == Swiftagram.UserTag
+  final public func upload(image: Swiftagram.Agnostic.Image, captioned caption: Swift.String?, at location: Swiftagram.Location? = nil) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error>
+  final public func upload<U>(image data: Foundation.Data, captioned caption: Swift.String?, tagging users: U, at location: Swiftagram.Location? = nil) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error> where U : Swift.Collection, U.Element == Swiftagram.UserTag
+  final public func upload(image data: Foundation.Data, captioned caption: Swift.String?, at location: Swiftagram.Location? = nil) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error>
+  @available(watchOS 6, *)
+  final public func upload<U>(video url: Foundation.URL, preview image: Swiftagram.Agnostic.Image, captioned caption: Swift.String?, tagging users: U, at location: Swiftagram.Location? = nil) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error> where U : Swift.Collection, U.Element == Swiftagram.UserTag
+  @available(watchOS 6, *)
+  final public func upload(video url: Foundation.URL, preview image: Swiftagram.Agnostic.Image, captioned caption: Swift.String?, at location: Swiftagram.Location? = nil) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error>
+  @available(watchOS 6, *)
+  final public func upload<U>(video url: Foundation.URL, preview data: Foundation.Data, captioned caption: Swift.String?, tagging users: U, at location: Swiftagram.Location? = nil) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error> where U : Swift.Collection, U.Element == Swiftagram.UserTag
+  @available(watchOS 6, *)
+  final public func upload(video url: Foundation.URL, preview data: Foundation.Data, captioned caption: Swift.String?, at location: Swiftagram.Location? = nil) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group.Stories {
+  final public func upload<S>(image: Swiftagram.Agnostic.Image, stickers: S, isCloseFriendsOnly: Swift.Bool = false) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error> where S : Swift.Sequence, S.Element == Swiftagram.Sticker
+  final public func upload(image: Swiftagram.Agnostic.Image, isCloseFriendsOnly: Swift.Bool = false) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error>
+  final public func upload<S>(image data: Foundation.Data, stickers: S, isCloseFriendsOnly: Swift.Bool = false) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error> where S : Swift.Collection, S.Element == Swiftagram.Sticker
+  final public func upload(image data: Foundation.Data, isCloseFriendsOnly: Swift.Bool = false) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error>
+  @available(watchOS 6, *)
+  final public func upload<S>(video url: Foundation.URL, preview image: Swiftagram.Agnostic.Image? = nil, stickers: S, isCloseFriendsOnly: Swift.Bool = false) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error> where S : Swift.Sequence, S.Element == Swiftagram.Sticker
+  @available(watchOS 6, *)
+  final public func upload(video url: Foundation.URL, preview image: Swiftagram.Agnostic.Image? = nil, isCloseFriendsOnly: Swift.Bool = false) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error>
+  @available(watchOS 6, *)
+  final public func upload<S>(video url: Foundation.URL, preview data: Foundation.Data, stickers: S, isCloseFriendsOnly: Swift.Bool = false) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error> where S : Swift.Collection, S.Element == Swiftagram.Sticker
+  @available(watchOS 6, *)
+  final public func upload(video url: Foundation.URL, preview data: Foundation.Data, isCloseFriendsOnly: Swift.Bool = false) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group.Tag {
+  final public func follow() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+  final public func unfollow() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group.User {
+  public struct Request {
+    public let user: Swiftagram.Endpoint.Group.User
+  }
+  public enum Muting : Swift.Equatable {
+    case all
+    case posts
+    case stories
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: Swiftagram.Endpoint.Group.User.Muting, b: Swiftagram.Endpoint.Group.User.Muting) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public var request: Swiftagram.Endpoint.Group.User.Request {
+    get
+  }
+  final public func block() -> Swiftagram.Endpoint.Single<Swiftagram.Friendship.Unit, Swift.Error>
+  final public func follow() -> Swiftagram.Endpoint.Single<Swiftagram.Friendship.Unit, Swift.Error>
+  final public func mute(_ action: Swiftagram.Endpoint.Group.User.Muting) -> Swiftagram.Endpoint.Single<Swiftagram.Friendship.Unit, Swift.Error>
+  final public func remove() -> Swiftagram.Endpoint.Single<Swiftagram.Friendship.Unit, Swift.Error>
+  final public func unblock() -> Swiftagram.Endpoint.Single<Swiftagram.Friendship.Unit, Swift.Error>
+  final public func unfollow() -> Swiftagram.Endpoint.Single<Swiftagram.Friendship.Unit, Swift.Error>
+  final public func unmute(_ action: Swiftagram.Endpoint.Group.User.Muting) -> Swiftagram.Endpoint.Single<Swiftagram.Friendship.Unit, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group.User.Request {
+  public func approve() -> Swiftagram.Endpoint.Single<Swiftagram.Friendship.Unit, Swift.Error>
+  public func decline() -> Swiftagram.Endpoint.Single<Swiftagram.Friendship.Unit, Swift.Error>
+}
+public enum SigningError : Swift.Error {
+  case cryptographyUnavailable
+  case invalidRepresentation
+  public static func == (a: SwiftagramCrypto.SigningError, b: SwiftagramCrypto.SigningError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Swiftagram.Endpoint.Group.User.Muting : Swift.Hashable {}
+extension SwiftagramCrypto.SigningError : Swift.Equatable {}
+extension SwiftagramCrypto.SigningError : Swift.Hashable {}

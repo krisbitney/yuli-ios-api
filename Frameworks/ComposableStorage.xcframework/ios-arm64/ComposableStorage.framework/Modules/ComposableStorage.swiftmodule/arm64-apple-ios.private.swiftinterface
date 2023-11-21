@@ -1,0 +1,101 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ComposableStorage
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+public struct AnyStorage<Item> : ComposableStorage.Storage where Item : ComposableStorage.Storable {
+  public init<S>(_ storage: S) where Item == S.Item, S : ComposableStorage.Storage
+  public static func item(matching label: Swift.String, in storage: ComposableStorage.AnyStorage<Item>) throws -> Item?
+  public static func items(in storage: ComposableStorage.AnyStorage<Item>) throws -> [Item]
+  @discardableResult
+  public static func store(_ item: Item, in storage: ComposableStorage.AnyStorage<Item>) throws -> Item
+  @discardableResult
+  public static func discard(_ label: Swift.String, in storage: ComposableStorage.AnyStorage<Item>) throws -> Item?
+  public static func empty(_ storage: ComposableStorage.AnyStorage<Item>) throws
+}
+public struct TransientStorage<Item> : ComposableStorage.NonThrowingStorage where Item : ComposableStorage.Storable {
+  public init()
+  public func item(matching label: Swift.String) -> Item?
+  public func items() -> [Item]
+  @discardableResult
+  public func store(_ item: Item) -> Item
+  @discardableResult
+  public func discard(_ label: Swift.String) -> Item?
+  public func empty()
+}
+public struct UserDefaultsStorage<Item> : ComposableStorage.NonThrowingStorage where Item : ComposableStorage.Storable {
+  public init(userDefaults: Foundation.UserDefaults = .standard)
+  public func item(matching label: Swift.String) -> Item?
+  public func items() -> [Item]
+  @discardableResult
+  public func store(_ item: Item) -> Item
+  @discardableResult
+  public func discard(_ label: Swift.String) -> Item?
+  public func empty()
+}
+extension ComposableStorage.Storable where Self : Swift.Decodable, Self : Swift.Encodable {
+  public static func encoding(_ storable: Self) throws -> Foundation.Data
+  public static func decoding(_ data: Foundation.Data) throws -> Self
+}
+public protocol NonThrowingStorage : ComposableStorage.Storage {
+  func item(matching label: Swift.String) -> Self.Item?
+  func items() -> [Self.Item]
+  @discardableResult
+  func store(_ item: Self.Item) -> Self.Item
+  @discardableResult
+  func discard(_ label: Swift.String) -> Self.Item?
+  func empty()
+}
+extension ComposableStorage.NonThrowingStorage {
+  public static func item(matching label: Swift.String, in storage: Self) throws -> Self.Item?
+  public static func items(in storage: Self) throws -> [Self.Item]
+  @discardableResult
+  public static func store(_ item: Self.Item, in storage: Self) throws -> Self.Item
+  @discardableResult
+  public static func discard(_ label: Swift.String, in storage: Self) throws -> Self.Item?
+  public static func empty(_ storage: Self) throws
+}
+public protocol Storable {
+  var label: Swift.String { get }
+  static func encoding(_ storable: Self) throws -> Foundation.Data
+  static func decoding(_ data: Foundation.Data) throws -> Self
+}
+extension ComposableStorage.Storable {
+  public static func matching<S>(_ label: Swift.String, in storage: S) -> Self? where Self == S.Item, S : ComposableStorage.NonThrowingStorage
+  public static func matching<S>(_ label: Swift.String, in storage: S) throws -> Self? where Self == S.Item, S : ComposableStorage.ThrowingStorage
+  @discardableResult
+  public func store<S>(in storage: S) -> Self where Self == S.Item, S : ComposableStorage.NonThrowingStorage
+  @discardableResult
+  public func store<S>(in storage: S) throws -> Self where Self == S.Item, S : ComposableStorage.ThrowingStorage
+}
+public protocol Storage {
+  associatedtype Item : ComposableStorage.Storable
+  static func item(matching label: Swift.String, in storage: Self) throws -> Self.Item?
+  static func items(in storage: Self) throws -> [Self.Item]
+  @discardableResult
+  static func store(_ item: Self.Item, in storage: Self) throws -> Self.Item
+  @discardableResult
+  static func discard(_ label: Swift.String, in storage: Self) throws -> Self.Item?
+  static func empty(_ storage: Self) throws
+}
+public protocol ThrowingStorage : ComposableStorage.Storage {
+  func item(matching label: Swift.String) throws -> Self.Item?
+  func items() throws -> [Self.Item]
+  @discardableResult
+  func store(_ item: Self.Item) throws -> Self.Item
+  @discardableResult
+  func discard(_ label: Swift.String) throws -> Self.Item?
+  func empty() throws
+}
+extension ComposableStorage.ThrowingStorage {
+  public static func item(matching label: Swift.String, in storage: Self) throws -> Self.Item?
+  public static func items(in storage: Self) throws -> [Self.Item]
+  @discardableResult
+  public static func store(_ item: Self.Item, in storage: Self) throws -> Self.Item
+  @discardableResult
+  public static func discard(_ label: Swift.String, in storage: Self) throws -> Self.Item?
+  public static func empty(_ storage: Self) throws
+}

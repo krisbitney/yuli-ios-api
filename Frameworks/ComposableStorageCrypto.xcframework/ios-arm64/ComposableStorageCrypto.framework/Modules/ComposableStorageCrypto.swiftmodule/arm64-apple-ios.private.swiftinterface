@@ -1,0 +1,24 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ComposableStorageCrypto
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import ComposableStorage/*.Storable*/
+import ComposableStorage/*.ThrowingStorage*/
+import Foundation
+import KeychainAccess
+import Swift
+import _Concurrency
+import _StringProcessing
+public typealias Keychain = KeychainAccess.Keychain
+public typealias Accessibility = KeychainAccess.Accessibility
+public typealias AuthenticationPolicy = KeychainAccess.AuthenticationPolicy
+public struct KeychainStorage<Item> : ComposableStorage.ThrowingStorage where Item : ComposableStorage.Storable {
+  public init(service: Swift.String? = nil, group: Swift.String? = nil, accessibility: ComposableStorageCrypto.Accessibility = .whenUnlocked, authentication: ComposableStorageCrypto.AuthenticationPolicy = [], isSynchronizable: Swift.Bool = false)
+  public func item(matching label: Swift.String) throws -> Item?
+  public func items() throws -> [Item]
+  @discardableResult
+  public func store(_ item: Item) throws -> Item
+  @discardableResult
+  public func discard(_ label: Swift.String) throws -> Item?
+  public func empty() throws
+}

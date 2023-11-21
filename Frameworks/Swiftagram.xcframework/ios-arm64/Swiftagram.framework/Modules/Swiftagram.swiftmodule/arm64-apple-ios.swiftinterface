@@ -1,0 +1,1315 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Swiftagram
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+@_exported import ComposableRequest
+import ComposableStorage
+import CoreGraphics
+import Foundation
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+public protocol CustomClientAuthentication : Swiftagram.Authentication {
+  func authenticate(in client: Swiftagram.Client) -> Combine.AnyPublisher<Swiftagram.Secret, Swift.Error>
+}
+public protocol Authentication {
+  func authenticate() -> Combine.AnyPublisher<Swiftagram.Secret, Swift.Error>
+}
+extension Swiftagram.CustomClientAuthentication {
+  public func authenticate() -> Combine.AnyPublisher<Swiftagram.Secret, Swift.Error>
+}
+extension Swiftagram.Authenticator {
+  public enum Error : Swift.Error {
+    case generic(Swift.String)
+    case invalidCookies([Foundation.HTTPCookie])
+    case invalidPassword
+    case invalidResponse(Foundation.URLResponse)
+    case invalidURL
+    case invalidUsername
+    case twoFactorChallenge(Swiftagram.Authenticator.Error.TwoFactor)
+  }
+}
+extension Swiftagram.Authenticator.Error {
+  public struct TwoFactor {
+    public let storage: ComposableStorage.AnyStorage<Swiftagram.Secret>
+    public let client: Swiftagram.Client
+    public let identifier: Swift.String
+    public let username: Swift.String
+    public let crossSiteRequestForgery: Foundation.HTTPCookie
+    public init<S>(storage: S, client: Swiftagram.Client, identifier: Swift.String, username: Swift.String, crossSiteRequestForgery: Foundation.HTTPCookie) where S : ComposableStorage.Storage, S.Item == Swiftagram.Secret
+  }
+}
+extension Swiftagram.Authenticator {
+  @_hasMissingDesignatedInitializers final public class Key {
+    final public let label: Swift.String
+    @objc deinit
+  }
+  public func secret(_ label: Swift.String) -> Swiftagram.Authenticator.Key
+  public func secret(_ secret: Swiftagram.Secret) -> Swiftagram.Authenticator.Key
+}
+extension Swiftagram.Authenticator.Key {
+  final public func get() throws -> Swiftagram.Secret?
+  @discardableResult
+  final public func delete() throws -> Swiftagram.Secret?
+}
+extension Swiftagram.Authenticator {
+  @_hasMissingDesignatedInitializers final public class Keys {
+    final public let labels: [Swift.String]?
+    @objc deinit
+  }
+  public var secrets: Swiftagram.Authenticator.Keys {
+    get
+  }
+  public func secrets<C>(_ labels: C) -> Swiftagram.Authenticator.Keys where C : Swift.Collection, C.Element == Swift.String
+  public func secrets<C>(_ secrets: C) -> Swiftagram.Authenticator.Keys where C : Swift.Collection, C.Element == Swiftagram.Secret
+}
+extension Swiftagram.Authenticator.Keys {
+  final public func get() throws -> [Swiftagram.Secret]
+  @discardableResult
+  final public func delete() throws -> [Swiftagram.Secret]
+}
+public typealias UserDefaultsStorage = ComposableStorage.UserDefaultsStorage
+public struct Authenticator {
+  public let storage: ComposableStorage.AnyStorage<Swiftagram.Secret>
+  public init<S>(storage: S) where S : ComposableStorage.Storage, S.Item == Swiftagram.Secret
+}
+extension Swiftagram.Authenticator {
+  public enum Group {
+  }
+}
+extension Swiftagram.Authenticator {
+  public static var transient: Swiftagram.Authenticator {
+    get
+  }
+  public static var userDefaults: Swiftagram.Authenticator {
+    get
+  }
+  public static func userDefaults(_ userDefaultsStorage: ComposableStorage.UserDefaultsStorage<Swiftagram.Secret>) -> Swiftagram.Authenticator
+}
+public struct Secret : Swift.Codable, ComposableStorage.Storable {
+  public let client: Swiftagram.Client
+  public let identifier: Swift.String
+  public var label: Swift.String {
+    get
+  }
+  public var header: [Swift.String : Swift.String] {
+    get
+  }
+  public init?<Cookies>(cookies: Cookies, client: Swiftagram.Client = .default) where Cookies : Swift.Collection, Cookies.Element : Foundation.HTTPCookie
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  public subscript(key: Swift.String) -> Swift.String {
+    get
+  }
+}
+extension Swiftagram.Authenticator.Group {
+  @available(iOS 11.0, macOS 10.13, macCatalyst 13.0, *)
+  public struct Visual : Swiftagram.CustomClientAuthentication {
+    public let authenticator: Swiftagram.Authenticator
+    public func authenticate(in client: Swiftagram.Client) -> Combine.AnyPublisher<Swiftagram.Secret, Swift.Error>
+  }
+}
+extension Swiftagram.Authenticator {
+  public func visual(_ transformer: @escaping (_ webView: WebKit.WKWebView, _ completion: @escaping () -> Swift.Void) -> Swift.Void) -> Swiftagram.Authenticator.Group.Visual
+  public func visual(_ transformer: @escaping (_ webView: WebKit.WKWebView) -> Swift.Void) -> Swiftagram.Authenticator.Group.Visual
+  public func visual(filling superview: UIKit.UIView) -> Swiftagram.Authenticator.Group.Visual
+}
+extension Swiftagram.Client {
+  public struct Application : Swift.Equatable, Swift.Codable, Swift.CustomStringConvertible {
+    public let version: Swift.String
+    public let code: Swift.String
+    public static func android(_ version: Swift.String = "160.1.0.31.120", code: Swift.String = "246979827") -> Swiftagram.Client.Application
+    public static func iOS(_ version: Swift.String = "160.1.0.31.120", code: Swift.String = "246979827") -> Swiftagram.Client.Application
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: Swiftagram.Client.Application, b: Swiftagram.Client.Application) -> Swift.Bool
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
+  }
+}
+public struct Client : Swift.Equatable, Swift.Codable, Swift.CustomStringConvertible {
+  public static var `default`: Swiftagram.Client
+  public let application: Swiftagram.Client.Application
+  public let device: Swiftagram.Client.Device
+  public var description: Swift.String {
+    get
+  }
+  public var browserDescription: Swift.String {
+    get
+  }
+  public init(application: Swiftagram.Client.Application, device: Swiftagram.Client.Device)
+  public static func == (a: Swiftagram.Client, b: Swiftagram.Client) -> Swift.Bool
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension Swiftagram.Client {
+  public static let samsungGalaxyS20: Swiftagram.Client
+  public static let iPhone11ProMax: Swiftagram.Client
+  public static var current: Swiftagram.Client? {
+    get
+  }
+}
+extension Swiftagram.Client {
+  public struct Device : Swift.Equatable, Swift.Codable, Swift.CustomStringConvertible {
+    public let identifier: Foundation.UUID
+    public let phoneIdentifier: Foundation.UUID
+    public let adIdentifier: Foundation.UUID
+    public let hardware: Swiftagram.Client.Device.Hardware
+    public let software: Swiftagram.Client.Device.Software
+    public let resolution: Swiftagram.Client.Device.Resolution
+    public var instagramIdentifier: Swift.String {
+      get
+    }
+    public var description: Swift.String {
+      get
+    }
+    public var browserDescription: Swift.String {
+      get
+    }
+    public static func android(_ version: Swift.String, language: Swift.String, model: Swift.String, brand: Swift.String, boot: Swift.String, cpu: Swift.String, manufacturer: Swift.String?, resolution: Swiftagram.Client.Device.Resolution, identifier: Foundation.UUID = .init(), phoneIdentifier: Foundation.UUID = .init(), adIdentifier: Foundation.UUID = .init()) -> Swiftagram.Client.Device
+    public static func iOS(_ version: Swift.String, language: Swift.String, model: Swift.String, resolution: Swiftagram.Client.Device.Resolution, identifier: Foundation.UUID = .init(), phoneIdentifier: Foundation.UUID = .init(), adIdentifier: Foundation.UUID = .init()) -> Swiftagram.Client.Device
+    public static func == (a: Swiftagram.Client.Device, b: Swiftagram.Client.Device) -> Swift.Bool
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
+  }
+}
+extension Swiftagram.Client.Device {
+  public struct Resolution : Swift.Equatable, Swift.Codable {
+    public let width: Swift.Int
+    public let height: Swift.Int
+    public let scale: Swift.Int
+    public let dpi: Swift.Int?
+    public init(width: Swift.Int, height: Swift.Int, scale: Swift.Int, dpi: Swift.Int? = nil)
+    public static func == (a: Swiftagram.Client.Device.Resolution, b: Swiftagram.Client.Device.Resolution) -> Swift.Bool
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
+  }
+}
+extension Swiftagram.Client.Device {
+  public struct Hardware : Swift.Equatable, Swift.Codable {
+    public let model: Swift.String
+    public let brand: Swift.String?
+    public let boot: Swift.String?
+    public let cpu: Swift.String?
+    public let manufacturer: Swift.String?
+    public static func == (a: Swiftagram.Client.Device.Hardware, b: Swiftagram.Client.Device.Hardware) -> Swift.Bool
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
+  }
+}
+extension Swiftagram.Client.Device {
+  public struct Software : Swift.Equatable, Swift.Codable {
+    public let version: Swift.String
+    public let language: Swift.String
+    public static func == (a: Swiftagram.Client.Device.Software, b: Swiftagram.Client.Device.Software) -> Swift.Bool
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
+  }
+}
+extension Swiftagram.Endpoint.Group {
+  public struct Archived {
+  }
+}
+extension Swiftagram.Endpoint {
+  public static let archived: Swiftagram.Endpoint.Group.Archived
+}
+extension Swiftagram.Endpoint.Group.Archived {
+  public var posts: Swiftagram.Endpoint.Paginated<Swiftagram.Media.Collection, ComposableRequest.RankedOffset<Swift.String?, Swift.String?>, Swift.Error> {
+    get
+  }
+  public var stories: Swiftagram.Endpoint.Paginated<Swiftagram.TrayItem.Collection, ComposableRequest.RankedOffset<Swift.String?, Swift.String?>, Swift.Error> {
+    get
+  }
+}
+extension Swiftagram.Endpoint.Group.Direct {
+  @_hasMissingDesignatedInitializers final public class Conversation {
+    final public let identifier: Swift.String
+    @objc deinit
+  }
+  final public func conversation(_ identifier: Swift.String) -> Swiftagram.Endpoint.Group.Direct.Conversation
+  final public func conversation(_ identifier: Swift.String) -> Swiftagram.Endpoint.Single<Swiftagram.Conversation.Unit, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group.Direct.Conversation {
+  final public var messages: Swiftagram.Endpoint.Paginated<Swiftagram.Conversation.Unit, Swift.String?, Swift.Error> {
+    get
+  }
+  final public func delete() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+  final public func invite<C>(_ userIdentifiers: C) -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error> where C : Swift.Collection, C.Element == Swift.String
+  final public func invite(_ userIdentifier: Swift.String) -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+  final public func leave() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+  final public func mute() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+  final public func send(_ text: Swift.String) -> Swiftagram.Endpoint.Single<ComposableRequest.Wrapper, Swift.Error>
+  final public func title(_ title: Swift.String) -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+  final public func unmute() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group.Direct.Conversation {
+  @_hasMissingDesignatedInitializers final public class Request {
+    final public let conversation: Swiftagram.Endpoint.Group.Direct.Conversation
+    @objc deinit
+  }
+  final public var request: Swiftagram.Endpoint.Group.Direct.Conversation.Request {
+    get
+  }
+}
+extension Swiftagram.Endpoint.Group.Direct.Conversation.Request {
+  final public func approve() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+  final public func decline() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group {
+  @_hasMissingDesignatedInitializers final public class Direct {
+    @objc deinit
+  }
+}
+extension Swiftagram.Endpoint {
+  public static let direct: Swiftagram.Endpoint.Group.Direct
+}
+extension Swiftagram.Endpoint.Group.Direct {
+  final public var activity: Swiftagram.Endpoint.Single<ComposableRequest.Wrapper, Swift.Error> {
+    get
+  }
+  final public var conversations: Swiftagram.Endpoint.Paginated<Swiftagram.Conversation.Collection, Swift.String?, Swift.Error> {
+    get
+  }
+  final public var recipients: Swiftagram.Endpoint.Single<Swiftagram.Recipient.Collection, Swift.Error> {
+    get
+  }
+  final public var requests: Swiftagram.Endpoint.Paginated<Swiftagram.Conversation.Collection, Swift.String?, Swift.Error> {
+    get
+  }
+  final public func recipients(matching query: Swift.String) -> Swiftagram.Endpoint.Single<Swiftagram.Recipient.Collection, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group.Direct.Conversation {
+  @_hasMissingDesignatedInitializers final public class Message {
+    final public let conversation: Swiftagram.Endpoint.Group.Direct.Conversation
+    final public let identifier: Swift.String
+    @objc deinit
+  }
+  final public func message(_ identifier: Swift.String) -> Swiftagram.Endpoint.Group.Direct.Conversation.Message
+}
+extension Swiftagram.Endpoint.Group.Direct.Conversation.Message {
+  final public func delete() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+  final public func open() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+}
+public enum Endpoint {
+  public typealias Paginated<Response, Offset, Failure> = ComposableRequest.LockSessionPagerProvider<Swiftagram.Secret, Offset, Combine.AnyPublisher<Response, Failure>> where Failure : Swift.Error
+  public typealias Single<Response, Failure> = ComposableRequest.LockSessionProvider<Swiftagram.Secret, Combine.AnyPublisher<Response, Failure>> where Failure : Swift.Error
+  public enum Group {
+  }
+}
+extension ComposableRequest.Request {
+  public static let api: ComposableRequest.Request
+  public static let version1: ComposableRequest.Request
+  public static let generic: ComposableRequest.Request
+}
+extension Swiftagram.Endpoint.Group {
+  @_hasMissingDesignatedInitializers final public class Explore {
+    @objc deinit
+  }
+}
+extension Swiftagram.Endpoint {
+  public static let explore: Swiftagram.Endpoint.Group.Explore
+}
+extension Swiftagram.Endpoint.Group.Explore {
+  final public var posts: Swiftagram.Endpoint.Paginated<ComposableRequest.Wrapper, Swift.String?, Swift.Error> {
+    get
+  }
+  final public var topics: Swiftagram.Endpoint.Paginated<ComposableRequest.Wrapper, Swift.String?, Swift.Error> {
+    get
+  }
+}
+extension Swiftagram.Endpoint.Group {
+  @_hasMissingDesignatedInitializers final public class Location {
+    final public let identifier: Swift.String
+    @objc deinit
+  }
+}
+extension Swiftagram.Endpoint {
+  public static func location(_ identifier: Swift.String) -> Swiftagram.Endpoint.Group.Location
+  public static func location(_ identifier: Swift.String) -> Swiftagram.Endpoint.Single<Swiftagram.Location.Unit, Swift.Error>
+  public static func locations(around coordinates: Swiftagram.Location.Coordinates, matching query: Swift.String? = nil) -> Swiftagram.Endpoint.Single<Swiftagram.Location.Collection, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group.Location {
+  final public var summary: Swiftagram.Endpoint.Single<Swiftagram.Location.Unit, Swift.Error> {
+    get
+  }
+  final public var stories: Swiftagram.Endpoint.Single<Swiftagram.TrayItem.Unit, Swift.Error> {
+    get
+  }
+}
+extension Swiftagram.Endpoint.Group.Location {
+  public struct Posts {
+    public let location: Swiftagram.Endpoint.Group.Location
+  }
+  final public var posts: Swiftagram.Endpoint.Group.Location.Posts {
+    get
+  }
+}
+extension Swiftagram.Endpoint.Group.Location.Posts {
+  public var recent: Swiftagram.Endpoint.Paginated<Swiftagram.Section.Collection, Swiftagram.Section.Offset?, Swift.Error> {
+    get
+  }
+  public var top: Swiftagram.Endpoint.Paginated<Swiftagram.Section.Collection, Swiftagram.Section.Offset?, Swift.Error> {
+    get
+  }
+}
+extension Swiftagram.Endpoint.Group.Media {
+  @_hasMissingDesignatedInitializers final public class Comment {
+    final public let media: Swiftagram.Endpoint.Group.Media
+    final public let identifier: Swift.String
+    @objc deinit
+  }
+  final public func comment(_ identifier: Swift.String) -> Swiftagram.Endpoint.Group.Media.Comment
+}
+extension Swiftagram.Endpoint.Group.Media.Comment {
+  final public func like() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+  final public func unlike() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group.Media {
+  @_hasMissingDesignatedInitializers final public class ManyComments {
+    final public let media: Swiftagram.Endpoint.Group.Media
+    final public let identifiers: [Swift.String]
+    @objc deinit
+  }
+  final public func comments<C>(_ identifiers: C) -> Swiftagram.Endpoint.Group.Media.ManyComments where C : Swift.Collection, C.Element == Swift.String
+}
+extension Swiftagram.Endpoint.Group {
+  @_hasMissingDesignatedInitializers final public class Media {
+    final public let identifier: Swift.String
+    @objc deinit
+  }
+}
+extension Swiftagram.Endpoint {
+  public static func media(_ identifier: Swift.String) -> Swiftagram.Endpoint.Group.Media
+  public static func media(_ media: Swiftagram.Media) -> Swiftagram.Endpoint.Group.Media
+  public static func media(_ identifier: Swift.String) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error>
+  public static func media(at url: Foundation.URL) throws -> Swiftagram.Endpoint.Group.Media
+  public static func media(at url: Foundation.URL) -> Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group.Media {
+  public enum Error : Swift.Error {
+    case artifact(ComposableRequest.Wrapper)
+    case invalidShortcode(Swift.String)
+    case invalidURL(Foundation.URL)
+    case unsupportedType(Swift.Int?)
+    case videoTooLong(seconds: Foundation.TimeInterval)
+  }
+}
+extension Swiftagram.Endpoint.Group.Media {
+  final public var summary: Swiftagram.Endpoint.Single<Swiftagram.Media.Unit, Swift.Error> {
+    get
+  }
+  final public var comments: Swiftagram.Endpoint.Paginated<Swiftagram.Comment.Collection, ComposableRequest.RankedOffset<Swift.String?, Swift.String?>, Swift.Error> {
+    get
+  }
+  final public var likers: Swiftagram.Endpoint.Paginated<Swiftagram.User.Collection, ComposableRequest.RankedOffset<Swift.String?, Swift.String?>, Swift.Error> {
+    get
+  }
+  final public var link: Swiftagram.Endpoint.Single<Swiftagram.Media.Link, Swift.Error> {
+    get
+  }
+  final public var viewers: Swiftagram.Endpoint.Paginated<Swiftagram.User.Collection, ComposableRequest.RankedOffset<Swift.String?, Swift.String?>, Swift.Error> {
+    get
+  }
+  final public func save() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+  final public func unsave() -> Swiftagram.Endpoint.Single<Swiftagram.Status, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group {
+  @_hasMissingDesignatedInitializers final public class Posts {
+    @objc deinit
+  }
+}
+extension Swiftagram.Endpoint {
+  public static let posts: Swiftagram.Endpoint.Group.Posts
+}
+extension Swiftagram.Endpoint.Group.Posts {
+  final public var archived: Swiftagram.Endpoint.Paginated<Swiftagram.Media.Collection, ComposableRequest.RankedOffset<Swift.String?, Swift.String?>, Swift.Error> {
+    get
+  }
+  final public var recent: Swiftagram.Endpoint.Paginated<ComposableRequest.Wrapper, ComposableRequest.RankedOffset<Swift.String?, Swift.String?>, Swift.Error> {
+    get
+  }
+  final public var saved: Swiftagram.Endpoint.Paginated<Swiftagram.Media.Collection, Swift.String?, Swift.Error> {
+    get
+  }
+  final public var liked: Swiftagram.Endpoint.Paginated<Swiftagram.Media.Collection, ComposableRequest.RankedOffset<Swift.String?, Swift.String?>, Swift.Error> {
+    get
+  }
+}
+extension Swiftagram.Endpoint.Group {
+  @_hasMissingDesignatedInitializers final public class Recent {
+    @objc deinit
+  }
+}
+extension Swiftagram.Endpoint {
+  public static let recent: Swiftagram.Endpoint.Group.Recent
+}
+extension Swiftagram.Endpoint.Group.Recent {
+  final public var activity: Swiftagram.Endpoint.Single<ComposableRequest.Wrapper, Swift.Error> {
+    get
+  }
+  final public var posts: Swiftagram.Endpoint.Paginated<ComposableRequest.Wrapper, ComposableRequest.RankedOffset<Swift.String?, Swift.String?>, Swift.Error> {
+    get
+  }
+  final public var stories: Swiftagram.Endpoint.Single<Swiftagram.TrayItem.Collection, Swift.Error> {
+    get
+  }
+}
+extension Swiftagram.Endpoint.Group {
+  public struct Saved {
+  }
+}
+extension Swiftagram.Endpoint {
+  public static let saved: Swiftagram.Endpoint.Group.Saved
+}
+extension Swiftagram.Endpoint.Group.Saved {
+  public var posts: Swiftagram.Endpoint.Paginated<Swiftagram.Media.Collection, Swift.String?, Swift.Error> {
+    get
+  }
+  public var collections: Swiftagram.Endpoint.Paginated<Swiftagram.SavedCollection.Collection, Swift.String?, Swift.Error> {
+    get
+  }
+}
+extension Swiftagram.Endpoint.Group.Saved {
+  public struct Collection {
+    public let identifier: Swift.String
+  }
+  public func collection(_ identifier: Swift.String) -> Swiftagram.Endpoint.Group.Saved.Collection
+  public func collection(_ collection: Swiftagram.SavedCollection) -> Swiftagram.Endpoint.Group.Saved.Collection
+  public func collection(_ identifier: Swift.String) -> Swiftagram.Endpoint.Single<Swiftagram.SavedCollection.Unit, Swift.Error>
+  @available(*, deprecated, message: "paging summary is no longer supported (removing in 6.0)")
+  public func collection(_ identifier: Swift.String) -> Swiftagram.Endpoint.Paginated<Swiftagram.SavedCollection.Unit, Swift.String?, Swift.Error>
+  public func collection(_ collection: Swiftagram.SavedCollection) -> Swiftagram.Endpoint.Single<Swiftagram.SavedCollection.Unit, Swift.Error>
+  @available(*, deprecated, message: "paging summary is no longer supported (removing in 6.0)")
+  public func collection(_ collection: Swiftagram.SavedCollection) -> Swiftagram.Endpoint.Paginated<Swiftagram.SavedCollection.Unit, Swift.String?, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group.Saved.Collection {
+  public enum Error : Swift.Error {
+    case unsupportedAllMediaAutoCollection
+    public static func == (a: Swiftagram.Endpoint.Group.Saved.Collection.Error, b: Swiftagram.Endpoint.Group.Saved.Collection.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension Swiftagram.Endpoint.Group.Saved.Collection {
+  public var summary: Swiftagram.Endpoint.Single<Swiftagram.SavedCollection.Unit, Swift.Error> {
+    get
+  }
+  public var posts: Swiftagram.Endpoint.Paginated<Swiftagram.SavedCollection.Unit, Swift.String?, Swift.Error> {
+    get
+  }
+  public var igtv: Swiftagram.Endpoint.Paginated<Swiftagram.SavedCollection.Unit, Swift.String?, Swift.Error> {
+    get
+  }
+}
+extension Swiftagram.Endpoint.Group {
+  @_hasMissingDesignatedInitializers final public class Stories {
+    @objc deinit
+  }
+}
+extension Swiftagram.Endpoint {
+  public static let stories: Swiftagram.Endpoint.Group.Stories
+  public static func stories<C>(_ identifiers: C) -> Swiftagram.Endpoint.Single<Swiftagram.TrayItem.Dictionary, Swift.Error> where C : Swift.Collection, C.Element == Swift.String
+}
+extension Swiftagram.Endpoint.Group.Stories {
+  final public var archived: Swiftagram.Endpoint.Paginated<Swiftagram.TrayItem.Collection, ComposableRequest.RankedOffset<Swift.String?, Swift.String?>, Swift.Error> {
+    get
+  }
+  final public var recent: Swiftagram.Endpoint.Single<Swiftagram.TrayItem.Collection, Swift.Error> {
+    get
+  }
+}
+extension Swiftagram.Endpoint.Group {
+  @_hasMissingDesignatedInitializers final public class Tag {
+    final public let name: Swift.String
+    @objc deinit
+  }
+}
+extension Swiftagram.Endpoint {
+  public static func tag(_ name: Swift.String) -> Swiftagram.Endpoint.Group.Tag
+  public static func tag(_ name: Swift.String) -> Swiftagram.Endpoint.Single<Swiftagram.Tag, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group.Tag {
+  final public var summary: Swiftagram.Endpoint.Single<Swiftagram.Tag, Swift.Error> {
+    get
+  }
+  final public var stories: Swiftagram.Endpoint.Single<Swiftagram.TrayItem.Unit, Swift.Error> {
+    get
+  }
+}
+extension Swiftagram.Endpoint.Group.Tag {
+  public struct Posts {
+    public let tag: Swiftagram.Endpoint.Group.Tag
+  }
+  final public var posts: Swiftagram.Endpoint.Group.Tag.Posts {
+    get
+  }
+}
+extension Swiftagram.Endpoint.Group.Tag.Posts {
+  public var recent: Swiftagram.Endpoint.Paginated<Swiftagram.Section.Collection, Swiftagram.Section.Offset?, Swift.Error> {
+    get
+  }
+  public var top: Swiftagram.Endpoint.Paginated<Swiftagram.Section.Collection, Swiftagram.Section.Offset?, Swift.Error> {
+    get
+  }
+}
+extension Swiftagram.Endpoint.Group {
+  @_hasMissingDesignatedInitializers final public class ManyUsers {
+    final public let identifiers: [Swift.String]
+    @objc deinit
+  }
+}
+extension Swiftagram.Endpoint {
+  public static func users<C>(_ identifiers: C) -> Swiftagram.Endpoint.Group.ManyUsers where C : Swift.Collection, C.Element == Swift.String
+  public static func users<C>(_ users: C) -> Swiftagram.Endpoint.Group.ManyUsers where C : Swift.Collection, C.Element == Swiftagram.User
+}
+extension Swiftagram.Endpoint.Group.ManyUsers {
+  final public var friendships: Swiftagram.Endpoint.Single<Swiftagram.Friendship.Dictionary, Swift.Error> {
+    get
+  }
+  final public var stories: Swiftagram.Endpoint.Single<Swiftagram.TrayItem.Dictionary, Swift.Error> {
+    get
+  }
+}
+extension Swiftagram.Endpoint.Group {
+  @_hasMissingDesignatedInitializers final public class User {
+    final public let identifier: Swift.String
+    @objc deinit
+  }
+}
+extension Swiftagram.Endpoint {
+  public static func user(_ identifier: Swift.String) -> Swiftagram.Endpoint.Group.User
+  public static func user(_ user: Swiftagram.User) -> Swiftagram.Endpoint.Group.User
+  public static func user(_ identifier: Swift.String) -> Swiftagram.Endpoint.Single<Swiftagram.User.Unit, Swift.Error>
+  public static func user(matching username: Swift.String) -> Swiftagram.Endpoint.Single<Swiftagram.User.Unit, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group.User {
+  final public var summary: Swiftagram.Endpoint.Single<Swiftagram.User.Unit, Swift.Error> {
+    get
+  }
+  final public var followers: Swiftagram.Endpoint.Paginated<Swiftagram.User.Collection, ComposableRequest.RankedOffset<Swift.String?, Swift.String?>, Swift.Error> {
+    get
+  }
+  final public var following: Swiftagram.Endpoint.Paginated<Swiftagram.User.Collection, ComposableRequest.RankedOffset<Swift.String?, Swift.String?>, Swift.Error> {
+    get
+  }
+  final public var friendship: Swiftagram.Endpoint.Single<Swiftagram.Friendship, Swift.Error> {
+    get
+  }
+  final public var higlights: Swiftagram.Endpoint.Single<Swiftagram.TrayItem.Collection, Swift.Error> {
+    get
+  }
+  final public var posts: Swiftagram.Endpoint.Paginated<Swiftagram.Media.Collection, Swift.String?, Swift.Error> {
+    get
+  }
+  final public var similar: Swiftagram.Endpoint.Single<Swiftagram.User.Collection, Swift.Error> {
+    get
+  }
+  final public var stories: Swiftagram.Endpoint.Single<Swiftagram.TrayItem.Unit, Swift.Error> {
+    get
+  }
+  final public var tags: Swiftagram.Endpoint.Paginated<Swiftagram.Media.Collection, ComposableRequest.RankedOffset<Swift.String?, Swift.String?>, Swift.Error> {
+    get
+  }
+  final public func followers(matching query: Swift.String) -> Swiftagram.Endpoint.Paginated<Swiftagram.User.Collection, ComposableRequest.RankedOffset<Swift.String?, Swift.String?>, Swift.Error>
+  final public func following(matching query: Swift.String) -> Swiftagram.Endpoint.Paginated<Swiftagram.User.Collection, ComposableRequest.RankedOffset<Swift.String?, Swift.String?>, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group {
+  @_hasMissingDesignatedInitializers final public class Users {
+    @objc deinit
+  }
+}
+extension Swiftagram.Endpoint {
+  public static let users: Swiftagram.Endpoint.Group.Users
+  public static func users(matching query: Swift.String) -> Swiftagram.Endpoint.Paginated<Swiftagram.User.Collection, ComposableRequest.RankedOffset<Swift.String?, Swift.String?>, Swift.Error>
+}
+extension Swiftagram.Endpoint.Group.Users {
+  final public var blocked: Swiftagram.Endpoint.Single<ComposableRequest.Wrapper, Swift.Error> {
+    get
+  }
+  final public var requests: Swiftagram.Endpoint.Paginated<Swiftagram.User.Collection, Swift.String?, Swift.Error> {
+    get
+  }
+}
+public enum Agnostic {
+  public typealias Image = UIKit.UIImage
+  public typealias Color = UIKit.UIColor
+}
+extension UIKit.UIColor {
+  public func image(size: CoreFoundation.CGSize) -> UIKit.UIImage?
+}
+extension UIKit.UIImage {
+  public func jpegRepresentation() -> Foundation.Data?
+}
+public enum Constants {
+  public static let loginExperiments: Swift.String
+}
+public enum SupportedCapabilities {
+  public static let `default`: [Swift.String : Swift.String]
+}
+extension ComposableRequest.Header {
+  public func appendingDefaultHeader() -> Self
+}
+public protocol StringPaginatable : ComposableRequest.Paginatable where Self.Offset == Swift.String? {
+}
+extension ComposableRequest.Paginatable where Self : ComposableRequest.Wrappable, Self.Offset == Swift.String? {
+  public var offset: Swift.Optional<Swift.String> {
+    get
+  }
+}
+extension Combine.Publisher where Self.Output : Swiftagram.Specialized {
+  public func replaceFailingWithError() -> Combine.AnyPublisher<Self.Output, Swift.Error>
+}
+extension Foundation.URLSession {
+  public static let instagram: Foundation.URLSession
+  public static let ephemeral: Foundation.URLSession
+}
+public enum WebViewAuthenticatorError : Swift.Error {
+  case emptyViewHierarchy
+  case invalidCookies
+  case invalidURL
+  public static func == (a: Swiftagram.WebViewAuthenticatorError, b: Swiftagram.WebViewAuthenticatorError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct Comment : ComposableRequest.Wrapped {
+  public var wrapper: () -> ComposableRequest.Wrapper
+  public var identifier: Swift.String! {
+    get
+  }
+  public var text: Swift.String! {
+    get
+  }
+  public var likes: Swift.Int? {
+    get
+  }
+  public var user: Swiftagram.User? {
+    get
+  }
+  public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+}
+extension Swiftagram.Comment {
+  public struct Collection : Swiftagram.Specialized, Swiftagram.StringPaginatable {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var comments: [Swiftagram.Comment]? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+    public typealias Offset = Swift.Optional<Swift.String>
+  }
+  public struct Unit : Swiftagram.Specialized {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var comment: Swiftagram.Comment? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+  }
+}
+public struct Conversation : ComposableRequest.Wrapped {
+  public var wrapper: () -> ComposableRequest.Wrapper
+  public var identifier: Swift.String! {
+    get
+  }
+  public var title: Swift.String! {
+    get
+  }
+  public var updatedAt: Foundation.Date? {
+    get
+  }
+  public var openedAt: [Swift.String : Foundation.Date]? {
+    get
+  }
+  public var hasMutedMessages: Swift.Bool? {
+    get
+  }
+  public var hasMutedVideocalls: Swift.Bool? {
+    get
+  }
+  public var users: [Swiftagram.User]? {
+    get
+  }
+  public var messages: [ComposableRequest.Wrapper]? {
+    get
+  }
+  public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+}
+extension Swiftagram.Conversation {
+  public struct Unit : Swiftagram.Specialized, Swiftagram.StringPaginatable {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var conversation: Swiftagram.Conversation? {
+      get
+    }
+    public var offset: Swift.String? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+    public typealias Offset = Swift.Optional<Swift.String>
+  }
+  public struct Collection : Swiftagram.Specialized, Swiftagram.StringPaginatable {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var conversations: [Swiftagram.Conversation]? {
+      get
+    }
+    public var viewer: Swiftagram.User? {
+      get
+    }
+    public var offset: Swift.String? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+    public typealias Offset = Swift.Optional<Swift.String>
+  }
+}
+public struct Friendship : ComposableRequest.Wrapped {
+  public var wrapper: () -> ComposableRequest.Wrapper
+  public var isFollowedByYou: Swift.Bool? {
+    get
+  }
+  public var isFollowingYou: Swift.Bool? {
+    get
+  }
+  public var isBlockedByYou: Swift.Bool? {
+    get
+  }
+  public var isCloseFriend: Swift.Bool? {
+    get
+  }
+  public var didRequestToFollowYou: Swift.Bool? {
+    get
+  }
+  public var didRequestToFollow: Swift.Bool? {
+    get
+  }
+  public var isMutingStories: Swift.Bool? {
+    get
+  }
+  public var isMutingPosts: Swift.Bool? {
+    get
+  }
+  public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+}
+extension Swiftagram.Friendship {
+  public struct Dictionary : Swiftagram.Specialized {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var friendships: [Swift.String : Swiftagram.Friendship]! {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+  }
+  public struct Unit : Swiftagram.Specialized {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var friendship: Swiftagram.Friendship? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+  }
+}
+public struct Location : ComposableRequest.Wrapped {
+  public struct Coordinates : Swift.Equatable {
+    public var longitude: CoreFoundation.CGFloat
+    public var latitude: CoreFoundation.CGFloat
+    public init(latitude: CoreFoundation.CGFloat, longitude: CoreFoundation.CGFloat)
+    public static func == (a: Swiftagram.Location.Coordinates, b: Swiftagram.Location.Coordinates) -> Swift.Bool
+  }
+  public var wrapper: () -> ComposableRequest.Wrapper
+  public var coordinates: Swiftagram.Location.Coordinates? {
+    get
+  }
+  public var name: Swift.String? {
+    get
+  }
+  public var shortName: Swift.String? {
+    get
+  }
+  public var address: Swift.String? {
+    get
+  }
+  public var city: Swift.String? {
+    get
+  }
+  public var identifier: [Swift.String : Swift.Int]? {
+    get
+  }
+  public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+}
+extension Swiftagram.Location {
+  public struct Unit : Swiftagram.Specialized {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var location: Swiftagram.Location? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+  }
+  public struct Collection : Swiftagram.Specialized, Swiftagram.StringPaginatable {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var venues: [Swiftagram.Location]? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+    public typealias Offset = Swift.Optional<Swift.String>
+  }
+}
+public struct Media : ComposableRequest.Wrapped {
+  public struct Version : ComposableRequest.Wrapped {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var url: Foundation.URL? {
+      get
+    }
+    public var size: CoreFoundation.CGSize? {
+      get
+    }
+    public var aspectRatio: CoreFoundation.CGFloat {
+      get
+    }
+    public var resolution: CoreFoundation.CGFloat {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+  }
+  public struct Picture : ComposableRequest.Wrapped {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var images: [Swiftagram.Media.Version]? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+  }
+  public struct Video : ComposableRequest.Wrapped {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var duration: Foundation.TimeInterval? {
+      get
+    }
+    public var images: [Swiftagram.Media.Version]? {
+      get
+    }
+    public var clips: [Swiftagram.Media.Version]? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+  }
+  public enum Content : ComposableRequest.Wrapped, Swift.Codable {
+    case picture(Swiftagram.Media.Picture)
+    case video(Swiftagram.Media.Video)
+    case album([Swiftagram.Media.Content])
+    case error(ComposableRequest.Wrapper)
+    public var tagged: [Swiftagram.UserTag]? {
+      get
+    }
+    public var wrapper: () -> ComposableRequest.Wrapper {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+  }
+  public var wrapper: () -> ComposableRequest.Wrapper
+  public var identifier: Swift.String! {
+    get
+  }
+  public var primaryKey: Swift.Int! {
+    get
+  }
+  public var code: Swift.String? {
+    get
+  }
+  public var expiringAt: Foundation.Date? {
+    get
+  }
+  public var takenAt: Foundation.Date? {
+    get
+  }
+  public var size: CoreFoundation.CGSize? {
+    get
+  }
+  public var aspectRatio: CoreFoundation.CGFloat {
+    get
+  }
+  public var resolution: CoreFoundation.CGFloat {
+    get
+  }
+  public var caption: Swiftagram.Comment? {
+    get
+  }
+  public var comments: Swift.Int? {
+    get
+  }
+  public var likes: Swift.Int? {
+    get
+  }
+  public var wasLikedByYou: Swift.Bool? {
+    get
+  }
+  public var content: Swiftagram.Media.Content {
+    get
+  }
+  public var user: Swiftagram.User? {
+    get
+  }
+  public var location: Swiftagram.Location? {
+    get
+  }
+  public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+}
+extension Swiftagram.Media {
+  public struct Unit : Swiftagram.Specialized {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var media: Swiftagram.Media? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+  }
+  public struct Collection : Swiftagram.Specialized, Swiftagram.StringPaginatable {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var media: [Swiftagram.Media]? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+    public typealias Offset = Swift.Optional<Swift.String>
+  }
+  public struct Link : Swiftagram.Specialized {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var url: Foundation.URL? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+  }
+}
+public enum Recipient : ComposableRequest.Wrapped {
+  case user(Swiftagram.User)
+  case thread(Swiftagram.Conversation)
+  case error(ComposableRequest.Wrapper)
+  public var wrapper: () -> ComposableRequest.Wrapper {
+    get
+  }
+  public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+}
+extension Swiftagram.Recipient {
+  public struct Collection : Swiftagram.Specialized, Swiftagram.StringPaginatable {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var recipients: [Swiftagram.Recipient]? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+    public typealias Offset = Swift.Optional<Swift.String>
+  }
+}
+public struct SavedCollection : ComposableRequest.Wrapped {
+  public var wrapper: () -> ComposableRequest.Wrapper
+  public var identifier: Swift.String! {
+    get
+  }
+  public var name: Swift.String! {
+    get
+  }
+  public var type: Swift.String? {
+    get
+  }
+  public var count: Swift.Int? {
+    get
+  }
+  public var cover: [Swiftagram.Media]? {
+    get
+  }
+  public var items: [Swiftagram.Media]? {
+    get
+  }
+  public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+}
+extension Swiftagram.SavedCollection {
+  public struct Collection : Swiftagram.Specialized, Swiftagram.StringPaginatable {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var collections: [Swiftagram.SavedCollection]? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+    public typealias Offset = Swift.Optional<Swift.String>
+  }
+  public struct Unit : Swiftagram.Specialized, Swiftagram.StringPaginatable {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var collection: Swiftagram.SavedCollection? {
+      get
+    }
+    public var items: [Swiftagram.Media]? {
+      get
+    }
+    public var offset: Swift.String? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+    public typealias Offset = Swift.Optional<Swift.String>
+  }
+}
+public struct Section : ComposableRequest.Wrapped {
+  public var wrapper: () -> ComposableRequest.Wrapper
+  public var items: [Swiftagram.Media]? {
+    get
+  }
+  public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+}
+extension Swiftagram.Section {
+  public struct Offset : Swift.Equatable {
+    public let identifier: Swift.String
+    public let page: Swift.Int?
+    public let mediaIdentifiers: [Swift.String]
+    public init(identifier: Swift.String, page: Swift.Int?, mediaIdentifiers: [Swift.String])
+    public static func == (a: Swiftagram.Section.Offset, b: Swiftagram.Section.Offset) -> Swift.Bool
+  }
+  public struct Collection : Swiftagram.Specialized, ComposableRequest.Paginatable {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var sections: [Swiftagram.Section]? {
+      get
+    }
+    public var offset: Swiftagram.Section.Offset? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+  }
+}
+extension Swiftagram.Section.Collection {
+  public typealias Offset = Swiftagram.Section.Offset?
+}
+public enum SpecializedError : Swift.Error {
+  case generic(Swift.String, response: ComposableRequest.Wrapper)
+  case unforseen(Swift.String?, response: ComposableRequest.Wrapper)
+  case unknown(response: ComposableRequest.Wrapper)
+}
+public protocol Specialized : ComposableRequest.Wrapped {
+  var error: Swiftagram.SpecializedError? { get }
+}
+extension Swiftagram.Specialized {
+  @available(*, deprecated, message: "check for `error` instead (removing in 6.0)")
+  public var status: Swift.String! {
+    get
+  }
+  public var error: Swiftagram.SpecializedError? {
+    get
+  }
+}
+public struct Status : Swiftagram.Specialized {
+  public var wrapper: () -> ComposableRequest.Wrapper
+  public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+}
+public struct Sticker : ComposableRequest.Wrapped {
+  public var identifier: Swift.String
+  public var offset: CoreFoundation.CGPoint? {
+    get
+  }
+  public var level: Swift.Int? {
+    get
+  }
+  public var rotation: CoreFoundation.CGFloat? {
+    get
+  }
+  public var wrapper: () -> ComposableRequest.Wrapper
+  public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+  public init(identifier: Swift.String, wrapper: ComposableRequest.Wrapper)
+}
+extension Swiftagram.Sticker {
+  public static func mention(_ identfier: Swift.String) -> Swiftagram.Sticker
+  public static func tag(_ tag: Swift.String) -> Swiftagram.Sticker
+  public static func location(_ identifier: Swift.String) -> Swiftagram.Sticker
+  public static func slider(_ question: Swift.String, emoji: Swift.String) -> Swiftagram.Sticker
+  public static func countdown(to date: Foundation.Date, event: Swift.String, canBeFollowed: Swift.Bool = true) -> Swiftagram.Sticker
+  public static func question(_ question: Swift.String) -> Swiftagram.Sticker
+  public static func poll<S>(_ question: Swift.String, tallies: S, fontSize: CoreFoundation.CGFloat = 28) -> Swiftagram.Sticker where S : Swift.Sequence, S.Element == Swift.String
+}
+extension Swiftagram.Sticker {
+  public func zIndex(_ index: Swift.Int) -> Swiftagram.Sticker
+  public func position(_ position: CoreFoundation.CGPoint) -> Swiftagram.Sticker
+  public func position(x: CoreFoundation.CGFloat? = nil, y: CoreFoundation.CGFloat? = nil) -> Swiftagram.Sticker
+  public func center() -> Swiftagram.Sticker
+  public func rotate(by angle: CoreFoundation.CGFloat) -> Swiftagram.Sticker
+  public func scale(by factor: CoreFoundation.CGFloat) -> Swiftagram.Sticker
+  public func size(width: CoreFoundation.CGFloat? = nil, height: CoreFoundation.CGFloat? = nil) -> Swiftagram.Sticker
+}
+extension Swift.Sequence where Self.Element == Swiftagram.Sticker {
+  public func request() -> [Swift.String : ComposableRequest.Wrapper]
+}
+public struct Tag : Swiftagram.Specialized {
+  public var wrapper: () -> ComposableRequest.Wrapper
+  public var identifier: Swift.String! {
+    get
+  }
+  public var name: Swift.String! {
+    get
+  }
+  public var count: Swift.Int! {
+    get
+  }
+  public var isFollowed: Swift.Bool? {
+    get
+  }
+  public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+}
+public struct TrayItem : ComposableRequest.Wrapped {
+  public var wrapper: () -> ComposableRequest.Wrapper
+  public var identifier: Swift.String! {
+    get
+  }
+  public var position: Swift.Int? {
+    get
+  }
+  public var seenPosition: Swift.Int? {
+    get
+  }
+  public var availableCount: Swift.Int? {
+    get
+  }
+  public var fetchedCount: Swift.Int? {
+    get
+  }
+  public var title: Swift.String? {
+    get
+  }
+  public var cover: Swiftagram.Media? {
+    get
+  }
+  public var items: [Swiftagram.Media]? {
+    get
+  }
+  public var expiringAt: Foundation.Date? {
+    get
+  }
+  public var publishedAt: Foundation.Date? {
+    get
+  }
+  public var seenAt: Foundation.Date? {
+    get
+  }
+  public var user: Swiftagram.User? {
+    get
+  }
+  public var isMuted: Swift.Bool? {
+    get
+  }
+  public var containsVideos: Swift.Bool? {
+    get
+  }
+  public var containsCloseFriendsExclusives: Swift.Bool? {
+    get
+  }
+  public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+}
+extension Swiftagram.TrayItem {
+  public struct Unit : Swiftagram.Specialized {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var item: Swiftagram.TrayItem? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+  }
+  public struct Collection : Swiftagram.Specialized, Swiftagram.StringPaginatable {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var items: [Swiftagram.TrayItem]? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+    public typealias Offset = Swift.Optional<Swift.String>
+  }
+  public struct Dictionary : Swiftagram.Specialized {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var items: [Swift.String : Swiftagram.TrayItem]? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+  }
+}
+public struct User : ComposableRequest.Wrapped {
+  public struct Access : Swift.OptionSet, Swift.Hashable, Swift.Codable {
+    public let rawValue: Swift.Int
+    public init(rawValue: Swift.Int)
+    public static let `private`: Swiftagram.User.Access
+    public static let verified: Swiftagram.User.Access
+    public static let business: Swiftagram.User.Access
+    public static let creator: Swiftagram.User.Access
+    public typealias ArrayLiteralElement = Swiftagram.User.Access
+    public typealias Element = Swiftagram.User.Access
+    public typealias RawValue = Swift.Int
+  }
+  public struct Counter : Swift.Hashable, Swift.Codable {
+    public var posts: Swift.Int
+    public var followers: Swift.Int
+    public var following: Swift.Int
+    public var tags: Swift.Int
+    public var clips: Swift.Int
+    public var effects: Swift.Int
+    public var igtv: Swift.Int
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: Swiftagram.User.Counter, b: Swiftagram.User.Counter) -> Swift.Bool
+    public func encode(to encoder: Swift.Encoder) throws
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: Swift.Decoder) throws
+  }
+  public var wrapper: () -> ComposableRequest.Wrapper
+  public var identifier: Swift.String! {
+    get
+  }
+  public var username: Swift.String! {
+    get
+  }
+  public var name: Swift.String? {
+    get
+  }
+  public var biography: Swift.String? {
+    get
+  }
+  public var category: Swift.String? {
+    get
+  }
+  public var thumbnail: Foundation.URL? {
+    get
+  }
+  public var avatar: Foundation.URL? {
+    get
+  }
+  public var access: Swiftagram.User.Access? {
+    get
+  }
+  public var friendship: Swiftagram.Friendship? {
+    get
+  }
+  public var counter: Swiftagram.User.Counter? {
+    get
+  }
+  public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+}
+extension Swiftagram.User {
+  public struct Unit : Swiftagram.Specialized {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var user: Swiftagram.User? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+  }
+  public struct Collection : Swiftagram.Specialized, Swiftagram.StringPaginatable {
+    public var wrapper: () -> ComposableRequest.Wrapper
+    public var users: [Swiftagram.User]? {
+      get
+    }
+    public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+    public typealias Offset = Swift.Optional<Swift.String>
+  }
+}
+public struct UserTag : ComposableRequest.Wrapped {
+  public var wrapper: () -> ComposableRequest.Wrapper
+  public var identifier: Swift.String! {
+    get
+  }
+  public var x: CoreFoundation.CGFloat! {
+    get
+  }
+  public var y: CoreFoundation.CGFloat! {
+    get
+  }
+  public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+  public init(x: CoreFoundation.CGFloat, y: CoreFoundation.CGFloat, identifier: Swift.String)
+}
+extension Swiftagram.Endpoint.Group.Saved.Collection.Error : Swift.Equatable {}
+extension Swiftagram.Endpoint.Group.Saved.Collection.Error : Swift.Hashable {}
+extension Swiftagram.WebViewAuthenticatorError : Swift.Equatable {}
+extension Swiftagram.WebViewAuthenticatorError : Swift.Hashable {}

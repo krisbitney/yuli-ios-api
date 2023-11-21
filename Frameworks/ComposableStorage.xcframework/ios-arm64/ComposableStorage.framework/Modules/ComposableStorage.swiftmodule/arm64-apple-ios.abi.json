@@ -1,0 +1,2208 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ComposableStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AnyStorage",
+        "printedName": "AnyStorage",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnyStorage",
+                "printedName": "ComposableStorage.AnyStorage<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:17ComposableStorage03AnyB0V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ComposableStorage03AnyB0VyACyxGqd__c4ItemQyd__RszAA0B0Rd__lufc",
+            "mangledName": "$s17ComposableStorage03AnyB0VyACyxGqd__c4ItemQyd__RszAA0B0Rd__lufc",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 == τ_1_0.Item, τ_1_0 : ComposableStorage.Storage>",
+            "sugared_genericSig": "<Item, S where Item == S.Item, S : ComposableStorage.Storage>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "item",
+            "printedName": "item(matching:in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AnyStorage",
+                "printedName": "ComposableStorage.AnyStorage<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:17ComposableStorage03AnyB0V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage03AnyB0V4item8matching2inxSgSS_ACyxGtKFZ",
+            "mangledName": "$s17ComposableStorage03AnyB0V4item8matching2inxSgSS_ACyxGtKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "items",
+            "printedName": "items(in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AnyStorage",
+                "printedName": "ComposableStorage.AnyStorage<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:17ComposableStorage03AnyB0V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage03AnyB0V5items2inSayxGACyxG_tKFZ",
+            "mangledName": "$s17ComposableStorage03AnyB0V5items2inSayxGACyxG_tKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "store",
+            "printedName": "store(_:in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AnyStorage",
+                "printedName": "ComposableStorage.AnyStorage<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:17ComposableStorage03AnyB0V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage03AnyB0V5store_2inxx_ACyxGtKFZ",
+            "mangledName": "$s17ComposableStorage03AnyB0V5store_2inxx_ACyxGtKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "discard",
+            "printedName": "discard(_:in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AnyStorage",
+                "printedName": "ComposableStorage.AnyStorage<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:17ComposableStorage03AnyB0V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage03AnyB0V7discard_2inxSgSS_ACyxGtKFZ",
+            "mangledName": "$s17ComposableStorage03AnyB0V7discard_2inxSgSS_ACyxGtKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "empty",
+            "printedName": "empty(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AnyStorage",
+                "printedName": "ComposableStorage.AnyStorage<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:17ComposableStorage03AnyB0V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage03AnyB0V5emptyyyACyxGKFZ",
+            "mangledName": "$s17ComposableStorage03AnyB0V5emptyyyACyxGKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17ComposableStorage03AnyB0V",
+        "mangledName": "$s17ComposableStorage03AnyB0V",
+        "moduleName": "ComposableStorage",
+        "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+        "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Storage",
+            "printedName": "Storage",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Item",
+                "printedName": "Item",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:17ComposableStorage0B0P",
+            "mangledName": "$s17ComposableStorage0B0P"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ComposableStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TransientStorage",
+        "printedName": "TransientStorage",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TransientStorage",
+                "printedName": "ComposableStorage.TransientStorage<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:17ComposableStorage09TransientB0V"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ComposableStorage09TransientB0VACyxGycfc",
+            "mangledName": "$s17ComposableStorage09TransientB0VACyxGycfc",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "item",
+            "printedName": "item(matching:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage09TransientB0V4item8matchingxSgSS_tF",
+            "mangledName": "$s17ComposableStorage09TransientB0V4item8matchingxSgSS_tF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "items",
+            "printedName": "items()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage09TransientB0V5itemsSayxGyF",
+            "mangledName": "$s17ComposableStorage09TransientB0V5itemsSayxGyF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "store",
+            "printedName": "store(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage09TransientB0V5storeyxxF",
+            "mangledName": "$s17ComposableStorage09TransientB0V5storeyxxF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "discard",
+            "printedName": "discard(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage09TransientB0V7discardyxSgSSF",
+            "mangledName": "$s17ComposableStorage09TransientB0V7discardyxSgSSF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "empty",
+            "printedName": "empty()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage09TransientB0V5emptyyyF",
+            "mangledName": "$s17ComposableStorage09TransientB0V5emptyyyF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17ComposableStorage09TransientB0V",
+        "mangledName": "$s17ComposableStorage09TransientB0V",
+        "moduleName": "ComposableStorage",
+        "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+        "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "NonThrowingStorage",
+            "printedName": "NonThrowingStorage",
+            "usr": "s:17ComposableStorage011NonThrowingB0P",
+            "mangledName": "$s17ComposableStorage011NonThrowingB0P"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Storage",
+            "printedName": "Storage",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Item",
+                "printedName": "Item",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:17ComposableStorage0B0P",
+            "mangledName": "$s17ComposableStorage0B0P"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ComposableStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UserDefaultsStorage",
+        "printedName": "UserDefaultsStorage",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(userDefaults:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaultsStorage",
+                "printedName": "ComposableStorage.UserDefaultsStorage<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:17ComposableStorage012UserDefaultsB0V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UserDefaults",
+                "printedName": "Foundation.UserDefaults",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)NSUserDefaults"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ComposableStorage012UserDefaultsB0V04userD0ACyxGSo06NSUserD0C_tcfc",
+            "mangledName": "$s17ComposableStorage012UserDefaultsB0V04userD0ACyxGSo06NSUserD0C_tcfc",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "item",
+            "printedName": "item(matching:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage012UserDefaultsB0V4item8matchingxSgSS_tF",
+            "mangledName": "$s17ComposableStorage012UserDefaultsB0V4item8matchingxSgSS_tF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "items",
+            "printedName": "items()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage012UserDefaultsB0V5itemsSayxGyF",
+            "mangledName": "$s17ComposableStorage012UserDefaultsB0V5itemsSayxGyF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "store",
+            "printedName": "store(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage012UserDefaultsB0V5storeyxxF",
+            "mangledName": "$s17ComposableStorage012UserDefaultsB0V5storeyxxF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "discard",
+            "printedName": "discard(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage012UserDefaultsB0V7discardyxSgSSF",
+            "mangledName": "$s17ComposableStorage012UserDefaultsB0V7discardyxSgSSF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "empty",
+            "printedName": "empty()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage012UserDefaultsB0V5emptyyyF",
+            "mangledName": "$s17ComposableStorage012UserDefaultsB0V5emptyyyF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17ComposableStorage012UserDefaultsB0V",
+        "mangledName": "$s17ComposableStorage012UserDefaultsB0V",
+        "moduleName": "ComposableStorage",
+        "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+        "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "NonThrowingStorage",
+            "printedName": "NonThrowingStorage",
+            "usr": "s:17ComposableStorage011NonThrowingB0P",
+            "mangledName": "$s17ComposableStorage011NonThrowingB0P"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Storage",
+            "printedName": "Storage",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Item",
+                "printedName": "Item",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:17ComposableStorage0B0P",
+            "mangledName": "$s17ComposableStorage0B0P"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ComposableStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ComposableStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NonThrowingStorage",
+        "printedName": "NonThrowingStorage",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "item",
+            "printedName": "item(matching:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0.Item?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Item"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage011NonThrowingB0P4item8matching4ItemQzSgSS_tF",
+            "mangledName": "$s17ComposableStorage011NonThrowingB0P4item8matching4ItemQzSgSS_tF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.NonThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.NonThrowingStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "items",
+            "printedName": "items()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0.Item]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Item"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage011NonThrowingB0P5itemsSay4ItemQzGyF",
+            "mangledName": "$s17ComposableStorage011NonThrowingB0P5itemsSay4ItemQzGyF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.NonThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.NonThrowingStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "store",
+            "printedName": "store(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Item"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Item"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage011NonThrowingB0P5storey4ItemQzAFF",
+            "mangledName": "$s17ComposableStorage011NonThrowingB0P5storey4ItemQzAFF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.NonThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.NonThrowingStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "discard",
+            "printedName": "discard(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0.Item?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Item"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage011NonThrowingB0P7discardy4ItemQzSgSSF",
+            "mangledName": "$s17ComposableStorage011NonThrowingB0P7discardy4ItemQzSgSSF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.NonThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.NonThrowingStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "empty",
+            "printedName": "empty()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage011NonThrowingB0P5emptyyyF",
+            "mangledName": "$s17ComposableStorage011NonThrowingB0P5emptyyyF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.NonThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.NonThrowingStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "item",
+            "printedName": "item(matching:in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0.Item?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Item"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage011NonThrowingB0PAAE4item8matching2in4ItemQzSgSS_xtKFZ",
+            "mangledName": "$s17ComposableStorage011NonThrowingB0PAAE4item8matching2in4ItemQzSgSS_xtKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.NonThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.NonThrowingStorage>",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "items",
+            "printedName": "items(in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0.Item]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Item"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage011NonThrowingB0PAAE5items2inSay4ItemQzGx_tKFZ",
+            "mangledName": "$s17ComposableStorage011NonThrowingB0PAAE5items2inSay4ItemQzGx_tKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.NonThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.NonThrowingStorage>",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "store",
+            "printedName": "store(_:in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Item"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Item"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage011NonThrowingB0PAAE5store_2in4ItemQzAG_xtKFZ",
+            "mangledName": "$s17ComposableStorage011NonThrowingB0PAAE5store_2in4ItemQzAG_xtKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.NonThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.NonThrowingStorage>",
+            "static": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "discard",
+            "printedName": "discard(_:in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0.Item?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Item"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage011NonThrowingB0PAAE7discard_2in4ItemQzSgSS_xtKFZ",
+            "mangledName": "$s17ComposableStorage011NonThrowingB0PAAE7discard_2in4ItemQzSgSS_xtKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.NonThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.NonThrowingStorage>",
+            "static": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "empty",
+            "printedName": "empty(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage011NonThrowingB0PAAE5emptyyyxKFZ",
+            "mangledName": "$s17ComposableStorage011NonThrowingB0PAAE5emptyyyxKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.NonThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.NonThrowingStorage>",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17ComposableStorage011NonThrowingB0P",
+        "mangledName": "$s17ComposableStorage011NonThrowingB0P",
+        "moduleName": "ComposableStorage",
+        "genericSig": "<τ_0_0 : ComposableStorage.Storage>",
+        "sugared_genericSig": "<Self : ComposableStorage.Storage>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Storage",
+            "printedName": "Storage",
+            "usr": "s:17ComposableStorage0B0P",
+            "mangledName": "$s17ComposableStorage0B0P"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ComposableStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Storable",
+        "printedName": "Storable",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "label",
+            "printedName": "label",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ComposableStorage8StorableP5labelSSvp",
+            "mangledName": "$s17ComposableStorage8StorableP5labelSSvp",
+            "moduleName": "ComposableStorage",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ComposableStorage8StorableP5labelSSvg",
+                "mangledName": "$s17ComposableStorage8StorableP5labelSSvg",
+                "moduleName": "ComposableStorage",
+                "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+                "sugared_genericSig": "<Self where Self : ComposableStorage.Storable>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "encoding",
+            "printedName": "encoding(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage8StorableP8encodingy10Foundation4DataVxKFZ",
+            "mangledName": "$s17ComposableStorage8StorableP8encodingy10Foundation4DataVxKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.Storable>",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "decoding",
+            "printedName": "decoding(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage8StorableP8decodingyx10Foundation4DataVKFZ",
+            "mangledName": "$s17ComposableStorage8StorableP8decodingyx10Foundation4DataVKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.Storable>",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encoding",
+            "printedName": "encoding(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage8StorablePAASeRzSERzrlE8encodingy10Foundation4DataVxKFZ",
+            "mangledName": "$s17ComposableStorage8StorablePAASeRzSERzrlE8encodingy10Foundation4DataVxKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable, τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.Storable, Self : Swift.Decodable, Self : Swift.Encodable>",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "decoding",
+            "printedName": "decoding(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage8StorablePAASeRzSERzrlE8decodingyx10Foundation4DataVKFZ",
+            "mangledName": "$s17ComposableStorage8StorablePAASeRzSERzrlE8decodingyx10Foundation4DataVKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable, τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.Storable, Self : Swift.Decodable, Self : Swift.Encodable>",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "matching",
+            "printedName": "matching(_:in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage8StorablePAAE8matching_2inxSgSS_qd__t4ItemQyd__RszAA011NonThrowingB0Rd__lFZ",
+            "mangledName": "$s17ComposableStorage8StorablePAAE8matching_2inxSgSS_qd__t4ItemQyd__RszAA011NonThrowingB0Rd__lFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 == τ_1_0.Item, τ_1_0 : ComposableStorage.NonThrowingStorage>",
+            "sugared_genericSig": "<Self, S where Self == S.Item, S : ComposableStorage.NonThrowingStorage>",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "matching",
+            "printedName": "matching(_:in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage8StorablePAAE8matching_2inxSgSS_qd__tK4ItemQyd__RszAA08ThrowingB0Rd__lFZ",
+            "mangledName": "$s17ComposableStorage8StorablePAAE8matching_2inxSgSS_qd__tK4ItemQyd__RszAA08ThrowingB0Rd__lFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 == τ_1_0.Item, τ_1_0 : ComposableStorage.ThrowingStorage>",
+            "sugared_genericSig": "<Self, S where Self == S.Item, S : ComposableStorage.ThrowingStorage>",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "store",
+            "printedName": "store(in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage8StorablePAAE5store2inxqd___t4ItemQyd__RszAA011NonThrowingB0Rd__lF",
+            "mangledName": "$s17ComposableStorage8StorablePAAE5store2inxqd___t4ItemQyd__RszAA011NonThrowingB0Rd__lF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 == τ_1_0.Item, τ_1_0 : ComposableStorage.NonThrowingStorage>",
+            "sugared_genericSig": "<Self, S where Self == S.Item, S : ComposableStorage.NonThrowingStorage>",
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "store",
+            "printedName": "store(in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage8StorablePAAE5store2inxqd___tK4ItemQyd__RszAA08ThrowingB0Rd__lF",
+            "mangledName": "$s17ComposableStorage8StorablePAAE5store2inxqd___tK4ItemQyd__RszAA08ThrowingB0Rd__lF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 == τ_1_0.Item, τ_1_0 : ComposableStorage.ThrowingStorage>",
+            "sugared_genericSig": "<Self, S where Self == S.Item, S : ComposableStorage.ThrowingStorage>",
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17ComposableStorage8StorableP",
+        "mangledName": "$s17ComposableStorage8StorableP",
+        "moduleName": "ComposableStorage",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ComposableStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Storage",
+        "printedName": "Storage",
+        "children": [
+          {
+            "kind": "AssociatedType",
+            "name": "Item",
+            "printedName": "Item",
+            "declKind": "AssociatedType",
+            "usr": "s:17ComposableStorage0B0P4ItemQa",
+            "mangledName": "$s17ComposableStorage0B0P4ItemQa",
+            "moduleName": "ComposableStorage",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "item",
+            "printedName": "item(matching:in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0.Item?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Item"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage0B0P4item8matching2in4ItemQzSgSS_xtKFZ",
+            "mangledName": "$s17ComposableStorage0B0P4item8matching2in4ItemQzSgSS_xtKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.Storage>",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "items",
+            "printedName": "items(in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0.Item]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Item"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage0B0P5items2inSay4ItemQzGx_tKFZ",
+            "mangledName": "$s17ComposableStorage0B0P5items2inSay4ItemQzGx_tKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.Storage>",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "store",
+            "printedName": "store(_:in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Item"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Item"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage0B0P5store_2in4ItemQzAG_xtKFZ",
+            "mangledName": "$s17ComposableStorage0B0P5store_2in4ItemQzAG_xtKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.Storage>",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "discard",
+            "printedName": "discard(_:in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0.Item?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Item"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage0B0P7discard_2in4ItemQzSgSS_xtKFZ",
+            "mangledName": "$s17ComposableStorage0B0P7discard_2in4ItemQzSgSS_xtKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.Storage>",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "empty",
+            "printedName": "empty(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage0B0P5emptyyyxKFZ",
+            "mangledName": "$s17ComposableStorage0B0P5emptyyyxKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.Storage>",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17ComposableStorage0B0P",
+        "mangledName": "$s17ComposableStorage0B0P",
+        "moduleName": "ComposableStorage",
+        "genericSig": "<τ_0_0.Item : ComposableStorage.Storable>",
+        "sugared_genericSig": "<Self.Item : ComposableStorage.Storable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ComposableStorage",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ThrowingStorage",
+        "printedName": "ThrowingStorage",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "item",
+            "printedName": "item(matching:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0.Item?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Item"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage08ThrowingB0P4item8matching4ItemQzSgSS_tKF",
+            "mangledName": "$s17ComposableStorage08ThrowingB0P4item8matching4ItemQzSgSS_tKF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.ThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.ThrowingStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "items",
+            "printedName": "items()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0.Item]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Item"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage08ThrowingB0P5itemsSay4ItemQzGyKF",
+            "mangledName": "$s17ComposableStorage08ThrowingB0P5itemsSay4ItemQzGyKF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.ThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.ThrowingStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "store",
+            "printedName": "store(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Item"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Item"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage08ThrowingB0P5storey4ItemQzAFKF",
+            "mangledName": "$s17ComposableStorage08ThrowingB0P5storey4ItemQzAFKF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.ThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.ThrowingStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "discard",
+            "printedName": "discard(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0.Item?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Item"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage08ThrowingB0P7discardy4ItemQzSgSSKF",
+            "mangledName": "$s17ComposableStorage08ThrowingB0P7discardy4ItemQzSgSSKF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.ThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.ThrowingStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "empty",
+            "printedName": "empty()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage08ThrowingB0P5emptyyyKF",
+            "mangledName": "$s17ComposableStorage08ThrowingB0P5emptyyyKF",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.ThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.ThrowingStorage>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "item",
+            "printedName": "item(matching:in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0.Item?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Item"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage08ThrowingB0PAAE4item8matching2in4ItemQzSgSS_xtKFZ",
+            "mangledName": "$s17ComposableStorage08ThrowingB0PAAE4item8matching2in4ItemQzSgSS_xtKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.ThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.ThrowingStorage>",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "items",
+            "printedName": "items(in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0.Item]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Item"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage08ThrowingB0PAAE5items2inSay4ItemQzGx_tKFZ",
+            "mangledName": "$s17ComposableStorage08ThrowingB0PAAE5items2inSay4ItemQzGx_tKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.ThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.ThrowingStorage>",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "store",
+            "printedName": "store(_:in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Item"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DependentMember",
+                "printedName": "τ_0_0.Item"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage08ThrowingB0PAAE5store_2in4ItemQzAG_xtKFZ",
+            "mangledName": "$s17ComposableStorage08ThrowingB0PAAE5store_2in4ItemQzAG_xtKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.ThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.ThrowingStorage>",
+            "static": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "discard",
+            "printedName": "discard(_:in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0.Item?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.Item"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage08ThrowingB0PAAE7discard_2in4ItemQzSgSS_xtKFZ",
+            "mangledName": "$s17ComposableStorage08ThrowingB0PAAE7discard_2in4ItemQzSgSS_xtKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.ThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.ThrowingStorage>",
+            "static": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "empty",
+            "printedName": "empty(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ComposableStorage08ThrowingB0PAAE5emptyyyxKFZ",
+            "mangledName": "$s17ComposableStorage08ThrowingB0PAAE5emptyyyxKFZ",
+            "moduleName": "ComposableStorage",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.ThrowingStorage>",
+            "sugared_genericSig": "<Self where Self : ComposableStorage.ThrowingStorage>",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17ComposableStorage08ThrowingB0P",
+        "mangledName": "$s17ComposableStorage08ThrowingB0P",
+        "moduleName": "ComposableStorage",
+        "genericSig": "<τ_0_0 : ComposableStorage.Storage>",
+        "sugared_genericSig": "<Self : ComposableStorage.Storage>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Storage",
+            "printedName": "Storage",
+            "usr": "s:17ComposableStorage0B0P",
+            "mangledName": "$s17ComposableStorage0B0P"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}

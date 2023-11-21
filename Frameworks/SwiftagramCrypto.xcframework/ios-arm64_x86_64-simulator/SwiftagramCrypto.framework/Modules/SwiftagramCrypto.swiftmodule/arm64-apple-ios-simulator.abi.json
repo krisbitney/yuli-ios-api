@@ -1,0 +1,4339 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ComposableStorageCrypto",
+        "printedName": "ComposableStorageCrypto",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ComposableStorage",
+        "printedName": "ComposableStorage",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto"
+      },
+      {
+        "kind": "Import",
+        "name": "SwCrypt",
+        "printedName": "SwCrypt",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ComposableStorage",
+        "printedName": "ComposableStorage",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreGraphics",
+        "printedName": "CoreGraphics",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Swiftagram",
+        "printedName": "Swiftagram",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto",
+        "declAttributes": [
+          "Exported",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwCrypt",
+        "printedName": "SwCrypt",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto"
+      },
+      {
+        "kind": "Import",
+        "name": "Swiftagram",
+        "printedName": "Swiftagram",
+        "declKind": "Import",
+        "moduleName": "SwiftagramCrypto"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SigningError",
+        "printedName": "SigningError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "cryptographyUnavailable",
+            "printedName": "cryptographyUnavailable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftagramCrypto.SigningError.Type) -> SwiftagramCrypto.SigningError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SigningError",
+                    "printedName": "SwiftagramCrypto.SigningError",
+                    "usr": "s:16SwiftagramCrypto12SigningErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftagramCrypto.SigningError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SigningError",
+                        "printedName": "SwiftagramCrypto.SigningError",
+                        "usr": "s:16SwiftagramCrypto12SigningErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16SwiftagramCrypto12SigningErrorO23cryptographyUnavailableyA2CmF",
+            "mangledName": "$s16SwiftagramCrypto12SigningErrorO23cryptographyUnavailableyA2CmF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "invalidRepresentation",
+            "printedName": "invalidRepresentation",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftagramCrypto.SigningError.Type) -> SwiftagramCrypto.SigningError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SigningError",
+                    "printedName": "SwiftagramCrypto.SigningError",
+                    "usr": "s:16SwiftagramCrypto12SigningErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftagramCrypto.SigningError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SigningError",
+                        "printedName": "SwiftagramCrypto.SigningError",
+                        "usr": "s:16SwiftagramCrypto12SigningErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16SwiftagramCrypto12SigningErrorO21invalidRepresentationyA2CmF",
+            "mangledName": "$s16SwiftagramCrypto12SigningErrorO21invalidRepresentationyA2CmF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SigningError",
+                "printedName": "SwiftagramCrypto.SigningError",
+                "usr": "s:16SwiftagramCrypto12SigningErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SigningError",
+                "printedName": "SwiftagramCrypto.SigningError",
+                "usr": "s:16SwiftagramCrypto12SigningErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16SwiftagramCrypto12SigningErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s16SwiftagramCrypto12SigningErrorO2eeoiySbAC_ACtFZ",
+            "moduleName": "SwiftagramCrypto",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16SwiftagramCrypto12SigningErrorO9hashValueSivp",
+            "mangledName": "$s16SwiftagramCrypto12SigningErrorO9hashValueSivp",
+            "moduleName": "SwiftagramCrypto",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16SwiftagramCrypto12SigningErrorO9hashValueSivg",
+                "mangledName": "$s16SwiftagramCrypto12SigningErrorO9hashValueSivg",
+                "moduleName": "SwiftagramCrypto",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16SwiftagramCrypto12SigningErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s16SwiftagramCrypto12SigningErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "SwiftagramCrypto",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16SwiftagramCrypto12SigningErrorO",
+        "mangledName": "$s16SwiftagramCrypto12SigningErrorO",
+        "moduleName": "SwiftagramCrypto",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Authenticator",
+        "printedName": "Authenticator",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "keychain",
+            "printedName": "keychain",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Authenticator",
+                "printedName": "Swiftagram.Authenticator",
+                "usr": "s:10Swiftagram13AuthenticatorV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Swiftagram13AuthenticatorV0A6CryptoE8keychainACvpZ",
+            "mangledName": "$s10Swiftagram13AuthenticatorV0A6CryptoE8keychainACvpZ",
+            "moduleName": "SwiftagramCrypto",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Authenticator",
+                    "printedName": "Swiftagram.Authenticator",
+                    "usr": "s:10Swiftagram13AuthenticatorV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Swiftagram13AuthenticatorV0A6CryptoE8keychainACvgZ",
+                "mangledName": "$s10Swiftagram13AuthenticatorV0A6CryptoE8keychainACvgZ",
+                "moduleName": "SwiftagramCrypto",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "keychain",
+            "printedName": "keychain(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Authenticator",
+                "printedName": "Swiftagram.Authenticator",
+                "usr": "s:10Swiftagram13AuthenticatorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeychainStorage",
+                "printedName": "ComposableStorageCrypto.KeychainStorage<Swiftagram.Secret>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  }
+                ],
+                "usr": "s:23ComposableStorageCrypto08KeychainB0V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram13AuthenticatorV0A6CryptoE8keychainyAC017ComposableStorageC008KeychainF0VyAA6SecretVGFZ",
+            "mangledName": "$s10Swiftagram13AuthenticatorV0A6CryptoE8keychainyAC017ComposableStorageC008KeychainF0VyAA6SecretVGFZ",
+            "moduleName": "SwiftagramCrypto",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "basic",
+            "printedName": "basic(username:password:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Basic",
+                "printedName": "Swiftagram.Authenticator.Group.Basic",
+                "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram13AuthenticatorV0A6CryptoE5basic8username8passwordAC5GroupOADE5BasicVSS_SStF",
+            "mangledName": "$s10Swiftagram13AuthenticatorV0A6CryptoE5basic8username8passwordAC5GroupOADE5BasicVSS_SStF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10Swiftagram13AuthenticatorV",
+        "mangledName": "$s10Swiftagram13AuthenticatorV",
+        "moduleName": "Swiftagram",
+        "isExternal": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Group",
+        "printedName": "Group",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Basic",
+            "printedName": "Basic",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "authenticator",
+                "printedName": "authenticator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Authenticator",
+                    "printedName": "Swiftagram.Authenticator",
+                    "usr": "s:10Swiftagram13AuthenticatorV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV13authenticatorACvp",
+                "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV13authenticatorACvp",
+                "moduleName": "SwiftagramCrypto",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Authenticator",
+                        "printedName": "Swiftagram.Authenticator",
+                        "usr": "s:10Swiftagram13AuthenticatorV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV13authenticatorACvg",
+                    "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV13authenticatorACvg",
+                    "moduleName": "SwiftagramCrypto",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "username",
+                "printedName": "username",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV8usernameSSvp",
+                "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV8usernameSSvp",
+                "moduleName": "SwiftagramCrypto",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV8usernameSSvg",
+                    "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV8usernameSSvg",
+                    "moduleName": "SwiftagramCrypto",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "authenticate",
+                "printedName": "authenticate(in:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyPublisher",
+                    "printedName": "Combine.AnyPublisher<Swiftagram.Secret, Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Secret",
+                        "printedName": "Swiftagram.Secret",
+                        "usr": "s:10Swiftagram6SecretV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:7Combine12AnyPublisherV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Client",
+                    "printedName": "Swiftagram.Client",
+                    "usr": "s:10Swiftagram6ClientV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV12authenticate2in7Combine12AnyPublisherVyAA6SecretVs5Error_pGAA6ClientV_tF",
+                "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV12authenticate2in7Combine12AnyPublisherVyAA6SecretVs5Error_pGAA6ClientV_tF",
+                "moduleName": "SwiftagramCrypto",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "TypeDecl",
+                "name": "TwoFactor",
+                "printedName": "TwoFactor",
+                "children": [
+                  {
+                    "kind": "Var",
+                    "name": "storage",
+                    "printedName": "storage",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyStorage",
+                        "printedName": "ComposableStorage.AnyStorage<Swiftagram.Secret>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Secret",
+                            "printedName": "Swiftagram.Secret",
+                            "usr": "s:10Swiftagram6SecretV"
+                          }
+                        ],
+                        "usr": "s:17ComposableStorage03AnyB0V"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV7storage17ComposableStorage03AnyJ0VyAA6SecretVGvp",
+                    "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV7storage17ComposableStorage03AnyJ0VyAA6SecretVGvp",
+                    "moduleName": "SwiftagramCrypto",
+                    "declAttributes": [
+                      "HasStorage",
+                      "AccessControl",
+                      "RawDocComment"
+                    ],
+                    "isLet": true,
+                    "hasStorage": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AnyStorage",
+                            "printedName": "ComposableStorage.AnyStorage<Swiftagram.Secret>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Secret",
+                                "printedName": "Swiftagram.Secret",
+                                "usr": "s:10Swiftagram6SecretV"
+                              }
+                            ],
+                            "usr": "s:17ComposableStorage03AnyB0V"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV7storage17ComposableStorage03AnyJ0VyAA6SecretVGvg",
+                        "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV7storage17ComposableStorage03AnyJ0VyAA6SecretVGvg",
+                        "moduleName": "SwiftagramCrypto",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "client",
+                    "printedName": "client",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Client",
+                        "printedName": "Swiftagram.Client",
+                        "usr": "s:10Swiftagram6ClientV"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV6clientAA6ClientVvp",
+                    "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV6clientAA6ClientVvp",
+                    "moduleName": "SwiftagramCrypto",
+                    "declAttributes": [
+                      "HasStorage",
+                      "AccessControl",
+                      "RawDocComment"
+                    ],
+                    "isLet": true,
+                    "hasStorage": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Client",
+                            "printedName": "Swiftagram.Client",
+                            "usr": "s:10Swiftagram6ClientV"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV6clientAA6ClientVvg",
+                        "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV6clientAA6ClientVvg",
+                        "moduleName": "SwiftagramCrypto",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "code",
+                    "printedName": "code",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV4codeSSvp",
+                    "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV4codeSSvp",
+                    "moduleName": "SwiftagramCrypto",
+                    "declAttributes": [
+                      "HasStorage",
+                      "AccessControl",
+                      "RawDocComment"
+                    ],
+                    "isLet": true,
+                    "hasStorage": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV4codeSSvg",
+                        "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV4codeSSvg",
+                        "moduleName": "SwiftagramCrypto",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "username",
+                    "printedName": "username",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV8usernameSSvp",
+                    "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV8usernameSSvp",
+                    "moduleName": "SwiftagramCrypto",
+                    "declAttributes": [
+                      "HasStorage",
+                      "AccessControl",
+                      "RawDocComment"
+                    ],
+                    "isLet": true,
+                    "hasStorage": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV8usernameSSvg",
+                        "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV8usernameSSvg",
+                        "moduleName": "SwiftagramCrypto",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "crossSiteRequestForgery",
+                    "printedName": "crossSiteRequestForgery",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HTTPCookie",
+                        "printedName": "Foundation.HTTPCookie",
+                        "usr": "c:objc(cs)NSHTTPCookie"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV23crossSiteRequestForgerySo12NSHTTPCookieCvp",
+                    "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV23crossSiteRequestForgerySo12NSHTTPCookieCvp",
+                    "moduleName": "SwiftagramCrypto",
+                    "declAttributes": [
+                      "HasStorage",
+                      "AccessControl",
+                      "RawDocComment"
+                    ],
+                    "isLet": true,
+                    "hasStorage": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "HTTPCookie",
+                            "printedName": "Foundation.HTTPCookie",
+                            "usr": "c:objc(cs)NSHTTPCookie"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV23crossSiteRequestForgerySo12NSHTTPCookieCvg",
+                        "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV23crossSiteRequestForgerySo12NSHTTPCookieCvg",
+                        "moduleName": "SwiftagramCrypto",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Function",
+                    "name": "authenticate",
+                    "printedName": "authenticate()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Secret, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Secret",
+                            "printedName": "Swiftagram.Secret",
+                            "usr": "s:10Swiftagram6SecretV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "declKind": "Func",
+                    "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV12authenticate7Combine12AnyPublisherVyAA6SecretVs5Error_pGyF",
+                    "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV12authenticate7Combine12AnyPublisherVyAA6SecretVs5Error_pGyF",
+                    "moduleName": "SwiftagramCrypto",
+                    "declAttributes": [
+                      "AccessControl",
+                      "RawDocComment"
+                    ],
+                    "funcSelfKind": "NonMutating"
+                  }
+                ],
+                "declKind": "Struct",
+                "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV",
+                "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV",
+                "moduleName": "SwiftagramCrypto",
+                "declAttributes": [
+                  "RawDocComment"
+                ],
+                "isFromExtension": true,
+                "conformances": [
+                  {
+                    "kind": "Conformance",
+                    "name": "Authentication",
+                    "printedName": "Authentication",
+                    "usr": "s:10Swiftagram14AuthenticationP",
+                    "mangledName": "$s10Swiftagram14AuthenticationP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV",
+            "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "CustomClientAuthentication",
+                "printedName": "CustomClientAuthentication",
+                "usr": "s:10Swiftagram26CustomClientAuthenticationP",
+                "mangledName": "$s10Swiftagram26CustomClientAuthenticationP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Authentication",
+                "printedName": "Authentication",
+                "usr": "s:10Swiftagram14AuthenticationP",
+                "mangledName": "$s10Swiftagram14AuthenticationP"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:10Swiftagram13AuthenticatorV5GroupO",
+        "mangledName": "$s10Swiftagram13AuthenticatorV5GroupO",
+        "moduleName": "Swiftagram",
+        "isFromExtension": true,
+        "isExternal": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TwoFactor",
+        "printedName": "TwoFactor",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "code",
+            "printedName": "code(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TwoFactor",
+                "printedName": "Swiftagram.Authenticator.Group.Basic.TwoFactor",
+                "usr": "s:10Swiftagram13AuthenticatorV5GroupO0A6CryptoE5BasicV9TwoFactorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram13AuthenticatorV5ErrorO9TwoFactorV0A6CryptoE4codeyAC5GroupOAHE5BasicVAFVSSF",
+            "mangledName": "$s10Swiftagram13AuthenticatorV5ErrorO9TwoFactorV0A6CryptoE4codeyAC5GroupOAHE5BasicVAFVSSF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10Swiftagram13AuthenticatorV5ErrorO9TwoFactorV",
+        "mangledName": "$s10Swiftagram13AuthenticatorV5ErrorO9TwoFactorV",
+        "moduleName": "Swiftagram",
+        "isFromExtension": true,
+        "isExternal": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Comment",
+        "printedName": "Comment",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "delete",
+            "printedName": "delete()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Status, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "Swiftagram.Status",
+                            "usr": "s:10Swiftagram6StatusV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO5MediaC7CommentC0A6CryptoE6delete17ComposableRequest12LockProviderVyAA6SecretVAL07SessionK0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO5MediaC7CommentC0A6CryptoE6delete17ComposableRequest12LockProviderVyAA6SecretVAL07SessionK0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10Swiftagram8EndpointO5GroupO5MediaC7CommentC",
+        "mangledName": "$s10Swiftagram8EndpointO5GroupO5MediaC7CommentC",
+        "moduleName": "Swiftagram",
+        "declAttributes": [
+          "Final"
+        ],
+        "isFromExtension": true,
+        "isExternal": true,
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ManyComments",
+        "printedName": "ManyComments",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "delete",
+            "printedName": "delete()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Status, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "Swiftagram.Status",
+                            "usr": "s:10Swiftagram6StatusV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO5MediaC12ManyCommentsC0A6CryptoE6delete17ComposableRequest12LockProviderVyAA6SecretVAL07SessionL0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO5MediaC12ManyCommentsC0A6CryptoE6delete17ComposableRequest12LockProviderVyAA6SecretVAL07SessionL0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10Swiftagram8EndpointO5GroupO5MediaC12ManyCommentsC",
+        "mangledName": "$s10Swiftagram8EndpointO5GroupO5MediaC12ManyCommentsC",
+        "moduleName": "Swiftagram",
+        "declAttributes": [
+          "Final"
+        ],
+        "isFromExtension": true,
+        "isExternal": true,
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Media",
+        "printedName": "Media",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "archive",
+            "printedName": "archive()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Status, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "Swiftagram.Status",
+                            "usr": "s:10Swiftagram6StatusV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO5MediaC0A6CryptoE7archive17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO5MediaC0A6CryptoE7archive17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "comment",
+            "printedName": "comment(with:under:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Comment.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Comment.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Comment.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Comment.Unit",
+                            "usr": "s:10Swiftagram7CommentV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO5MediaC0A6CryptoE7comment4with5under17ComposableRequest12LockProviderVyAA6SecretVAL07SessionL0Vy7Combine12AnyPublisherVyAA7CommentV4UnitVs5Error_pGGGSS_SSSgtF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO5MediaC0A6CryptoE7comment4with5under17ComposableRequest12LockProviderVyAA6SecretVAL07SessionL0Vy7Combine12AnyPublisherVyAA7CommentV4UnitVs5Error_pGGGSS_SSSgtF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "delete",
+            "printedName": "delete()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Status, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "Swiftagram.Status",
+                            "usr": "s:10Swiftagram6StatusV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO5MediaC0A6CryptoE6delete17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO5MediaC0A6CryptoE6delete17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "like",
+            "printedName": "like()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Status, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "Swiftagram.Status",
+                            "usr": "s:10Swiftagram6StatusV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO5MediaC0A6CryptoE4like17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO5MediaC0A6CryptoE4like17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "save",
+            "printedName": "save(in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Status, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "Swiftagram.Status",
+                            "usr": "s:10Swiftagram6StatusV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO5MediaC0A6CryptoE4save2in17ComposableRequest12LockProviderVyAA6SecretVAK07SessionK0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGSS_tF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO5MediaC0A6CryptoE4save2in17ComposableRequest12LockProviderVyAA6SecretVAK07SessionK0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGSS_tF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unarchive",
+            "printedName": "unarchive()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Status, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "Swiftagram.Status",
+                            "usr": "s:10Swiftagram6StatusV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO5MediaC0A6CryptoE9unarchive17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO5MediaC0A6CryptoE9unarchive17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unlike",
+            "printedName": "unlike()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Status, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "Swiftagram.Status",
+                            "usr": "s:10Swiftagram6StatusV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO5MediaC0A6CryptoE6unlike17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO5MediaC0A6CryptoE6unlike17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10Swiftagram8EndpointO5GroupO5MediaC",
+        "mangledName": "$s10Swiftagram8EndpointO5GroupO5MediaC",
+        "moduleName": "Swiftagram",
+        "declAttributes": [
+          "Final"
+        ],
+        "isFromExtension": true,
+        "isExternal": true,
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Posts",
+        "printedName": "Posts",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(image:captioned:tagging:at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Media.Unit",
+                            "usr": "s:10Swiftagram5MediaV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swiftagram.Location?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Location",
+                    "printedName": "Swiftagram.Location",
+                    "usr": "s:10Swiftagram8LocationV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO5PostsC0A6CryptoE6upload5image9captioned7tagging2at17ComposableRequest12LockProviderVyAA6SecretVAN07SessionN0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGGSo7UIImageC_SSSgxAA8LocationVSgtSlRzAA7UserTagV7ElementRtzlF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO5PostsC0A6CryptoE6upload5image9captioned7tagging2at17ComposableRequest12LockProviderVyAA6SecretVAN07SessionN0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGGSo7UIImageC_SSSgxAA8LocationVSgtSlRzAA7UserTagV7ElementRtzlF",
+            "moduleName": "SwiftagramCrypto",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Collection, τ_0_0.Element == Swiftagram.UserTag>",
+            "sugared_genericSig": "<U where U : Swift.Collection, U.Element == Swiftagram.UserTag>",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(image:captioned:at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Media.Unit",
+                            "usr": "s:10Swiftagram5MediaV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swiftagram.Location?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Location",
+                    "printedName": "Swiftagram.Location",
+                    "usr": "s:10Swiftagram8LocationV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO5PostsC0A6CryptoE6upload5image9captioned2at17ComposableRequest12LockProviderVyAA6SecretVAM07SessionM0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGGSo7UIImageC_SSSgAA8LocationVSgtF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO5PostsC0A6CryptoE6upload5image9captioned2at17ComposableRequest12LockProviderVyAA6SecretVAM07SessionM0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGGSo7UIImageC_SSSgAA8LocationVSgtF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(image:captioned:tagging:at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Media.Unit",
+                            "usr": "s:10Swiftagram5MediaV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swiftagram.Location?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Location",
+                    "printedName": "Swiftagram.Location",
+                    "usr": "s:10Swiftagram8LocationV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO5PostsC0A6CryptoE6upload5image9captioned7tagging2at17ComposableRequest12LockProviderVyAA6SecretVAN07SessionN0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation4DataV_SSSgxAA8LocationVSgtSlRzAA7UserTagV7ElementRtzlF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO5PostsC0A6CryptoE6upload5image9captioned7tagging2at17ComposableRequest12LockProviderVyAA6SecretVAN07SessionN0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation4DataV_SSSgxAA8LocationVSgtSlRzAA7UserTagV7ElementRtzlF",
+            "moduleName": "SwiftagramCrypto",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Collection, τ_0_0.Element == Swiftagram.UserTag>",
+            "sugared_genericSig": "<U where U : Swift.Collection, U.Element == Swiftagram.UserTag>",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(image:captioned:at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Media.Unit",
+                            "usr": "s:10Swiftagram5MediaV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swiftagram.Location?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Location",
+                    "printedName": "Swiftagram.Location",
+                    "usr": "s:10Swiftagram8LocationV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO5PostsC0A6CryptoE6upload5image9captioned2at17ComposableRequest12LockProviderVyAA6SecretVAM07SessionM0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation4DataV_SSSgAA8LocationVSgtF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO5PostsC0A6CryptoE6upload5image9captioned2at17ComposableRequest12LockProviderVyAA6SecretVAM07SessionM0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation4DataV_SSSgAA8LocationVSgtF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(video:preview:captioned:tagging:at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Media.Unit",
+                            "usr": "s:10Swiftagram5MediaV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swiftagram.Location?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Location",
+                    "printedName": "Swiftagram.Location",
+                    "usr": "s:10Swiftagram8LocationV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO5PostsC0A6CryptoE6upload5video7preview9captioned7tagging2at17ComposableRequest12LockProviderVyAA6SecretVAO07SessionO0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation3URLV_So7UIImageCSSSgxAA8LocationVSgtSlRzAA7UserTagV7ElementRtzlF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO5PostsC0A6CryptoE6upload5video7preview9captioned7tagging2at17ComposableRequest12LockProviderVyAA6SecretVAO07SessionO0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation3URLV_So7UIImageCSSSgxAA8LocationVSgtSlRzAA7UserTagV7ElementRtzlF",
+            "moduleName": "SwiftagramCrypto",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Collection, τ_0_0.Element == Swiftagram.UserTag>",
+            "sugared_genericSig": "<U where U : Swift.Collection, U.Element == Swiftagram.UserTag>",
+            "intro_watchOS": "6",
+            "declAttributes": [
+              "Final",
+              "Available",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(video:preview:captioned:at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Media.Unit",
+                            "usr": "s:10Swiftagram5MediaV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swiftagram.Location?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Location",
+                    "printedName": "Swiftagram.Location",
+                    "usr": "s:10Swiftagram8LocationV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO5PostsC0A6CryptoE6upload5video7preview9captioned2at17ComposableRequest12LockProviderVyAA6SecretVAN07SessionN0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation3URLV_So7UIImageCSSSgAA8LocationVSgtF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO5PostsC0A6CryptoE6upload5video7preview9captioned2at17ComposableRequest12LockProviderVyAA6SecretVAN07SessionN0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation3URLV_So7UIImageCSSSgAA8LocationVSgtF",
+            "moduleName": "SwiftagramCrypto",
+            "intro_watchOS": "6",
+            "declAttributes": [
+              "Final",
+              "Available",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(video:preview:captioned:tagging:at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Media.Unit",
+                            "usr": "s:10Swiftagram5MediaV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swiftagram.Location?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Location",
+                    "printedName": "Swiftagram.Location",
+                    "usr": "s:10Swiftagram8LocationV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO5PostsC0A6CryptoE6upload5video7preview9captioned7tagging2at17ComposableRequest12LockProviderVyAA6SecretVAO07SessionO0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation3URLV_A5_4DataVSSSgxAA8LocationVSgtSlRzAA7UserTagV7ElementRtzlF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO5PostsC0A6CryptoE6upload5video7preview9captioned7tagging2at17ComposableRequest12LockProviderVyAA6SecretVAO07SessionO0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation3URLV_A5_4DataVSSSgxAA8LocationVSgtSlRzAA7UserTagV7ElementRtzlF",
+            "moduleName": "SwiftagramCrypto",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Collection, τ_0_0.Element == Swiftagram.UserTag>",
+            "sugared_genericSig": "<U where U : Swift.Collection, U.Element == Swiftagram.UserTag>",
+            "intro_watchOS": "6",
+            "declAttributes": [
+              "Final",
+              "Available",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(video:preview:captioned:at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Media.Unit",
+                            "usr": "s:10Swiftagram5MediaV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swiftagram.Location?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Location",
+                    "printedName": "Swiftagram.Location",
+                    "usr": "s:10Swiftagram8LocationV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO5PostsC0A6CryptoE6upload5video7preview9captioned2at17ComposableRequest12LockProviderVyAA6SecretVAN07SessionN0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation3URLV_A4_4DataVSSSgAA8LocationVSgtF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO5PostsC0A6CryptoE6upload5video7preview9captioned2at17ComposableRequest12LockProviderVyAA6SecretVAN07SessionN0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation3URLV_A4_4DataVSSSgAA8LocationVSgtF",
+            "moduleName": "SwiftagramCrypto",
+            "intro_watchOS": "6",
+            "declAttributes": [
+              "Final",
+              "Available",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10Swiftagram8EndpointO5GroupO5PostsC",
+        "mangledName": "$s10Swiftagram8EndpointO5GroupO5PostsC",
+        "moduleName": "Swiftagram",
+        "declAttributes": [
+          "Final"
+        ],
+        "isFromExtension": true,
+        "isExternal": true,
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Stories",
+        "printedName": "Stories",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(image:stickers:isCloseFriendsOnly:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Media.Unit",
+                            "usr": "s:10Swiftagram5MediaV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO7StoriesC0A6CryptoE6upload5image8stickers18isCloseFriendsOnly17ComposableRequest12LockProviderVyAA6SecretVAM07SessionP0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGGSo7UIImageC_xSbtSTRzAA7StickerV7ElementRtzlF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO7StoriesC0A6CryptoE6upload5image8stickers18isCloseFriendsOnly17ComposableRequest12LockProviderVyAA6SecretVAM07SessionP0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGGSo7UIImageC_xSbtSTRzAA7StickerV7ElementRtzlF",
+            "moduleName": "SwiftagramCrypto",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Sequence, τ_0_0.Element == Swiftagram.Sticker>",
+            "sugared_genericSig": "<S where S : Swift.Sequence, S.Element == Swiftagram.Sticker>",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(image:isCloseFriendsOnly:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Media.Unit",
+                            "usr": "s:10Swiftagram5MediaV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO7StoriesC0A6CryptoE6upload5image18isCloseFriendsOnly17ComposableRequest12LockProviderVyAA6SecretVAL07SessionO0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGGSo7UIImageC_SbtF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO7StoriesC0A6CryptoE6upload5image18isCloseFriendsOnly17ComposableRequest12LockProviderVyAA6SecretVAL07SessionO0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGGSo7UIImageC_SbtF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(image:stickers:isCloseFriendsOnly:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Media.Unit",
+                            "usr": "s:10Swiftagram5MediaV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO7StoriesC0A6CryptoE6upload5image8stickers18isCloseFriendsOnly17ComposableRequest12LockProviderVyAA6SecretVAM07SessionP0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation4DataV_xSbtSlRzAA7StickerV7ElementRtzlF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO7StoriesC0A6CryptoE6upload5image8stickers18isCloseFriendsOnly17ComposableRequest12LockProviderVyAA6SecretVAM07SessionP0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation4DataV_xSbtSlRzAA7StickerV7ElementRtzlF",
+            "moduleName": "SwiftagramCrypto",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Collection, τ_0_0.Element == Swiftagram.Sticker>",
+            "sugared_genericSig": "<S where S : Swift.Collection, S.Element == Swiftagram.Sticker>",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(image:isCloseFriendsOnly:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Media.Unit",
+                            "usr": "s:10Swiftagram5MediaV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO7StoriesC0A6CryptoE6upload5image18isCloseFriendsOnly17ComposableRequest12LockProviderVyAA6SecretVAL07SessionO0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation4DataV_SbtF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO7StoriesC0A6CryptoE6upload5image18isCloseFriendsOnly17ComposableRequest12LockProviderVyAA6SecretVAL07SessionO0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation4DataV_SbtF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(video:preview:stickers:isCloseFriendsOnly:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Media.Unit",
+                            "usr": "s:10Swiftagram5MediaV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO7StoriesC0A6CryptoE6upload5video7preview8stickers18isCloseFriendsOnly17ComposableRequest12LockProviderVyAA6SecretVAN07SessionQ0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation3URLV_So7UIImageCSgxSbtSTRzAA7StickerV7ElementRtzlF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO7StoriesC0A6CryptoE6upload5video7preview8stickers18isCloseFriendsOnly17ComposableRequest12LockProviderVyAA6SecretVAN07SessionQ0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation3URLV_So7UIImageCSgxSbtSTRzAA7StickerV7ElementRtzlF",
+            "moduleName": "SwiftagramCrypto",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Sequence, τ_0_0.Element == Swiftagram.Sticker>",
+            "sugared_genericSig": "<S where S : Swift.Sequence, S.Element == Swiftagram.Sticker>",
+            "intro_watchOS": "6",
+            "declAttributes": [
+              "Final",
+              "Available",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(video:preview:isCloseFriendsOnly:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Media.Unit",
+                            "usr": "s:10Swiftagram5MediaV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO7StoriesC0A6CryptoE6upload5video7preview18isCloseFriendsOnly17ComposableRequest12LockProviderVyAA6SecretVAM07SessionP0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation3URLV_So7UIImageCSgSbtF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO7StoriesC0A6CryptoE6upload5video7preview18isCloseFriendsOnly17ComposableRequest12LockProviderVyAA6SecretVAM07SessionP0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation3URLV_So7UIImageCSgSbtF",
+            "moduleName": "SwiftagramCrypto",
+            "intro_watchOS": "6",
+            "declAttributes": [
+              "Final",
+              "Available",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(video:preview:stickers:isCloseFriendsOnly:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Media.Unit",
+                            "usr": "s:10Swiftagram5MediaV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO7StoriesC0A6CryptoE6upload5video7preview8stickers18isCloseFriendsOnly17ComposableRequest12LockProviderVyAA6SecretVAN07SessionQ0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation3URLV_A4_4DataVxSbtSlRzAA7StickerV7ElementRtzlF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO7StoriesC0A6CryptoE6upload5video7preview8stickers18isCloseFriendsOnly17ComposableRequest12LockProviderVyAA6SecretVAN07SessionQ0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation3URLV_A4_4DataVxSbtSlRzAA7StickerV7ElementRtzlF",
+            "moduleName": "SwiftagramCrypto",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Collection, τ_0_0.Element == Swiftagram.Sticker>",
+            "sugared_genericSig": "<S where S : Swift.Collection, S.Element == Swiftagram.Sticker>",
+            "intro_watchOS": "6",
+            "declAttributes": [
+              "Final",
+              "Available",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(video:preview:isCloseFriendsOnly:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Media.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Media.Unit",
+                            "usr": "s:10Swiftagram5MediaV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO7StoriesC0A6CryptoE6upload5video7preview18isCloseFriendsOnly17ComposableRequest12LockProviderVyAA6SecretVAM07SessionP0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation3URLV_A3_4DataVSbtF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO7StoriesC0A6CryptoE6upload5video7preview18isCloseFriendsOnly17ComposableRequest12LockProviderVyAA6SecretVAM07SessionP0Vy7Combine12AnyPublisherVyAA5MediaV4UnitVs5Error_pGGG10Foundation3URLV_A3_4DataVSbtF",
+            "moduleName": "SwiftagramCrypto",
+            "intro_watchOS": "6",
+            "declAttributes": [
+              "Final",
+              "Available",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10Swiftagram8EndpointO5GroupO7StoriesC",
+        "mangledName": "$s10Swiftagram8EndpointO5GroupO7StoriesC",
+        "moduleName": "Swiftagram",
+        "declAttributes": [
+          "Final"
+        ],
+        "isFromExtension": true,
+        "isExternal": true,
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Tag",
+        "printedName": "Tag",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "follow",
+            "printedName": "follow()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Status, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "Swiftagram.Status",
+                            "usr": "s:10Swiftagram6StatusV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO3TagC0A6CryptoE6follow17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO3TagC0A6CryptoE6follow17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unfollow",
+            "printedName": "unfollow()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Status, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Status, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "Swiftagram.Status",
+                            "usr": "s:10Swiftagram6StatusV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO3TagC0A6CryptoE8unfollow17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO3TagC0A6CryptoE8unfollow17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA6StatusVs5Error_pGGGyF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10Swiftagram8EndpointO5GroupO3TagC",
+        "mangledName": "$s10Swiftagram8EndpointO5GroupO3TagC",
+        "moduleName": "Swiftagram",
+        "declAttributes": [
+          "Final"
+        ],
+        "isFromExtension": true,
+        "isExternal": true,
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "User",
+        "printedName": "User",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Request",
+            "printedName": "Request",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "user",
+                "printedName": "user",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "User",
+                    "printedName": "Swiftagram.Endpoint.Group.User",
+                    "usr": "s:10Swiftagram8EndpointO5GroupO4UserC"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7RequestV4userAGvp",
+                "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7RequestV4userAGvp",
+                "moduleName": "SwiftagramCrypto",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "User",
+                        "printedName": "Swiftagram.Endpoint.Group.User",
+                        "usr": "s:10Swiftagram8EndpointO5GroupO4UserC"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7RequestV4userAGvg",
+                    "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7RequestV4userAGvg",
+                    "moduleName": "SwiftagramCrypto",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "approve",
+                "printedName": "approve()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockProvider",
+                    "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Secret",
+                        "printedName": "Swiftagram.Secret",
+                        "usr": "s:10Swiftagram6SecretV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SessionProvider",
+                        "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AnyPublisher",
+                            "printedName": "Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Unit",
+                                "printedName": "Swiftagram.Friendship.Unit",
+                                "usr": "s:10Swiftagram10FriendshipV4UnitV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:7Combine12AnyPublisherV"
+                          }
+                        ],
+                        "usr": "s:17ComposableRequest15SessionProviderV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest12LockProviderV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7RequestV7approve010ComposableF012LockProviderVyAA6SecretVAL07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGyF",
+                "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7RequestV7approve010ComposableF012LockProviderVyAA6SecretVAL07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGyF",
+                "moduleName": "SwiftagramCrypto",
+                "declAttributes": [
+                  "RawDocComment"
+                ],
+                "isFromExtension": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "decline",
+                "printedName": "decline()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LockProvider",
+                    "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Secret",
+                        "printedName": "Swiftagram.Secret",
+                        "usr": "s:10Swiftagram6SecretV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SessionProvider",
+                        "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AnyPublisher",
+                            "printedName": "Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Unit",
+                                "printedName": "Swiftagram.Friendship.Unit",
+                                "usr": "s:10Swiftagram10FriendshipV4UnitV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:7Combine12AnyPublisherV"
+                          }
+                        ],
+                        "usr": "s:17ComposableRequest15SessionProviderV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest12LockProviderV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7RequestV7decline010ComposableF012LockProviderVyAA6SecretVAL07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGyF",
+                "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7RequestV7decline010ComposableF012LockProviderVyAA6SecretVAL07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGyF",
+                "moduleName": "SwiftagramCrypto",
+                "declAttributes": [
+                  "RawDocComment"
+                ],
+                "isFromExtension": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7RequestV",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7RequestV",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Muting",
+            "printedName": "Muting",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "all",
+                "printedName": "all",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swiftagram.Endpoint.Group.User.Muting.Type) -> Swiftagram.Endpoint.Group.User.Muting",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Muting",
+                        "printedName": "Swiftagram.Endpoint.Group.User.Muting",
+                        "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "Swiftagram.Endpoint.Group.User.Muting.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Muting",
+                            "printedName": "Swiftagram.Endpoint.Group.User.Muting",
+                            "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO3allyA2JmF",
+                "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO3allyA2JmF",
+                "moduleName": "SwiftagramCrypto",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "posts",
+                "printedName": "posts",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swiftagram.Endpoint.Group.User.Muting.Type) -> Swiftagram.Endpoint.Group.User.Muting",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Muting",
+                        "printedName": "Swiftagram.Endpoint.Group.User.Muting",
+                        "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "Swiftagram.Endpoint.Group.User.Muting.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Muting",
+                            "printedName": "Swiftagram.Endpoint.Group.User.Muting",
+                            "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO5postsyA2JmF",
+                "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO5postsyA2JmF",
+                "moduleName": "SwiftagramCrypto",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "stories",
+                "printedName": "stories",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swiftagram.Endpoint.Group.User.Muting.Type) -> Swiftagram.Endpoint.Group.User.Muting",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Muting",
+                        "printedName": "Swiftagram.Endpoint.Group.User.Muting",
+                        "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "Swiftagram.Endpoint.Group.User.Muting.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Muting",
+                            "printedName": "Swiftagram.Endpoint.Group.User.Muting",
+                            "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO7storiesyA2JmF",
+                "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO7storiesyA2JmF",
+                "moduleName": "SwiftagramCrypto",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO9hashValueSivp",
+                "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO9hashValueSivp",
+                "moduleName": "SwiftagramCrypto",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO9hashValueSivg",
+                    "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO9hashValueSivg",
+                    "moduleName": "SwiftagramCrypto",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO4hash4intoys6HasherVz_tF",
+                "moduleName": "SwiftagramCrypto",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Muting",
+                    "printedName": "Swiftagram.Endpoint.Group.User.Muting",
+                    "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Muting",
+                    "printedName": "Swiftagram.Endpoint.Group.User.Muting",
+                    "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO2eeoiySbAJ_AJtFZ",
+                "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO2eeoiySbAJ_AJtFZ",
+                "moduleName": "SwiftagramCrypto",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "request",
+            "printedName": "request",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Request",
+                "printedName": "Swiftagram.Endpoint.Group.User.Request",
+                "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7RequestV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7requestAgHE7RequestVvp",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7requestAgHE7RequestVvp",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Request",
+                    "printedName": "Swiftagram.Endpoint.Group.User.Request",
+                    "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7RequestV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7requestAgHE7RequestVvg",
+                "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7requestAgHE7RequestVvg",
+                "moduleName": "SwiftagramCrypto",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "block",
+            "printedName": "block()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Friendship.Unit",
+                            "usr": "s:10Swiftagram10FriendshipV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE5block17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGyF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE5block17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGyF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "follow",
+            "printedName": "follow()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Friendship.Unit",
+                            "usr": "s:10Swiftagram10FriendshipV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6follow17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGyF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6follow17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGyF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "mute",
+            "printedName": "mute(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Friendship.Unit",
+                            "usr": "s:10Swiftagram10FriendshipV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Muting",
+                "printedName": "Swiftagram.Endpoint.Group.User.Muting",
+                "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE4mutey17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGAgHE6MutingOF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE4mutey17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGAgHE6MutingOF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "remove",
+            "printedName": "remove()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Friendship.Unit",
+                            "usr": "s:10Swiftagram10FriendshipV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6remove17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGyF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6remove17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGyF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unblock",
+            "printedName": "unblock()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Friendship.Unit",
+                            "usr": "s:10Swiftagram10FriendshipV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7unblock17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGyF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE7unblock17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGyF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unfollow",
+            "printedName": "unfollow()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Friendship.Unit",
+                            "usr": "s:10Swiftagram10FriendshipV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE8unfollow17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGyF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE8unfollow17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGyF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unmute",
+            "printedName": "unmute(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LockProvider",
+                "printedName": "ComposableRequest.LockProvider<Swiftagram.Secret, ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Secret",
+                    "printedName": "Swiftagram.Secret",
+                    "usr": "s:10Swiftagram6SecretV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SessionProvider",
+                    "printedName": "ComposableRequest.SessionProvider<Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyPublisher",
+                        "printedName": "Combine.AnyPublisher<Swiftagram.Friendship.Unit, Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Unit",
+                            "printedName": "Swiftagram.Friendship.Unit",
+                            "usr": "s:10Swiftagram10FriendshipV4UnitV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:7Combine12AnyPublisherV"
+                      }
+                    ],
+                    "usr": "s:17ComposableRequest15SessionProviderV"
+                  }
+                ],
+                "usr": "s:17ComposableRequest12LockProviderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Muting",
+                "printedName": "Swiftagram.Endpoint.Group.User.Muting",
+                "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6MutingO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6unmutey17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGAgHE6MutingOF",
+            "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC0A6CryptoE6unmutey17ComposableRequest12LockProviderVyAA6SecretVAJ07SessionJ0Vy7Combine12AnyPublisherVyAA10FriendshipV4UnitVs5Error_pGGGAgHE6MutingOF",
+            "moduleName": "SwiftagramCrypto",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10Swiftagram8EndpointO5GroupO4UserC",
+        "mangledName": "$s10Swiftagram8EndpointO5GroupO4UserC",
+        "moduleName": "Swiftagram",
+        "declAttributes": [
+          "Final"
+        ],
+        "isFromExtension": true,
+        "isExternal": true,
+        "hasMissingDesignatedInitializers": true
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/kris\/XcodeProjects\/yuli_ios\/.build\/checkouts\/Swiftagram\/Sources\/SwiftagramCrypto\/Endpoints\/Endpoint+Media.swift",
+      "kind": "StringLiteral",
+      "offset": 207,
+      "length": 5,
+      "value": "\"media\""
+    },
+    {
+      "filePath": "\/Users\/kris\/XcodeProjects\/yuli_ios\/.build\/checkouts\/Swiftagram\/Sources\/SwiftagramCrypto\/Endpoints\/Endpoint+Media.swift",
+      "kind": "Dictionary",
+      "offset": 4931,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/kris\/XcodeProjects\/yuli_ios\/.build\/checkouts\/Swiftagram\/Sources\/SwiftagramCrypto\/Endpoints\/Endpoint+Stories.swift",
+      "kind": "BooleanLiteral",
+      "offset": 882,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kris\/XcodeProjects\/yuli_ios\/.build\/checkouts\/Swiftagram\/Sources\/SwiftagramCrypto\/Endpoints\/Endpoint+Stories.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1513,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kris\/XcodeProjects\/yuli_ios\/.build\/checkouts\/Swiftagram\/Sources\/SwiftagramCrypto\/Endpoints\/Endpoint+Stories.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2227,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kris\/XcodeProjects\/yuli_ios\/.build\/checkouts\/Swiftagram\/Sources\/SwiftagramCrypto\/Endpoints\/Endpoint+Stories.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5689,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kris\/XcodeProjects\/yuli_ios\/.build\/checkouts\/Swiftagram\/Sources\/SwiftagramCrypto\/Endpoints\/Endpoint+Stories.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6273,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kris\/XcodeProjects\/yuli_ios\/.build\/checkouts\/Swiftagram\/Sources\/SwiftagramCrypto\/Endpoints\/Endpoint+Stories.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7136,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kris\/XcodeProjects\/yuli_ios\/.build\/checkouts\/Swiftagram\/Sources\/SwiftagramCrypto\/Endpoints\/Endpoint+Stories.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7988,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kris\/XcodeProjects\/yuli_ios\/.build\/checkouts\/Swiftagram\/Sources\/SwiftagramCrypto\/Endpoints\/Endpoint+Stories.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9000,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kris\/XcodeProjects\/yuli_ios\/.build\/checkouts\/Swiftagram\/Sources\/SwiftagramCrypto\/Endpoints\/Endpoint+Stories.swift",
+      "kind": "BooleanLiteral",
+      "offset": 13653,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kris\/XcodeProjects\/yuli_ios\/.build\/checkouts\/Swiftagram\/Sources\/SwiftagramCrypto\/Endpoints\/Endpoint+Stories.swift",
+      "kind": "BooleanLiteral",
+      "offset": 14370,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kris\/XcodeProjects\/yuli_ios\/.build\/checkouts\/Swiftagram\/Sources\/SwiftagramCrypto\/Endpoints\/Endpoint+Uploader.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3741,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

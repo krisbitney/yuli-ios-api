@@ -1,0 +1,349 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ComposableStorageCrypto",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "KeychainAccess",
+        "printedName": "KeychainAccess",
+        "declKind": "Import",
+        "moduleName": "ComposableStorageCrypto"
+      },
+      {
+        "kind": "Import",
+        "name": "ComposableStorage",
+        "printedName": "ComposableStorage",
+        "declKind": "Import",
+        "moduleName": "ComposableStorageCrypto"
+      },
+      {
+        "kind": "Import",
+        "name": "ComposableStorage",
+        "printedName": "ComposableStorage",
+        "declKind": "Import",
+        "moduleName": "ComposableStorageCrypto"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "KeychainStorage",
+        "printedName": "KeychainStorage",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(service:group:accessibility:authentication:isSynchronizable:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "KeychainStorage",
+                "printedName": "ComposableStorageCrypto.KeychainStorage<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:23ComposableStorageCrypto08KeychainB0V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Accessibility",
+                "printedName": "KeychainAccess.Accessibility",
+                "hasDefaultArg": true,
+                "usr": "s:14KeychainAccess13AccessibilityO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AuthenticationPolicy",
+                "printedName": "KeychainAccess.AuthenticationPolicy",
+                "hasDefaultArg": true,
+                "usr": "s:14KeychainAccess20AuthenticationPolicyV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:23ComposableStorageCrypto08KeychainB0V7service5group13accessibility14authentication16isSynchronizableACyxGSSSg_AJ0D6Access13AccessibilityOAK20AuthenticationPolicyVSbtcfc",
+            "mangledName": "$s23ComposableStorageCrypto08KeychainB0V7service5group13accessibility14authentication16isSynchronizableACyxGSSSg_AJ0D6Access13AccessibilityOAK20AuthenticationPolicyVSbtcfc",
+            "moduleName": "ComposableStorageCrypto",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "item",
+            "printedName": "item(matching:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ComposableStorageCrypto08KeychainB0V4item8matchingxSgSS_tKF",
+            "mangledName": "$s23ComposableStorageCrypto08KeychainB0V4item8matchingxSgSS_tKF",
+            "moduleName": "ComposableStorageCrypto",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "items",
+            "printedName": "items()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ComposableStorageCrypto08KeychainB0V5itemsSayxGyKF",
+            "mangledName": "$s23ComposableStorageCrypto08KeychainB0V5itemsSayxGyKF",
+            "moduleName": "ComposableStorageCrypto",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "store",
+            "printedName": "store(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ComposableStorageCrypto08KeychainB0V5storeyxxKF",
+            "mangledName": "$s23ComposableStorageCrypto08KeychainB0V5storeyxxKF",
+            "moduleName": "ComposableStorageCrypto",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "discard",
+            "printedName": "discard(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ComposableStorageCrypto08KeychainB0V7discardyxSgSSKF",
+            "mangledName": "$s23ComposableStorageCrypto08KeychainB0V7discardyxSgSSKF",
+            "moduleName": "ComposableStorageCrypto",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "empty",
+            "printedName": "empty()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23ComposableStorageCrypto08KeychainB0V5emptyyyKF",
+            "mangledName": "$s23ComposableStorageCrypto08KeychainB0V5emptyyyKF",
+            "moduleName": "ComposableStorageCrypto",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+            "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:23ComposableStorageCrypto08KeychainB0V",
+        "mangledName": "$s23ComposableStorageCrypto08KeychainB0V",
+        "moduleName": "ComposableStorageCrypto",
+        "genericSig": "<τ_0_0 where τ_0_0 : ComposableStorage.Storable>",
+        "sugared_genericSig": "<Item where Item : ComposableStorage.Storable>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ThrowingStorage",
+            "printedName": "ThrowingStorage",
+            "usr": "s:17ComposableStorage08ThrowingB0P",
+            "mangledName": "$s17ComposableStorage08ThrowingB0P"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Storage",
+            "printedName": "Storage",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Item",
+                "printedName": "Item",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:17ComposableStorage0B0P",
+            "mangledName": "$s17ComposableStorage0B0P"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/kris\/XcodeProjects\/yuli_ios\/.build\/checkouts\/ComposableRequest\/Sources\/ComposableStorageCrypto\/KeychainStorage.swift",
+      "kind": "Array",
+      "offset": 3052,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/kris\/XcodeProjects\/yuli_ios\/.build\/checkouts\/ComposableRequest\/Sources\/ComposableStorageCrypto\/KeychainStorage.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3097,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

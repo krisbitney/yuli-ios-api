@@ -1,0 +1,693 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ComposableRequest
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+@_exported import Combine
+import CoreGraphics
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+public protocol Body {
+  var body: Foundation.Data? { get set }
+}
+extension ComposableRequest.Body {
+  public func body(_ body: Foundation.Data?) -> Self
+  public func body<W>(_ body: W) throws -> Self where W : ComposableRequest.Wrappable
+  public func body(_ body: [Swift.String : Swift.String]) -> Self
+  public func body(_ value: Swift.String, forKey key: Swift.String) -> Self
+}
+extension ComposableRequest.Body {
+  public func body(appending body: [Swift.String : Swift.String]) -> Self
+  public func body(appending value: Swift.String, forKey key: Swift.String) -> Self
+}
+public protocol Header {
+  var header: [Swift.String : Swift.String] { get set }
+}
+extension ComposableRequest.Header {
+  public func header(_ header: [Swift.String : Swift.String]) -> Self
+  public func header(_ header: [Swift.String : Swift.String?]) -> Self
+  public func header(_ value: Swift.String, forKey key: Swift.String) -> Self
+}
+extension ComposableRequest.Header {
+  public func header(appending header: [Swift.String : Swift.String]) -> Self
+  public func header(appending header: [Swift.String : Swift.String?]) -> Self
+  public func header(appending value: Swift.String, forKey key: Swift.String) -> Self
+}
+public enum HTTPMethod : Swift.String, Swift.Hashable {
+  case `default`
+  case get
+  case header
+  case post
+  case put
+  case delete
+  case connect
+  case options
+  case trace
+  case patch
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol Method {
+  var method: ComposableRequest.HTTPMethod { get set }
+}
+extension ComposableRequest.Method {
+  public func method(_ method: ComposableRequest.HTTPMethod) -> Self
+}
+@dynamicMemberLookup public protocol Path {
+  var components: Foundation.URLComponents? { get set }
+}
+extension ComposableRequest.Path {
+  public func path(appending component: Swift.String) -> Self
+  public subscript(dynamicMember component: Swift.String) -> Self {
+    get
+  }
+}
+public protocol Query {
+  var components: Foundation.URLComponents? { get set }
+}
+extension ComposableRequest.Query {
+  public func query<C>(_ query: C) -> Self where C : Swift.Collection, C.Element == Foundation.URLQueryItem
+  public func query(_ query: [Swift.String : Swift.String]) -> Self
+  public func query(_ query: [Swift.String : Swift.String?]) -> Self
+}
+extension ComposableRequest.Query {
+  public func query<C>(appending query: C) -> Self where C : Swift.Collection, C.Element == Foundation.URLQueryItem
+  public func query(appending query: [Swift.String : Swift.String]) -> Self
+  public func query(appending query: [Swift.String : Swift.String?]) -> Self
+  public func query(appending value: Swift.String?, forKey key: Swift.String) -> Self
+}
+public protocol Timeout {
+  var timeout: Foundation.TimeInterval { get set }
+}
+extension ComposableRequest.Timeout {
+  public func timeout(after seconds: Foundation.TimeInterval) -> Self
+}
+extension Foundation.CharacterSet {
+  public static let urlQueryValueAllowed: Foundation.CharacterSet
+}
+@objc final public class CodableHTTPCookie : Foundation.HTTPCookie, Swift.Codable {
+  @objc override dynamic public init?(properties: [Foundation.HTTPCookiePropertyKey : Any])
+  convenience public init?(_ cookie: Foundation.HTTPCookie)
+  convenience public init(from decoder: Swift.Decoder) throws
+  final public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+extension Foundation.HTTPCookiePropertyKey : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension Foundation.Data {
+  public var parameters: [Swift.String : Swift.String]? {
+    get
+  }
+}
+final public class Atomic<Value> {
+  final public var value: Value {
+    get
+  }
+  public init(_ value: Value)
+  final public func sync<T>(_ transform: (inout Value) -> T) -> T
+  final public func mutate(_ transform: (inout Value) -> Swift.Void)
+  @objc deinit
+}
+final public class Reference<Value> {
+  final public var value: Value
+  public init(_ value: Value)
+  @objc deinit
+}
+extension Swift.String {
+  public var camelCased: Swift.String {
+    get
+  }
+  public var snakeCased: Swift.String {
+    get
+  }
+  public var beginningWithUppercase: Swift.String {
+    get
+  }
+  public var beginningWithLowercase: Swift.String {
+    get
+  }
+}
+extension ComposableRequest.Logger {
+  public struct Level : Swift.OptionSet {
+    public let rawValue: Swift.Int
+    public init(rawValue: Swift.Int)
+    public static let all: ComposableRequest.Logger.Level
+    public typealias ArrayLiteralElement = ComposableRequest.Logger.Level
+    public typealias Element = ComposableRequest.Logger.Level
+    public typealias RawValue = Swift.Int
+  }
+}
+extension ComposableRequest.Logger.Level {
+  public enum Request {
+    public static var url: ComposableRequest.Logger.Level {
+      get
+    }
+    public static var method: ComposableRequest.Logger.Level {
+      get
+    }
+    public static var header: ComposableRequest.Logger.Level {
+      get
+    }
+    public static var body: ComposableRequest.Logger.Level {
+      get
+    }
+    public static let basic: ComposableRequest.Logger.Level
+    public static let all: ComposableRequest.Logger.Level
+  }
+}
+extension ComposableRequest.Logger.Level {
+  public enum Response {
+    public static var url: ComposableRequest.Logger.Level {
+      get
+    }
+    public static var statusCode: ComposableRequest.Logger.Level {
+      get
+    }
+    public static var error: ComposableRequest.Logger.Level {
+      get
+    }
+    public static var header: ComposableRequest.Logger.Level {
+      get
+    }
+    public static var body: ComposableRequest.Logger.Level {
+      get
+    }
+    public static let basic: ComposableRequest.Logger.Level
+    public static let all: ComposableRequest.Logger.Level
+  }
+}
+public struct Logger {
+  public static var `default`: ComposableRequest.Logger
+  public init(level: ComposableRequest.Logger.Level?, handler: ((Swift.String) -> Swift.Void)? = nil)
+  public func log(_ request: Foundation.URLRequest)
+  public func log(_ result: Swift.Result<ComposableRequest.Request.Response, Swift.Error>)
+}
+public struct ConcatProvider<A, B> : ComposableRequest.Provider where A : ComposableRequest.Provider, B : ComposableRequest.Provider, B == A.Output {
+  public typealias Input = A.Input
+  public typealias Output = B
+  @available(*, deprecated, message: "use concat `init` on nested `A` directly (removing on `6.0.0`)")
+  public init(_ generator: @escaping (ComposableRequest.ConcatProvider<A, B>.Input) -> ComposableRequest.ConcatProvider<A, B>.Output)
+  @available(*, deprecated, message: "use concat `init` on nested `A` directly (removing on `6.0.0`)")
+  public init(_ generator: @escaping (A.Input, B.Input) -> B.Output)
+  public static func generate(_ provider: ComposableRequest.ConcatProvider<A, B>, from input: ComposableRequest.ConcatProvider<A, B>.Input) -> ComposableRequest.ConcatProvider<A, B>.Output
+}
+extension ComposableRequest.ConcatProvider : ComposableRequest.LockProviderType where A : ComposableRequest.LockProviderType {
+}
+extension ComposableRequest.ConcatProvider : ComposableRequest.PagerProviderType where A : ComposableRequest.PagerProviderType {
+  public typealias Offset = A.Offset
+}
+extension ComposableRequest.ConcatProvider : ComposableRequest.SessionProviderType where A : ComposableRequest.SessionProviderType {
+}
+public struct ConcatProvider3<A, B, C> : ComposableRequest.Provider where A : ComposableRequest.Provider, B : ComposableRequest.Provider, B == A.Output, C : ComposableRequest.Provider, C == B.Output {
+  public typealias Input = A.Input
+  public typealias Output = ComposableRequest.ConcatProvider<B, C>
+  @available(*, deprecated, message: "use concat `init` on nested `A` directly (removing on `6.0.0`)")
+  public init(_ generator: @escaping (ComposableRequest.ConcatProvider3<A, B, C>.Input) -> ComposableRequest.ConcatProvider3<A, B, C>.Output)
+  @available(*, deprecated, message: "use concat `init` on nested `A` directly (removing on `6.0.0`)")
+  public init(_ generator: @escaping (A.Input, B.Input, C.Input) -> C.Output)
+  public static func generate(_ provider: ComposableRequest.ConcatProvider3<A, B, C>, from input: ComposableRequest.ConcatProvider3<A, B, C>.Input) -> ComposableRequest.ConcatProvider3<A, B, C>.Output
+}
+extension ComposableRequest.ConcatProvider3 : ComposableRequest.LockProviderType where A : ComposableRequest.LockProviderType {
+}
+extension ComposableRequest.ConcatProvider3 : ComposableRequest.PagerProviderType where A : ComposableRequest.PagerProviderType {
+  public typealias Offset = A.Offset
+}
+extension ComposableRequest.ConcatProvider3 : ComposableRequest.SessionProviderType where A : ComposableRequest.SessionProviderType {
+}
+public struct ConcatProvider4<A, B, C, D> : ComposableRequest.Provider where A : ComposableRequest.Provider, B : ComposableRequest.Provider, B == A.Output, C : ComposableRequest.Provider, C == B.Output, D : ComposableRequest.Provider, D == C.Output {
+  public typealias Input = A.Input
+  public typealias Output = ComposableRequest.ConcatProvider3<B, C, D>
+  @available(*, deprecated, message: "use concat `init` on nested `A` directly (removing on `6.0.0`)")
+  public init(_ generator: @escaping (ComposableRequest.ConcatProvider4<A, B, C, D>.Input) -> ComposableRequest.ConcatProvider4<A, B, C, D>.Output)
+  @available(*, deprecated, message: "use concat `init` on nested `A` directly (removing on `6.0.0`)")
+  public init(_ generator: @escaping (A.Input, B.Input, C.Input, D.Input) -> D.Output)
+  public static func generate(_ provider: ComposableRequest.ConcatProvider4<A, B, C, D>, from input: ComposableRequest.ConcatProvider4<A, B, C, D>.Input) -> ComposableRequest.ConcatProvider4<A, B, C, D>.Output
+}
+extension ComposableRequest.ConcatProvider4 : ComposableRequest.LockProviderType where A : ComposableRequest.LockProviderType {
+}
+extension ComposableRequest.ConcatProvider4 : ComposableRequest.PagerProviderType where A : ComposableRequest.PagerProviderType {
+  public typealias Offset = A.Offset
+}
+extension ComposableRequest.ConcatProvider4 : ComposableRequest.SessionProviderType where A : ComposableRequest.SessionProviderType {
+}
+public struct ConcatProvider5<A, B, C, D, E> : ComposableRequest.Provider where A : ComposableRequest.Provider, B : ComposableRequest.Provider, B == A.Output, C : ComposableRequest.Provider, C == B.Output, D : ComposableRequest.Provider, D == C.Output, E : ComposableRequest.Provider, E == D.Output {
+  public typealias Input = A.Input
+  public typealias Output = ComposableRequest.ConcatProvider4<B, C, D, E>
+  @available(*, deprecated, message: "use concat `init` on nested `A` directly (removing on `6.0.0`)")
+  public init(_ generator: @escaping (ComposableRequest.ConcatProvider5<A, B, C, D, E>.Input) -> ComposableRequest.ConcatProvider5<A, B, C, D, E>.Output)
+  @available(*, deprecated, message: "use concat `init` on nested `A` directly (removing on `6.0.0`)")
+  public init(_ generator: @escaping (A.Input, B.Input, C.Input, D.Input, E.Input) -> E.Output)
+  public static func generate(_ provider: ComposableRequest.ConcatProvider5<A, B, C, D, E>, from input: ComposableRequest.ConcatProvider5<A, B, C, D, E>.Input) -> ComposableRequest.ConcatProvider5<A, B, C, D, E>.Output
+}
+extension ComposableRequest.ConcatProvider5 : ComposableRequest.LockProviderType where A : ComposableRequest.LockProviderType {
+}
+extension ComposableRequest.ConcatProvider5 : ComposableRequest.PagerProviderType where A : ComposableRequest.PagerProviderType {
+  public typealias Offset = A.Offset
+}
+extension ComposableRequest.ConcatProvider5 : ComposableRequest.SessionProviderType where A : ComposableRequest.SessionProviderType {
+}
+public struct LockProvider<Input, Output> : ComposableRequest.LockProviderType {
+  public init(_ generator: @escaping (Input) -> Output)
+  public static func generate(_ provider: ComposableRequest.LockProvider<Input, Output>, from input: Input) -> Output
+}
+public protocol LockProviderType : ComposableRequest.Provider {
+}
+extension ComposableRequest.LockProviderType {
+  public func unlock(with key: Self.Input) -> Self.Output
+}
+extension ComposableRequest.LockProviderType where Self.Input == () {
+  public func unlock() -> Self.Output
+}
+public protocol ComposableNonNilType {
+  var composableIsNone: Swift.Bool { get }
+}
+public protocol ComposableOptionalType : ComposableRequest.ComposableNonNilType {
+  associatedtype Wrapped
+  static var composableNone: Self { get }
+  var composableOptional: Self.Wrapped? { get }
+}
+extension Swift.Optional : ComposableRequest.ComposableOptionalType {
+  public static var composableNone: Swift.Optional<Wrapped> {
+    get
+  }
+  public var composableIsNone: Swift.Bool {
+    get
+  }
+  public var composableOptional: Wrapped? {
+    get
+  }
+}
+public struct PagerProvider<Offset, Output> : ComposableRequest.PagerProviderType {
+  public typealias Input = ComposableRequest.PagerProviderInput<Offset>
+  public init(_ generator: @escaping (ComposableRequest.PagerProvider<Offset, Output>.Input) -> Output)
+  public static func generate(_ provider: ComposableRequest.PagerProvider<Offset, Output>, from input: ComposableRequest.PagerProvider<Offset, Output>.Input) -> Output
+}
+public struct PagerProviderInput<Offset> {
+  public let count: Swift.Int
+  public let offset: Offset
+  public let delay: (_ offset: Offset) -> ComposableRequest.Delay
+  public init(count: Swift.Int, offset: Offset, delay: @escaping (_ offset: Offset) -> ComposableRequest.Delay)
+  public init(count: Swift.Int, offset: Offset, delay: ComposableRequest.Delay)
+}
+extension ComposableRequest.PagerProviderInput where Offset : ComposableRequest.Ranked {
+  public var rank: Offset.Rank {
+    get
+  }
+}
+public protocol PagerProviderType : ComposableRequest.Provider {
+  associatedtype Offset where Self.Input == ComposableRequest.PagerProviderInput<Self.Offset>
+}
+extension ComposableRequest.PagerProviderType {
+  public func pages(_ count: Swift.Int, offset: Self.Offset, delay: @escaping (_ offset: Self.Offset) -> ComposableRequest.Delay) -> Self.Output
+  public func pages(_ count: Swift.Int, offset: Self.Offset, delay: ComposableRequest.Delay = .seconds(0)) -> Self.Output
+  public func pages(_ count: Swift.Int, offset: Self.Offset, delay: Swift.ClosedRange<Foundation.TimeInterval>) -> Self.Output
+  public func pages(_ count: Swift.Int, offset: Self.Offset, delay: Swift.Range<Foundation.TimeInterval>) -> Self.Output
+}
+extension ComposableRequest.PagerProviderType where Self.Offset == () {
+  public func pages(_ count: Swift.Int, delay: ComposableRequest.Delay = .seconds(0)) -> Self.Output
+}
+extension ComposableRequest.PagerProviderType where Self.Offset : ComposableRequest.ComposableOptionalType {
+  public func pages(_ count: Swift.Int, delay: ComposableRequest.Delay = .seconds(0)) -> Self.Output
+}
+extension ComposableRequest.PagerProviderType where Self.Offset : ComposableRequest.Ranked {
+  public func pages(_ count: Swift.Int, offset: Self.Offset.Offset, rank: Self.Offset.Rank, delay: ComposableRequest.Delay = .seconds(0)) -> Self.Output
+}
+extension ComposableRequest.PagerProviderType where Self.Offset : ComposableRequest.Ranked, Self.Offset.Offset : ComposableRequest.ComposableOptionalType {
+  public func pages(_ count: Swift.Int, rank: Self.Offset.Rank, delay: ComposableRequest.Delay = .seconds(0)) -> Self.Output
+}
+extension ComposableRequest.PagerProviderType where Self.Offset : ComposableRequest.Ranked, Self.Offset.Rank : ComposableRequest.ComposableOptionalType {
+  public func pages(_ count: Swift.Int, offset: Self.Offset.Offset, delay: ComposableRequest.Delay = .seconds(0)) -> Self.Output
+}
+extension ComposableRequest.PagerProviderType where Self.Offset : ComposableRequest.Ranked, Self.Offset.Offset : ComposableRequest.ComposableOptionalType, Self.Offset.Rank : ComposableRequest.ComposableOptionalType {
+  public func pages(_ count: Swift.Int, delay: ComposableRequest.Delay = .seconds(0)) -> Self.Output
+}
+public typealias LockSessionPagerProvider<Input, Offset, Output> = ComposableRequest.LockProvider<Input, ComposableRequest.SessionProvider<ComposableRequest.PagerProvider<Offset, Output>>>
+public typealias LockSessionProvider<Input, Output> = ComposableRequest.LockProvider<Input, ComposableRequest.SessionProvider<Output>>
+public typealias SessionPagerProvider<Offset, Output> = ComposableRequest.SessionProvider<ComposableRequest.PagerProvider<Offset, Output>>
+public protocol Provider {
+  associatedtype Input
+  associatedtype Output
+  init(_ generator: @escaping (Self.Input) -> Self.Output)
+  static func generate(_ provider: Self, from input: Self.Input) -> Self.Output
+}
+extension ComposableRequest.Provider where Self.Output : ComposableRequest.Provider {
+  public init(_ generator: @escaping (Self.Input, Self.Output.Input) -> Self.Output.Output)
+}
+extension ComposableRequest.Provider where Self.Output : ComposableRequest.Provider, Self.Output.Output : ComposableRequest.Provider {
+  public init(_ generator: @escaping (Self.Input, Self.Output.Input, Self.Output.Output.Input) -> Self.Output.Output.Output)
+}
+extension ComposableRequest.Provider where Self.Output : ComposableRequest.Provider, Self.Output.Output : ComposableRequest.Provider, Self.Output.Output.Output : ComposableRequest.Provider {
+  public init(_ generator: @escaping (Self.Input, Self.Output.Input, Self.Output.Output.Input, Self.Output.Output.Output.Input) -> Self.Output.Output.Output.Output)
+}
+extension ComposableRequest.Provider where Self.Output : ComposableRequest.Provider, Self.Output.Output : ComposableRequest.Provider, Self.Output.Output.Output : ComposableRequest.Provider, Self.Output.Output.Output.Output : ComposableRequest.Provider {
+  public init(_ generator: @escaping (Self.Input, Self.Output.Input, Self.Output.Output.Input, Self.Output.Output.Output.Input, Self.Output.Output.Output.Output.Input) -> Self.Output.Output.Output.Output.Output)
+}
+public struct SessionProvider<Output> : ComposableRequest.SessionProviderType {
+  public typealias Input = ComposableRequest.SessionProviderInput
+  public init(_ generator: @escaping (ComposableRequest.SessionProvider<Output>.Input) -> Output)
+  public static func generate(_ provider: ComposableRequest.SessionProvider<Output>, from input: ComposableRequest.SessionProvider<Output>.Input) -> Output
+}
+public struct SessionProviderInput {
+  public let session: Foundation.URLSession
+  public let retries: Swift.Int
+  public let logger: ComposableRequest.Logger?
+  public init(session: Foundation.URLSession, retries: Swift.Int, logger: ComposableRequest.Logger?)
+}
+public protocol SessionProviderType : ComposableRequest.Provider where Self.Input == ComposableRequest.SessionProviderInput {
+}
+extension ComposableRequest.SessionProviderType {
+  public func session(_ input: Self.Input) -> Self.Output
+  public func session(_ session: Foundation.URLSession, retries: Swift.Int = 0, logging logger: ComposableRequest.Logger? = nil) -> Self.Output
+}
+public typealias Delay = Foundation.RunLoop.SchedulerTimeType.Stride
+public enum Instruction<Offset> {
+  case stop
+  case load(Offset)
+}
+extension Combine.Publishers.Pager {
+  public struct Iteration {
+    public let stream: Stream
+    public let offset: ([Combine.Publishers.Pager<Offset, Stream>.Output]) -> ComposableRequest.Instruction<Offset>
+  }
+}
+extension Combine.Publisher {
+  public func iterate<O>(with offset: @escaping ([Self.Output]) -> ComposableRequest.Instruction<O>) -> Combine.Publishers.Pager<O, Self>.Iteration
+  public func iterate<O>(stoppingAt exception: @escaping (O) -> Swift.Bool, with offset: @escaping ([Self.Output]) -> ComposableRequest.Instruction<O>) -> Combine.Publishers.Pager<O, Self>.Iteration
+  public func iterate<O>(stoppingAt exception: O, with offset: @escaping ([Self.Output]) -> ComposableRequest.Instruction<O>) -> Combine.Publishers.Pager<O, Self>.Iteration where O : Swift.Equatable
+  public func iterateFirst<O>(with offset: @escaping (Self.Output?) -> ComposableRequest.Instruction<O>) -> Combine.Publishers.Pager<O, Combine.Publishers.Output<Self>>.Iteration
+  public func iterateFirst<O>(stoppingAt exception: @escaping (O) -> Swift.Bool, with offset: @escaping (Self.Output?) -> ComposableRequest.Instruction<O>) -> Combine.Publishers.Pager<O, Combine.Publishers.Output<Self>>.Iteration
+  public func iterateFirst<O>(stoppingAt exception: O, with offset: @escaping (Self.Output?) -> ComposableRequest.Instruction<O>) -> Combine.Publishers.Pager<O, Combine.Publishers.Output<Self>>.Iteration where O : Swift.Equatable
+  public func iterateLast<O>(with offset: @escaping (Self.Output?) -> ComposableRequest.Instruction<O>) -> Combine.Publishers.Pager<O, Combine.Publishers.Last<Self>>.Iteration
+  public func iterateLast<O>(stoppingAt exception: @escaping (O) -> Swift.Bool, with offset: @escaping (Self.Output?) -> ComposableRequest.Instruction<O>) -> Combine.Publishers.Pager<O, Combine.Publishers.Last<Self>>.Iteration
+  public func iterateLast<O>(stoppingAt exception: O, with offset: @escaping (Self.Output?) -> ComposableRequest.Instruction<O>) -> Combine.Publishers.Pager<O, Combine.Publishers.Last<Self>>.Iteration where O : Swift.Equatable
+  public func iterate(_ continue: @escaping ([Self.Output]) -> Swift.Bool = { _ in true }) -> Combine.Publishers.Pager<Swift.Void, Self>.Iteration
+  public func iterate<W>(with offset: @escaping ([Self.Output]) -> ComposableRequest.Instruction<W>) -> Combine.Publishers.Pager<W?, Self>.Iteration
+  public func iterate<W>(stoppingAt exception: @escaping (W?) -> Swift.Bool, with offset: @escaping ([Self.Output]) -> ComposableRequest.Instruction<W>) -> Combine.Publishers.Pager<W?, Self>.Iteration
+  public func iterate<W>(stoppingAt exception: W?, with offset: @escaping ([Self.Output]) -> ComposableRequest.Instruction<W>) -> Combine.Publishers.Pager<W?, Self>.Iteration where W : Swift.Equatable
+  public func iterateFirst<W>(with offset: @escaping (Self.Output?) -> ComposableRequest.Instruction<W>) -> Combine.Publishers.Pager<W?, Combine.Publishers.Output<Self>>.Iteration
+  public func iterateFirst<W>(stoppingAt exception: @escaping (W?) -> Swift.Bool, with offset: @escaping (Self.Output?) -> ComposableRequest.Instruction<W>) -> Combine.Publishers.Pager<W?, Combine.Publishers.Output<Self>>.Iteration
+  public func iterateFirst<W>(stoppingAt exception: W?, with offset: @escaping (Self.Output?) -> ComposableRequest.Instruction<W>) -> Combine.Publishers.Pager<W?, Combine.Publishers.Output<Self>>.Iteration where W : Swift.Equatable
+  public func iterateLast<W>(with offset: @escaping (Self.Output?) -> ComposableRequest.Instruction<W>) -> Combine.Publishers.Pager<W?, Combine.Publishers.Last<Self>>.Iteration
+  public func iterateLast<W>(stoppingAt exception: @escaping (W?) -> Swift.Bool, with offset: @escaping (Self.Output?) -> ComposableRequest.Instruction<W>) -> Combine.Publishers.Pager<W?, Combine.Publishers.Last<Self>>.Iteration
+  public func iterateLast<W>(stoppingAt exception: W?, with offset: @escaping (Self.Output?) -> ComposableRequest.Instruction<W>) -> Combine.Publishers.Pager<W?, Combine.Publishers.Last<Self>>.Iteration where W : Swift.Equatable
+}
+extension Combine.Publisher where Self.Failure == Swift.Never {
+  public func iterateFirst<O>(with offset: @escaping (Self.Output) -> ComposableRequest.Instruction<O>) -> Combine.Publishers.Pager<O, Combine.Publishers.Output<Self>>.Iteration
+  public func iterateFirst<O>(stoppingAt exception: @escaping (O) -> Swift.Bool, with offset: @escaping (Self.Output) -> ComposableRequest.Instruction<O>) -> Combine.Publishers.Pager<O, Combine.Publishers.Output<Self>>.Iteration
+  public func iterateFirst<O>(stoppingAt exception: O, with offset: @escaping (Self.Output) -> ComposableRequest.Instruction<O>) -> Combine.Publishers.Pager<O, Combine.Publishers.Output<Self>>.Iteration where O : Swift.Equatable
+  public func iterateLast<O>(with offset: @escaping (Self.Output) -> ComposableRequest.Instruction<O>) -> Combine.Publishers.Pager<O, Combine.Publishers.Last<Self>>.Iteration
+  public func iterateLast<O>(stoppingAt exception: @escaping (O) -> Swift.Bool, with offset: @escaping (Self.Output) -> ComposableRequest.Instruction<O>) -> Combine.Publishers.Pager<O, Combine.Publishers.Last<Self>>.Iteration
+  public func iterateLast<O>(stoppingAt exception: O, with offset: @escaping (Self.Output) -> ComposableRequest.Instruction<O>) -> Combine.Publishers.Pager<O, Combine.Publishers.Last<Self>>.Iteration where O : Swift.Equatable
+}
+public typealias Pager = Combine.Publishers.Pager
+extension Combine.Publishers {
+  public struct Pager<Offset, Stream> : Combine.Publisher where Stream : Combine.Publisher {
+    public init(_ count: Swift.Int = .max, offset: Offset, delay: @escaping (_ offset: Offset) -> Combine.Publishers.Pager<Offset, Stream>.Delay, generator: @escaping (_ offset: Offset) -> Combine.Publishers.Pager<Offset, Stream>.Iteration)
+    public init(_ count: Swift.Int = .max, offset: Offset, delay: Combine.Publishers.Pager<Offset, Stream>.Delay, generator: @escaping (_ offset: Offset) -> Combine.Publishers.Pager<Offset, Stream>.Iteration)
+    public init(_ pages: ComposableRequest.PagerProviderInput<Offset>, generator: @escaping (_ offset: Offset) -> Combine.Publishers.Pager<Offset, Stream>.Iteration)
+    public func receive<S>(subscriber: S) where S : Combine.Subscriber, Stream.Failure == S.Failure, Stream.Output == S.Input
+  }
+}
+extension Combine.Publishers.Pager {
+  public typealias Output = Stream.Output
+  public typealias Failure = Stream.Failure
+  public typealias Delay = ComposableRequest.Delay
+}
+extension Combine.Publishers.Pager where Offset == () {
+  public init(_ count: Swift.Int = .max, delay: @escaping () -> Combine.Publishers.Pager<Offset, Stream>.Delay, generator: @escaping () -> Combine.Publishers.Pager<Offset, Stream>.Iteration)
+  public init(_ count: Swift.Int = .max, delay: Combine.Publishers.Pager<Offset, Stream>.Delay = .seconds(0), generator: @escaping () -> Combine.Publishers.Pager<Offset, Stream>.Iteration)
+  public init(_ pages: ComposableRequest.PagerProviderInput<Offset>, generator: @escaping () -> Combine.Publishers.Pager<Offset, Stream>.Iteration)
+  public init(_ count: Swift.Int = .max, delay: @escaping () -> Combine.Publishers.Pager<Offset, Stream>.Delay, generator: @escaping () -> Stream)
+  public init(_ count: Swift.Int = .max, delay: Combine.Publishers.Pager<Offset, Stream>.Delay = .seconds(0), generator: @escaping () -> Stream)
+  public init(_ pages: ComposableRequest.PagerProviderInput<Offset>, generator: @escaping () -> Stream)
+}
+extension Combine.Publishers.Pager where Offset : ComposableRequest.ComposableOptionalType {
+  public init(_ count: Swift.Int = .max, delay: @escaping (_ offset: Offset) -> Combine.Publishers.Pager<Offset, Stream>.Delay, generator: @escaping (_ offset: Offset) -> Combine.Publishers.Pager<Offset, Stream>.Iteration)
+  public init(_ count: Swift.Int = .max, delay: Combine.Publishers.Pager<Offset, Stream>.Delay = .seconds(0), generator: @escaping (_ offset: Offset) -> Combine.Publishers.Pager<Offset, Stream>.Iteration)
+}
+extension Combine.Publishers.Pager where Offset : ComposableRequest.Ranked {
+  public init(_ count: Swift.Int = .max, offset: Offset, delay: @escaping (_ offset: Offset) -> Combine.Publishers.Pager<Offset, Stream>.Delay, generator: @escaping (_ offset: Offset.Offset) -> Combine.Publishers.Pager<Offset.Offset, Stream>.Iteration)
+  public init(_ count: Swift.Int = .max, offset: Offset, delay: @escaping (_ offset: Offset.Offset) -> Combine.Publishers.Pager<Offset, Stream>.Delay, generator: @escaping (_ offset: Offset.Offset) -> Combine.Publishers.Pager<Offset.Offset, Stream>.Iteration)
+  public init(_ count: Swift.Int = .max, offset: Offset, delay: Combine.Publishers.Pager<Offset, Stream>.Delay = .seconds(0), generator: @escaping (_ offset: Offset.Offset) -> Combine.Publishers.Pager<Offset.Offset, Stream>.Iteration)
+  public init(_ pages: ComposableRequest.PagerProviderInput<Offset>, generator: @escaping (_ offset: Offset.Offset) -> Combine.Publishers.Pager<Offset.Offset, Stream>.Iteration)
+}
+public protocol Instructable {
+  associatedtype Offset
+  var instruction: ComposableRequest.Instruction<Self.Offset> { get }
+}
+public protocol Paginatable : ComposableRequest.Instructable where Self.Offset : ComposableRequest.ComposableNonNilType {
+  var offset: Self.Offset { get }
+}
+extension ComposableRequest.Paginatable {
+  public var instruction: ComposableRequest.Instruction<Self.Offset> {
+    get
+  }
+}
+extension Combine.Publisher where Self.Output : ComposableRequest.Instructable {
+  public func iterateFirst() -> Combine.Publishers.Pager<Self.Output.Offset, Combine.Publishers.Output<Self>>.Iteration
+  public func iterateFirst(stoppingAt exception: @escaping (Self.Output.Offset) -> Swift.Bool) -> Combine.Publishers.Pager<Self.Output.Offset, Combine.Publishers.Output<Self>>.Iteration
+  public func iterateLast() -> Combine.Publishers.Pager<Self.Output.Offset, Combine.Publishers.Last<Self>>.Iteration
+  public func iterateLast(stoppingAt exception: @escaping (Self.Output.Offset) -> Swift.Bool) -> Combine.Publishers.Pager<Self.Output.Offset, Combine.Publishers.Last<Self>>.Iteration
+}
+extension Combine.Publisher where Self.Output : ComposableRequest.Instructable, Self.Output.Offset : Swift.Equatable {
+  public func iterateFirst(stoppingAt exception: Self.Output.Offset) -> Combine.Publishers.Pager<Self.Output.Offset, Combine.Publishers.Output<Self>>.Iteration
+  public func iterateLast(stoppingAt exception: Self.Output.Offset) -> Combine.Publishers.Pager<Self.Output.Offset, Combine.Publishers.Last<Self>>.Iteration
+}
+public protocol Ranked {
+  associatedtype Offset
+  associatedtype Rank
+  var offset: Self.Offset { get }
+  var rank: Self.Rank { get }
+  init(offset: Self.Offset, rank: Self.Rank)
+}
+public struct RankedOffset<Offset, Rank> : ComposableRequest.Ranked {
+  public var offset: Offset
+  public var rank: Rank
+  public init(offset: Offset, rank: Rank)
+}
+extension ComposableRequest.RankedOffset : Swift.Equatable where Offset : Swift.Equatable {
+  public static func == (lhs: ComposableRequest.RankedOffset<Offset, Rank>, rhs: ComposableRequest.RankedOffset<Offset, Rank>) -> Swift.Bool
+}
+extension ComposableRequest.Request {
+  public func publish(with input: ComposableRequest.SessionProviderInput) -> Combine.AnyPublisher<ComposableRequest.Request.Response, Swift.Error>
+  public func publish(session: Foundation.URLSession, retries: Swift.Int = 0, logging logger: ComposableRequest.Logger? = nil) -> Combine.AnyPublisher<ComposableRequest.Request.Response, Swift.Error>
+}
+extension Combine.Publisher where Self.Output : ComposableRequest.Wrappable {
+  public func wrap() -> Combine.Publishers.Map<Self, ComposableRequest.Wrapper>
+}
+extension Combine.Publisher where Self.Output == Foundation.Data {
+  public func wrap() -> Combine.Publishers.TryMap<Self, ComposableRequest.Wrapper>
+}
+extension Combine.Publisher where Self.Output == Foundation.Data? {
+  public func wrap() -> Combine.Publishers.TryMap<Self, ComposableRequest.Wrapper>
+}
+extension ComposableRequest.Request {
+  public struct Response {
+    public let data: Foundation.Data
+    public let response: Foundation.URLResponse
+  }
+}
+extension ComposableRequest.Request {
+  public enum Error : Swift.Error {
+    case invalidRequest(ComposableRequest.Request)
+    case cancelled
+  }
+}
+@dynamicMemberLookup public struct Request : Swift.Hashable {
+  public var components: Foundation.URLComponents?
+  public var method: ComposableRequest.HTTPMethod
+  public var header: [Swift.String : Swift.String]
+  public var body: Foundation.Data?
+  public var timeout: Foundation.TimeInterval
+  public init(_ components: Foundation.URLComponents?, method: ComposableRequest.HTTPMethod = .default, header: [Swift.String : Swift.String] = [:], body: Foundation.Data? = nil, timeout: Foundation.TimeInterval = 15)
+  public init(_ url: Foundation.URL?, query: [Swift.String : Swift.String] = [:], method: ComposableRequest.HTTPMethod = .default, header: [Swift.String : Swift.String] = [:], body: Foundation.Data? = nil, timeout: Foundation.TimeInterval = 15)
+  public init(_ path: Swift.String?, query: [Swift.String : Swift.String] = [:], method: ComposableRequest.HTTPMethod = .default, header: [Swift.String : Swift.String] = [:], body: Foundation.Data? = nil, timeout: Foundation.TimeInterval = 15)
+  public init(filePath path: Swift.String?, query: [Swift.String : Swift.String] = [:], method: ComposableRequest.HTTPMethod = .default, header: [Swift.String : Swift.String] = [:], body: Foundation.Data? = nil, timeout: Foundation.TimeInterval = 15)
+  public func request() -> Foundation.URLRequest?
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: ComposableRequest.Request, b: ComposableRequest.Request) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ComposableRequest.Request : ComposableRequest.Body, ComposableRequest.Header, ComposableRequest.Method, ComposableRequest.Path, ComposableRequest.Query, ComposableRequest.Timeout {
+}
+public protocol Wrappable : Swift.CustomStringConvertible {
+  var wrapped: ComposableRequest.Wrapper { get }
+}
+extension ComposableRequest.Wrappable {
+  public var description: Swift.String {
+    get
+  }
+}
+extension Swift.Bool : ComposableRequest.Wrappable {
+  public var wrapped: ComposableRequest.Wrapper {
+    get
+  }
+}
+extension Swift.Int : ComposableRequest.Wrappable {
+  public var wrapped: ComposableRequest.Wrapper {
+    get
+  }
+}
+extension Swift.Float : ComposableRequest.Wrappable {
+  public var wrapped: ComposableRequest.Wrapper {
+    get
+  }
+}
+extension Swift.Double : ComposableRequest.Wrappable {
+  public var wrapped: ComposableRequest.Wrapper {
+    get
+  }
+}
+extension Swift.String : ComposableRequest.Wrappable {
+  public var wrapped: ComposableRequest.Wrapper {
+    get
+  }
+}
+extension Foundation.NSNull : ComposableRequest.Wrappable {
+  public var wrapped: ComposableRequest.Wrapper {
+    get
+  }
+}
+extension Swift.Optional : Swift.CustomStringConvertible where Wrapped : ComposableRequest.Wrappable {
+  public var description: Swift.String {
+    get
+  }
+}
+extension Swift.Optional : ComposableRequest.Wrappable where Wrapped : ComposableRequest.Wrappable {
+  public var wrapped: ComposableRequest.Wrapper {
+    get
+  }
+}
+extension Swift.Array : ComposableRequest.Wrappable where Element : ComposableRequest.Wrappable {
+  public var wrapped: ComposableRequest.Wrapper {
+    get
+  }
+}
+extension Swift.Dictionary : ComposableRequest.Wrappable where Key == Swift.String, Value : ComposableRequest.Wrappable {
+  public var wrapped: ComposableRequest.Wrapper {
+    get
+  }
+}
+extension ComposableRequest.Wrapper : ComposableRequest.Wrappable {
+  public var wrapped: ComposableRequest.Wrapper {
+    get
+  }
+}
+extension CoreFoundation.CGFloat : ComposableRequest.Wrappable {
+  public var wrapped: ComposableRequest.Wrapper {
+    get
+  }
+}
+@dynamicMemberLookup public protocol Wrapped : ComposableRequest.Wrappable, Swift.Decodable, Swift.Encodable {
+  var wrapper: () -> ComposableRequest.Wrapper { get }
+  init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+}
+extension ComposableRequest.Wrapper : ComposableRequest.Wrapped {
+  public var wrapper: () -> ComposableRequest.Wrapper {
+    get
+  }
+  public init(wrapper: @escaping () -> ComposableRequest.Wrapper)
+}
+extension ComposableRequest.Wrapped {
+  public var wrapped: ComposableRequest.Wrapper {
+    get
+  }
+  public init(wrapper: ComposableRequest.Wrapper)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  public subscript(dynamicMember member: Swift.String) -> ComposableRequest.Wrapper {
+    get
+  }
+  public subscript(key: Swift.String) -> ComposableRequest.Wrapper {
+    get
+  }
+  public subscript(index: Swift.Int) -> ComposableRequest.Wrapper {
+    get
+  }
+}
+@dynamicMemberLookup public struct Wrapper {
+  public static var empty: ComposableRequest.Wrapper {
+    get
+  }
+  public var value: ComposableRequest.Wrappable
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  public static func decode(_ data: Foundation.Data) throws -> ComposableRequest.Wrapper
+  public func encode() throws -> Foundation.Data
+  public func optional() -> ComposableRequest.Wrapper?
+  public func snakeCased() -> ComposableRequest.Wrapper
+  public func camelCased() -> ComposableRequest.Wrapper
+  public subscript(dynamicMember member: Swift.String) -> ComposableRequest.Wrapper {
+    get
+    set(newValue)
+  }
+  public subscript(key: Swift.String) -> ComposableRequest.Wrapper {
+    get
+    set(newValue)
+  }
+  public subscript(index: Swift.Int) -> ComposableRequest.Wrapper {
+    get
+  }
+}
+extension ComposableRequest.Wrapper {
+  public func array() -> [ComposableRequest.Wrapper]?
+  public func bool(converting shouldConvert: Swift.Bool = true) -> Swift.Bool?
+  public func date(countingFrom reference: Foundation.Date = .init(timeIntervalSince1970: 0), converting shouldConvert: Swift.Bool = false) -> Foundation.Date?
+  public func dictionary() -> [Swift.String : ComposableRequest.Wrapper]?
+  public func double(converting shouldConvert: Swift.Bool = true) -> Swift.Double?
+  public func int(converting shouldConvert: Swift.Bool = true) -> Swift.Int?
+  public func string(converting shouldConvert: Swift.Bool = false) -> Swift.String?
+  public func url() -> Foundation.URL?
+}
+extension ComposableRequest.Wrapper : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension ComposableRequest.Wrapper : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public func jsonRepresentation() throws -> Swift.String?
+}
+extension ComposableRequest.Wrapper : Swift.Equatable {
+  public static func == (lhs: ComposableRequest.Wrapper, rhs: ComposableRequest.Wrapper) -> Swift.Bool
+}
+extension ComposableRequest.Wrapper : Swift.ExpressibleByArrayLiteral {
+  public init(arrayLiteral elements: ComposableRequest.Wrapper...)
+  public init(arrayLiteral elements: [ComposableRequest.Wrapper])
+  public typealias ArrayLiteralElement = ComposableRequest.Wrapper
+}
+extension ComposableRequest.Wrapper : Swift.ExpressibleByBooleanLiteral {
+  public init(booleanLiteral value: Swift.BooleanLiteralType)
+  public typealias BooleanLiteralType = Swift.BooleanLiteralType
+}
+extension ComposableRequest.Wrapper : Swift.ExpressibleByDictionaryLiteral {
+  public init(dictionaryLiteral elements: (Swift.String, ComposableRequest.Wrapper)...)
+  public init(dictionaryLiteral elements: [Swift.String : ComposableRequest.Wrapper])
+  public typealias Key = Swift.String
+  public typealias Value = ComposableRequest.Wrapper
+}
+extension ComposableRequest.Wrapper : Swift.ExpressibleByFloatLiteral {
+  public init(floatLiteral value: Swift.FloatLiteralType)
+  public typealias FloatLiteralType = Swift.FloatLiteralType
+}
+extension ComposableRequest.Wrapper : Swift.ExpressibleByIntegerLiteral {
+  public init(integerLiteral value: Swift.IntegerLiteralType)
+  public typealias IntegerLiteralType = Swift.IntegerLiteralType
+}
+extension ComposableRequest.Wrapper : Swift.ExpressibleByStringLiteral {
+  public init(stringLiteral value: Swift.StringLiteralType)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.StringLiteralType
+  public typealias StringLiteralType = Swift.StringLiteralType
+  public typealias UnicodeScalarLiteralType = Swift.StringLiteralType
+}
+extension ComposableRequest.HTTPMethod : Swift.RawRepresentable {}

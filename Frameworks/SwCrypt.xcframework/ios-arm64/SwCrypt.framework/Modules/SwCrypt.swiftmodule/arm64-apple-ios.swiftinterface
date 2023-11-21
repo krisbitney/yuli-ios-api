@@ -1,0 +1,378 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SwCrypt
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+@_hasMissingDesignatedInitializers open class SwKeyStore {
+  public enum SecError : Darwin.OSStatus, Swift.Error {
+    case unimplemented
+    case param
+    case allocate
+    case notAvailable
+    case authFailed
+    case duplicateItem
+    case itemNotFound
+    case interactionNotAllowed
+    case decode
+    case missingEntitlement
+    public static var debugLevel: Swift.Int
+    public init?(rawValue: Darwin.OSStatus)
+    public typealias RawValue = Darwin.OSStatus
+    public var rawValue: Darwin.OSStatus {
+      get
+    }
+  }
+  public static func upsertKey(_ pemKey: Swift.String, keyTag: Swift.String, options: [Foundation.NSString : Swift.AnyObject] = [:]) throws
+  public static func getKey(_ keyTag: Swift.String) throws -> Swift.String
+  public static func delKey(_ keyTag: Swift.String) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class SwKeyConvert {
+  public enum SwError : Swift.Error {
+    case invalidKey
+    case badPassphrase
+    case keyNotEncrypted
+    public static var debugLevel: Swift.Int
+    public static func == (a: SwCrypt.SwKeyConvert.SwError, b: SwCrypt.SwKeyConvert.SwError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @_hasMissingDesignatedInitializers open class PrivateKey {
+    public static func pemToPKCS1DER(_ pemKey: Swift.String) throws -> Foundation.Data
+    public static func derToPKCS1PEM(_ derKey: Foundation.Data) -> Swift.String
+    public typealias EncMode = SwCrypt.PEM.EncryptedPrivateKey.EncMode
+    public static func encryptPEM(_ pemKey: Swift.String, passphrase: Swift.String, mode: SwCrypt.SwKeyConvert.PrivateKey.EncMode) throws -> Swift.String
+    public static func decryptPEM(_ pemKey: Swift.String, passphrase: Swift.String) throws -> Swift.String
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class PublicKey {
+    public static func pemToPKCS1DER(_ pemKey: Swift.String) throws -> Foundation.Data
+    public static func pemToPKCS8DER(_ pemKey: Swift.String) throws -> Foundation.Data
+    public static func derToPKCS1PEM(_ derKey: Foundation.Data) -> Swift.String
+    public static func derToPKCS8PEM(_ derKey: Foundation.Data) -> Swift.String
+    @objc deinit
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class PKCS8 {
+  @_hasMissingDesignatedInitializers open class PrivateKey {
+    public static func getPKCS1DEROffset(_ derKey: Foundation.Data) -> Swift.Int?
+    public static func stripHeaderIfAny(_ derKey: Foundation.Data) -> Foundation.Data?
+    public static func hasCorrectHeader(_ derKey: Foundation.Data) -> Swift.Bool
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class PublicKey {
+    public static func addHeader(_ derKey: Foundation.Data) -> Foundation.Data
+    public static func getPKCS1DEROffset(_ derKey: Foundation.Data) -> Swift.Int?
+    public static func stripHeaderIfAny(_ derKey: Foundation.Data) -> Foundation.Data?
+    public static func hasCorrectHeader(_ derKey: Foundation.Data) -> Swift.Bool
+    @objc deinit
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class PEM {
+  public enum SwError : Swift.Error {
+    case parse(Swift.String)
+    case badPassphrase
+    case keyNotEncrypted
+    public static var debugLevel: Swift.Int
+  }
+  @_hasMissingDesignatedInitializers open class PrivateKey {
+    public static func toDER(_ pemKey: Swift.String) throws -> Foundation.Data
+    public static func toPEM(_ derKey: Foundation.Data) -> Swift.String
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class PublicKey {
+    public static func toDER(_ pemKey: Swift.String) throws -> Foundation.Data
+    public static func toPEM(_ derKey: Foundation.Data) -> Swift.String
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class EncryptedPrivateKey {
+    public enum EncMode {
+      case aes128CBC, aes256CBC
+      public static func == (a: SwCrypt.PEM.EncryptedPrivateKey.EncMode, b: SwCrypt.PEM.EncryptedPrivateKey.EncMode) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public static func toDER(_ pemKey: Swift.String, passphrase: Swift.String) throws -> Foundation.Data
+    public static func toPEM(_ derKey: Foundation.Data, passphrase: Swift.String, mode: SwCrypt.PEM.EncryptedPrivateKey.EncMode) -> Swift.String
+    @objc deinit
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class CC {
+  public typealias CCCryptorStatus = Swift.Int32
+  public enum CCError : SwCrypt.CC.CCCryptorStatus, Swift.Error {
+    case paramError
+    case bufferTooSmall
+    case memoryFailure
+    case alignmentError
+    case decodeError
+    case unimplemented
+    case overflow
+    case rngFailure
+    case unspecifiedError
+    case callSequenceError
+    case keySizeError
+    case invalidKey
+    public static var debugLevel: Swift.Int
+    public init?(rawValue: SwCrypt.CC.CCCryptorStatus)
+    public typealias RawValue = SwCrypt.CC.CCCryptorStatus
+    public var rawValue: SwCrypt.CC.CCCryptorStatus {
+      get
+    }
+  }
+  public static func generateRandom(_ size: Swift.Int) -> Foundation.Data
+  public typealias CCDigestAlgorithm = Swift.UInt32
+  public enum DigestAlgorithm : SwCrypt.CC.CCDigestAlgorithm {
+    case none
+    case md5
+    case rmd128, rmd160, rmd256, rmd320
+    case sha1
+    case sha224, sha256, sha384, sha512
+    public init?(rawValue: SwCrypt.CC.CCDigestAlgorithm)
+    public typealias RawValue = SwCrypt.CC.CCDigestAlgorithm
+    public var rawValue: SwCrypt.CC.CCDigestAlgorithm {
+      get
+    }
+  }
+  public static func digest(_ data: Foundation.Data, alg: SwCrypt.CC.DigestAlgorithm) -> Foundation.Data
+  public typealias CCHmacAlgorithm = Swift.UInt32
+  public enum HMACAlg : SwCrypt.CC.CCHmacAlgorithm {
+    case sha1, md5, sha256, sha384, sha512, sha224
+    public init?(rawValue: SwCrypt.CC.CCHmacAlgorithm)
+    public typealias RawValue = SwCrypt.CC.CCHmacAlgorithm
+    public var rawValue: SwCrypt.CC.CCHmacAlgorithm {
+      get
+    }
+  }
+  public static func HMAC(_ data: Foundation.Data, alg: SwCrypt.CC.HMACAlg, key: Foundation.Data) -> Foundation.Data
+  public typealias CCOperation = Swift.UInt32
+  public enum OpMode : SwCrypt.CC.CCOperation {
+    case encrypt, decrypt
+    public init?(rawValue: SwCrypt.CC.CCOperation)
+    public typealias RawValue = SwCrypt.CC.CCOperation
+    public var rawValue: SwCrypt.CC.CCOperation {
+      get
+    }
+  }
+  public typealias CCMode = Swift.UInt32
+  public enum BlockMode : SwCrypt.CC.CCMode {
+    case ecb, cbc, cfb, ctr, f8, lrw, ofb, xts, rc4, cfb8
+    public init?(rawValue: SwCrypt.CC.CCMode)
+    public typealias RawValue = SwCrypt.CC.CCMode
+    public var rawValue: SwCrypt.CC.CCMode {
+      get
+    }
+  }
+  public enum AuthBlockMode : SwCrypt.CC.CCMode {
+    case gcm, ccm
+    public init?(rawValue: SwCrypt.CC.CCMode)
+    public typealias RawValue = SwCrypt.CC.CCMode
+    public var rawValue: SwCrypt.CC.CCMode {
+      get
+    }
+  }
+  public typealias CCAlgorithm = Swift.UInt32
+  public enum Algorithm : SwCrypt.CC.CCAlgorithm {
+    case aes, des, threeDES, cast, rc4, rc2, blowfish
+    public init?(rawValue: SwCrypt.CC.CCAlgorithm)
+    public typealias RawValue = SwCrypt.CC.CCAlgorithm
+    public var rawValue: SwCrypt.CC.CCAlgorithm {
+      get
+    }
+  }
+  public typealias CCPadding = Swift.UInt32
+  public enum Padding : SwCrypt.CC.CCPadding {
+    case noPadding, pkcs7Padding
+    public init?(rawValue: SwCrypt.CC.CCPadding)
+    public typealias RawValue = SwCrypt.CC.CCPadding
+    public var rawValue: SwCrypt.CC.CCPadding {
+      get
+    }
+  }
+  public static func crypt(_ opMode: SwCrypt.CC.OpMode, blockMode: SwCrypt.CC.BlockMode, algorithm: SwCrypt.CC.Algorithm, padding: SwCrypt.CC.Padding, data: Foundation.Data, key: Foundation.Data, iv: Foundation.Data) throws -> Foundation.Data
+  public static func cryptAuth(_ opMode: SwCrypt.CC.OpMode, blockMode: SwCrypt.CC.AuthBlockMode, algorithm: SwCrypt.CC.Algorithm, data: Foundation.Data, aData: Foundation.Data, key: Foundation.Data, iv: Foundation.Data, tagLength: Swift.Int) throws -> Foundation.Data
+  public static func digestAvailable() -> Swift.Bool
+  public static func randomAvailable() -> Swift.Bool
+  public static func hmacAvailable() -> Swift.Bool
+  public static func cryptorAvailable() -> Swift.Bool
+  public static func available() -> Swift.Bool
+  @_hasMissingDesignatedInitializers open class GCM {
+    public static func crypt(_ opMode: SwCrypt.CC.OpMode, algorithm: SwCrypt.CC.Algorithm, data: Foundation.Data, key: Foundation.Data, iv: Foundation.Data, aData: Foundation.Data, tagLength: Swift.Int) throws -> (Foundation.Data, Foundation.Data)
+    public static func available() -> Swift.Bool
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class CCM {
+    public static func crypt(_ opMode: SwCrypt.CC.OpMode, algorithm: SwCrypt.CC.Algorithm, data: Foundation.Data, key: Foundation.Data, iv: Foundation.Data, aData: Foundation.Data, tagLength: Swift.Int) throws -> (Foundation.Data, Foundation.Data)
+    public static func available() -> Swift.Bool
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class RSA {
+    public typealias CCAsymmetricPadding = Swift.UInt32
+    public enum AsymmetricPadding : SwCrypt.CC.RSA.CCAsymmetricPadding {
+      case pkcs1
+      case oaep
+      public init?(rawValue: SwCrypt.CC.RSA.CCAsymmetricPadding)
+      public typealias RawValue = SwCrypt.CC.RSA.CCAsymmetricPadding
+      public var rawValue: SwCrypt.CC.RSA.CCAsymmetricPadding {
+        get
+      }
+    }
+    public enum AsymmetricSAPadding : Swift.UInt32 {
+      case pkcs15
+      case pss
+      public init?(rawValue: Swift.UInt32)
+      public typealias RawValue = Swift.UInt32
+      public var rawValue: Swift.UInt32 {
+        get
+      }
+    }
+    public static func generateKeyPair(_ keySize: Swift.Int = 4096) throws -> (Foundation.Data, Foundation.Data)
+    public static func getPublicKeyFromPrivateKey(_ derKey: Foundation.Data) throws -> Foundation.Data
+    public static func encrypt(_ data: Foundation.Data, derKey: Foundation.Data, tag: Foundation.Data, padding: SwCrypt.CC.RSA.AsymmetricPadding, digest: SwCrypt.CC.DigestAlgorithm) throws -> Foundation.Data
+    public static func decrypt(_ data: Foundation.Data, derKey: Foundation.Data, tag: Foundation.Data, padding: SwCrypt.CC.RSA.AsymmetricPadding, digest: SwCrypt.CC.DigestAlgorithm) throws -> (Foundation.Data, Swift.Int)
+    public static func sign(_ message: Foundation.Data, derKey: Foundation.Data, padding: SwCrypt.CC.RSA.AsymmetricSAPadding, digest: SwCrypt.CC.DigestAlgorithm, saltLen: Swift.Int) throws -> Foundation.Data
+    public static func verify(_ message: Foundation.Data, derKey: Foundation.Data, padding: SwCrypt.CC.RSA.AsymmetricSAPadding, digest: SwCrypt.CC.DigestAlgorithm, saltLen: Swift.Int, signedData: Foundation.Data) throws -> Swift.Bool
+    public static func available() -> Swift.Bool
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class DH {
+    public enum DHParam {
+      case rfc3526Group5
+      case rfc2409Group2
+      public static func == (a: SwCrypt.CC.DH.DHParam, b: SwCrypt.CC.DH.DHParam) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    open class DH {
+      public init(dhParam: SwCrypt.CC.DH.DHParam) throws
+      open func generateKey() throws -> Foundation.Data
+      open func computeKey(_ peerKey: Foundation.Data) throws -> Foundation.Data
+      @objc deinit
+    }
+    public static func available() -> Swift.Bool
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class EC {
+    public static func generateKeyPair(_ keySize: Swift.Int) throws -> (Foundation.Data, Foundation.Data)
+    public static func getPublicKeyFromPrivateKey(_ privateKey: Foundation.Data) throws -> Foundation.Data
+    public static func signHash(_ privateKey: Foundation.Data, hash: Foundation.Data) throws -> Foundation.Data
+    public static func verifyHash(_ publicKey: Foundation.Data, hash: Foundation.Data, signedData: Foundation.Data) throws -> Swift.Bool
+    public static func computeSharedSecret(_ privateKey: Foundation.Data, publicKey: Foundation.Data) throws -> Foundation.Data
+    public struct KeyComponents {
+      public init(_ keySize: Swift.Int, _ x: Foundation.Data, _ y: Foundation.Data, _ d: Foundation.Data)
+      public var keySize: Swift.Int
+      public var x: Foundation.Data
+      public var y: Foundation.Data
+      public var d: Foundation.Data
+    }
+    public static func getPublicKeyComponents(_ keyData: Foundation.Data) throws -> SwCrypt.CC.EC.KeyComponents
+    public static func getPrivateKeyComponents(_ keyData: Foundation.Data) throws -> SwCrypt.CC.EC.KeyComponents
+    public static func createFromData(_ keySize: Darwin.size_t, _ x: Foundation.Data, _ y: Foundation.Data) throws -> Foundation.Data
+    public static func available() -> Swift.Bool
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class CRC {
+    public typealias CNcrc = Swift.UInt32
+    public enum Mode : SwCrypt.CC.CRC.CNcrc {
+      case crc8, crc8ICODE, crc8ITU, crc8ROHC, crc8WCDMA, crc16, crc16CCITTTrue, crc16CCITTFalse, crc16USB, crc16XMODEM, crc16DECTR, crc16DECTX, crc16ICODE, crc16VERIFONE, crc16A, crc16B, crc16Fletcher, crc32Adler, crc32, crc32CASTAGNOLI, crc32BZIP2, crc32MPEG2, crc32POSIX, crc32XFER, crc64ECMA182
+      public init?(rawValue: SwCrypt.CC.CRC.CNcrc)
+      public typealias RawValue = SwCrypt.CC.CRC.CNcrc
+      public var rawValue: SwCrypt.CC.CRC.CNcrc {
+        get
+      }
+    }
+    public static func crc(_ input: Foundation.Data, mode: SwCrypt.CC.CRC.Mode) throws -> Swift.UInt64
+    public static func available() -> Swift.Bool
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class CMAC {
+    public static func AESCMAC(_ data: Foundation.Data, key: Foundation.Data) -> Foundation.Data
+    public static func available() -> Swift.Bool
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class KeyDerivation {
+    public typealias CCPseudoRandomAlgorithm = Swift.UInt32
+    public enum PRFAlg : SwCrypt.CC.KeyDerivation.CCPseudoRandomAlgorithm {
+      case sha1, sha224, sha256, sha384, sha512
+      public init?(rawValue: SwCrypt.CC.KeyDerivation.CCPseudoRandomAlgorithm)
+      public typealias RawValue = SwCrypt.CC.KeyDerivation.CCPseudoRandomAlgorithm
+      public var rawValue: SwCrypt.CC.KeyDerivation.CCPseudoRandomAlgorithm {
+        get
+      }
+    }
+    public static func PBKDF2(_ password: Swift.String, salt: Foundation.Data, prf: SwCrypt.CC.KeyDerivation.PRFAlg, rounds: Swift.UInt32) throws -> Foundation.Data
+    public static func available() -> Swift.Bool
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class KeyWrap {
+    public static let rfc3394IV: Foundation.Data
+    public static func SymmetricKeyWrap(_ iv: Foundation.Data, kek: Foundation.Data, rawKey: Foundation.Data) throws -> Foundation.Data
+    public static func SymmetricKeyUnwrap(_ iv: Foundation.Data, kek: Foundation.Data, wrappedKey: Foundation.Data) throws -> Foundation.Data
+    public static func available() -> Swift.Bool
+    @objc deinit
+  }
+  @objc deinit
+}
+extension Foundation.Data {
+  public func hexadecimalString() -> Swift.String
+  public func arrayOfBytes() -> [Swift.UInt8]
+}
+extension Swift.String {
+  public func dataFromHexadecimalString() -> Foundation.Data?
+}
+extension SwCrypt.SwKeyStore.SecError : Swift.Equatable {}
+extension SwCrypt.SwKeyStore.SecError : Swift.Hashable {}
+extension SwCrypt.SwKeyStore.SecError : Swift.RawRepresentable {}
+extension SwCrypt.SwKeyConvert.SwError : Swift.Equatable {}
+extension SwCrypt.SwKeyConvert.SwError : Swift.Hashable {}
+extension SwCrypt.PEM.EncryptedPrivateKey.EncMode : Swift.Equatable {}
+extension SwCrypt.PEM.EncryptedPrivateKey.EncMode : Swift.Hashable {}
+extension SwCrypt.CC.CCError : Swift.Equatable {}
+extension SwCrypt.CC.CCError : Swift.Hashable {}
+extension SwCrypt.CC.CCError : Swift.RawRepresentable {}
+extension SwCrypt.CC.DigestAlgorithm : Swift.Equatable {}
+extension SwCrypt.CC.DigestAlgorithm : Swift.Hashable {}
+extension SwCrypt.CC.DigestAlgorithm : Swift.RawRepresentable {}
+extension SwCrypt.CC.HMACAlg : Swift.Equatable {}
+extension SwCrypt.CC.HMACAlg : Swift.Hashable {}
+extension SwCrypt.CC.HMACAlg : Swift.RawRepresentable {}
+extension SwCrypt.CC.OpMode : Swift.Equatable {}
+extension SwCrypt.CC.OpMode : Swift.Hashable {}
+extension SwCrypt.CC.OpMode : Swift.RawRepresentable {}
+extension SwCrypt.CC.BlockMode : Swift.Equatable {}
+extension SwCrypt.CC.BlockMode : Swift.Hashable {}
+extension SwCrypt.CC.BlockMode : Swift.RawRepresentable {}
+extension SwCrypt.CC.AuthBlockMode : Swift.Equatable {}
+extension SwCrypt.CC.AuthBlockMode : Swift.Hashable {}
+extension SwCrypt.CC.AuthBlockMode : Swift.RawRepresentable {}
+extension SwCrypt.CC.Algorithm : Swift.Equatable {}
+extension SwCrypt.CC.Algorithm : Swift.Hashable {}
+extension SwCrypt.CC.Algorithm : Swift.RawRepresentable {}
+extension SwCrypt.CC.Padding : Swift.Equatable {}
+extension SwCrypt.CC.Padding : Swift.Hashable {}
+extension SwCrypt.CC.Padding : Swift.RawRepresentable {}
+extension SwCrypt.CC.RSA.AsymmetricPadding : Swift.Equatable {}
+extension SwCrypt.CC.RSA.AsymmetricPadding : Swift.Hashable {}
+extension SwCrypt.CC.RSA.AsymmetricPadding : Swift.RawRepresentable {}
+extension SwCrypt.CC.RSA.AsymmetricSAPadding : Swift.Equatable {}
+extension SwCrypt.CC.RSA.AsymmetricSAPadding : Swift.Hashable {}
+extension SwCrypt.CC.RSA.AsymmetricSAPadding : Swift.RawRepresentable {}
+extension SwCrypt.CC.DH.DHParam : Swift.Equatable {}
+extension SwCrypt.CC.DH.DHParam : Swift.Hashable {}
+extension SwCrypt.CC.CRC.Mode : Swift.Equatable {}
+extension SwCrypt.CC.CRC.Mode : Swift.Hashable {}
+extension SwCrypt.CC.CRC.Mode : Swift.RawRepresentable {}
+extension SwCrypt.CC.KeyDerivation.PRFAlg : Swift.Equatable {}
+extension SwCrypt.CC.KeyDerivation.PRFAlg : Swift.Hashable {}
+extension SwCrypt.CC.KeyDerivation.PRFAlg : Swift.RawRepresentable {}
