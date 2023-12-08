@@ -35,7 +35,7 @@ public class Profile: NSObject {
 
 @objc
 public protocol SocialApi {
-    @objc func login(username: String, password: String, completion: @escaping (Bool, String?) -> Void)
+    @objc func login(username: String, password: String, onChallenge: @escaping () -> String, completion: @escaping (Bool, String?) -> Void)
     @objc func restoreSession(completion: @escaping (Bool, String?) -> Void)
     @objc func fetchUserProfile(completion: @escaping (User?, String?) -> Void)
     @objc func fetchFollowers(pageDelay: Int64, completion: @escaping ([Profile]?, String?) -> Void)
