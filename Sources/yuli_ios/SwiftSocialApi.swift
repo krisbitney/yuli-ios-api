@@ -104,6 +104,7 @@ public class SwiftSocialApi: NSObject, SocialApi {
         }
         
         let delay = Delay(TimeInterval(Float(pageDelay) / 1000))
+        var allProfiles = [Profile]()
         
         Endpoint
             .user(secret.identifier)
@@ -115,7 +116,7 @@ public class SwiftSocialApi: NSObject, SocialApi {
                 receiveCompletion: { compl in
                     switch compl {
                     case .finished:
-                        break
+                        completion(allProfiles, nil)
                     case .failure(let error):
                         completion(nil, error.localizedDescription)
                     }
@@ -128,7 +129,7 @@ public class SwiftSocialApi: NSObject, SocialApi {
                         picUrl: user.avatar?.absoluteString
                        )
                    })
-                   completion(users, nil)
+                   allProfiles.append(contentsOf: users ?? [])
                }
             )
             .store(in: &cancellables)
@@ -141,6 +142,7 @@ public class SwiftSocialApi: NSObject, SocialApi {
         }
         
         let delay = Delay(TimeInterval(Float(pageDelay) / 1000))
+        var allProfiles = [Profile]()
         
         Endpoint
             .user(secret.identifier)
@@ -152,7 +154,7 @@ public class SwiftSocialApi: NSObject, SocialApi {
                 receiveCompletion: { compl in
                     switch compl {
                     case .finished:
-                        break
+                        completion(allProfiles, nil)
                     case .failure(let error):
                         completion(nil, error.localizedDescription)
                     }
@@ -165,7 +167,7 @@ public class SwiftSocialApi: NSObject, SocialApi {
                         picUrl: user.avatar?.absoluteString
                        )
                    })
-                   completion(users, nil)
+                   allProfiles.append(contentsOf: users ?? [])
                }
             )
             .store(in: &cancellables)
