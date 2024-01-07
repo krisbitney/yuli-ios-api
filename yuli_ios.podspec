@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name             = 'yuli_ios'
   s.version          = '1.0.0'
   s.summary          = 'An iOS API for the Yuli app'
-  s.homepage         = 'https://github.com/krisbitney/yuli_ios'
+  s.homepage         = 'https://github.com/krisbitney/yuli-ios-api'
   s.license          = { :type => 'Proprietary', :text => 'All rights reserved. Do not distribute.' }
   s.author           = { 'Kris Bitney' => 'kristoferbitney@gmail.com' }
   s.source           = { :git => 'https://github.com/krisbitney/yuli-ios-api.git', :tag => s.version.to_s }
